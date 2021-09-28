@@ -16,10 +16,6 @@ nlu:
     - tanto tiempo
     - querido amigo
 
-- intent: inicio_conversacion
-  examples:
-    - 
-
 - intent: saber_como_estoy
   examples: |
     - que onda compañero como estás?
@@ -127,10 +123,6 @@ nlu:
     - muy mal
     - tan triste
 
-- intent: modo_triste_continuacion
-  examples:
-    - 
-
 - intent: agradecer
   examples: |
     - muchas gracias amigo
@@ -140,8 +132,6 @@ nlu:
     - sé que me tenías fe, gracias
     - no tengo más palabras de agradecimiento que ofrecerte
     - gracias bro
-
-
 
 - intent: bot_challenge
   examples: |

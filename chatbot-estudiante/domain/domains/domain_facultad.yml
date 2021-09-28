@@ -1,6 +1,9 @@
 version: "2.0"
 
 intents:
+  - contar_examen_desaprobado
+  - contar_examen_aprobado
+  - volver_a_intentarlo
 
 entities:
   - que_examen_rindio
@@ -8,9 +11,9 @@ entities:
 
 slots:  
   rindio_final:
-    type: boolean
+    type: bool
   
-  que_final_rindio:
+  que_examen_rindio:
     type: text
 
   como_cree_fue_examen:
@@ -38,4 +41,4 @@ slots:
       - no sabe
 
   esfuerzo:
-    type: boolean
+    type: bool

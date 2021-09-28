@@ -22,6 +22,6 @@ stories:
   - action: utter_inicio_conversacion
 
 
-- story: cambio de conversacion
-  steps:
-  - intent: 
+#- story: cambio de conversacion
+#  steps:
+#  - intent: 

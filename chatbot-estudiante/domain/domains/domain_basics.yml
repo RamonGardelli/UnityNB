@@ -8,6 +8,7 @@ intents:
   - negar
   - modo_feliz
   - modo_triste
+  - agradecer
   - bot_challenge
 
 
@@ -31,7 +32,7 @@ slots:
       - 5to
 
   viene_de_la_facultad:
-    type: boolean
+    type: bool
   
   ultima_cursada:
     type: categorical
