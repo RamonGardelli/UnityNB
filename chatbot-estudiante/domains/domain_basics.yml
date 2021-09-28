@@ -1,12 +1,12 @@
 version: "2.0"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
+  - saludar
+  - despedir
+  - afirmar
+  - negar
+  - modo_feliz
+  - modo_triste
   - bot_challenge
 
 responses:
@@ -28,7 +28,3 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
