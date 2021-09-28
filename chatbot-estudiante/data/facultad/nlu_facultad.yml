@@ -2,7 +2,41 @@ version: "2.0"
 
 nlu:
 
+- intent: contar_examen_desaprobado
+  examples: |
+    - me fue mal en un examen
+    - me rompieron el orto
+    - fue muy dificil
+    - tomaron cosas que no dieron
+    - no estudie nada
+    - no me presente
+    - me agarraron machetiandome
+    - las cuentas no me daban
+    - desaprobé el final que rendí
+    - no me fue como esperaba en el examen
+    - me saqué un 2
+    - acabo de sumar otro desaprobado a la historia académica
+    - firmé el ausente y me fui
 
+- intent: volver_a_intentarlo
+  examples:
+    - si, ya fue, pruebo el proximo año
+    - que se le va a hacer, la siguiente
+    - la tercera será la vencida
+    - más adelante se vuelve a dar
+    - y si nos hacemos cartoneros? seguro nos va mejor
+    - tenes razon, tengo que dedicarle mas tiempo aunque no me guste la materia
+    - siempre tan optimista vos
+    - ya te va a tocar a vos gato
+
+- intent: contar_examen_aprobado
+  examples: |
+    - me fue bien en el examen
+    - aprobé el examen!
+    - adentro
+    - este finde nos rompemos
+    - me saqué un [4](nota_examen)
+    - una menos
 
 - synonym: diseño
   examples: |

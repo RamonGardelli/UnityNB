@@ -21,10 +21,21 @@ responses:
   - text: "Que onda compañero como estás?"
   - text: "{nombre_usuario} que tal?"
 
-  utter_preguntar_que_pasó:
+  utter_preguntar_que_paso:
   - text: "Que pasó amigo?"
+  - text: "Alguna nueva?"
   - text: "Que anda pasando {nombre_usuario}"
-  - text: "Por qué estás mal?"
+  - text: "Cuales son las noticias?"
+
+  utter_inicio_conversacion:
+  - text: "Que otras novedades hay?"
+  - text: "Contate algo"
+  - text: "Alguna otra novedad"
+  - text: "Que mas me podes contar"
+  - text: "Tenes tiempo para otro tema?"
+  - text: "Algun chusmerio nuevo?"
+  - text: "Cambiemos de tema"
+  - text: "Algo mas para decir?"
 
   utter_insistir:
   - text: "Quedate un rato a charlar"

@@ -3,8 +3,8 @@ version: "2.0"
 intents:
 
 entities:
-  - que_final_rindio
-  - nota_final
+  - que_examen_rindio
+  - nota_examen
 
 slots:  
   rindio_final:
@@ -13,7 +13,7 @@ slots:
   que_final_rindio:
     type: text
 
-  como_cree_fue_final:
+  como_cree_fue_examen:
     type: categorical
     values:
       - bien
@@ -21,7 +21,7 @@ slots:
       - mal
       - no sabe
   
-  nota_final:
+  nota_examen:
     type: float
     min_value: 0.0
     max_value: 10.0
@@ -39,6 +39,3 @@ slots:
 
   esfuerzo:
     type: boolean
-  
-
-responses:
