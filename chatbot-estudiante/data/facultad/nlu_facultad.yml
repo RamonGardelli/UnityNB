@@ -19,7 +19,7 @@ nlu:
     - firmé el ausente y me fui
 
 - intent: volver_a_intentarlo
-  examples:
+  examples: |
     - si, ya fue, pruebo el proximo año
     - que se le va a hacer, la siguiente
     - la tercera será la vencida
@@ -35,7 +35,7 @@ nlu:
     - aprobé el examen!
     - adentro
     - este finde nos rompemos
-    - me saqué un [4](nota_examen)
+    - me saqué un 4
     - una menos
 
 - synonym: diseño
