@@ -1,0 +1,43 @@
+version: "2.0"
+
+nlu:
+
+
+
+- synonym: diseño
+  examples: |
+    - Diseño de Sistemas de Software
+    - DSS
+
+- synonym: compiladores
+  examples: |
+    - Diseño de Compiladores I
+    - compis
+    - diseño de compiladores
+
+- synonym: feypi
+  examples: |
+    - Fundamentos de la Economía y Proyectos de Inversión
+    - fundamentos
+
+- synonym: 1ro
+  examples: |
+    - primero
+    - 1ero
+
+- synonym: 2do
+  examples: |
+    - segundo
+
+- synonym: 3ro
+  examples: |
+    - tercero
+    - 3ero
+
+- synonym: 4to
+  examples: |
+    - cuarto
+
+- synonym: 5to
+  examples: |
+    - quinto

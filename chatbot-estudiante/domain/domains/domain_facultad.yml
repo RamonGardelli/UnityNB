@@ -1,0 +1,44 @@
+version: "2.0"
+
+intents:
+
+entities:
+  - que_final_rindio
+  - nota_final
+
+slots:  
+  rindio_final:
+    type: boolean
+  
+  que_final_rindio:
+    type: text
+
+  como_cree_fue_final:
+    type: categorical
+    values:
+      - bien
+      - mas o menos
+      - mal
+      - no sabe
+  
+  nota_final:
+    type: float
+    min_value: 0.0
+    max_value: 10.0
+
+  temario_diseño:
+    type: list
+
+  como_cree_cursada:
+    type: categorical
+    values:
+      - bien
+      - mas o menos
+      - mal
+      - no sabe
+
+  esfuerzo:
+    type: boolean
+  
+
+responses:

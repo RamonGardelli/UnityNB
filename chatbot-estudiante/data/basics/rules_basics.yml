@@ -1,0 +1,18 @@
+version: "2.0"
+
+rules:
+
+- rule: Saludar
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+
+- rule: Despedir
+  steps:
+  - intent: despedir
+  - action: utter_despedir
+
+- rule: Decir que soy un bot al preguntar por bot_challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

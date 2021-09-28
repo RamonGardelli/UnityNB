@@ -4,4 +4,4 @@ Este repositorio almacena un chatbot implementado con el framework RASA para un 
 # Train model
 
 # console
-rasa train --domain ./domains
+rasa train --domain ./domain

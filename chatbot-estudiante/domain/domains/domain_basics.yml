@@ -1,0 +1,41 @@
+version: "2.0"
+
+intents:
+  - saludar
+  - saber_como_estoy
+  - despedir
+  - afirmar
+  - negar
+  - modo_feliz
+  - modo_triste
+  - bot_challenge
+
+
+entities:
+  - nombre_usuario
+  - año_cursante
+  - ultima_cursada
+
+slots:
+  # datos del usuario a extraer
+  nombre_usuario:
+    type: text
+  
+  año_cursante:
+    type: categorical
+    values:
+      - 1ro
+      - 2do
+      - 3ro
+      - 4to
+      - 5to
+
+  viene_de_la_facultad:
+    type: boolean
+  
+  ultima_cursada:
+    type: categorical
+    values:
+      - diseño
+      - compiladores
+      - feypi
