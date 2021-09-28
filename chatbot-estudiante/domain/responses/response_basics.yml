@@ -8,18 +8,23 @@ responses:
   - text: "Como dice que le va"
   - text: "{nombre_usuario} que onda"
 
-  utter_feliz:
+  utter_responder_feliz:
   - text: "Muy bien, sentado acá en la plazita de siempre"
   - text: "Recién salgo de cursar"
   - text: "Disfrutando el inicio de la primavera, así que ree bien"
   - text: "Bien, viste que jugó garcia lorca de titular jaja"
   - text: "Claro bien, yo hace un momento vengo de hacer unos trámites y me senté a descansar"
 
-  utter_preguntar_como_esta:
+  utter_preguntar_como_está:
   - text: "Ey como va amiguito?"
   - text: "Todo en orden. Vos?"
   - text: "Que onda compañero como estás?"
   - text: "{nombre_usuario} que tal?"
+
+  utter_preguntar_que_pasó:
+  - text: "Que pasó amigo?"
+  - text: "Que anda pasando {nombre_usuario}"
+  - text: "Por qué estás mal?"
 
   utter_insistir:
   - text: "Quedate un rato a charlar"
