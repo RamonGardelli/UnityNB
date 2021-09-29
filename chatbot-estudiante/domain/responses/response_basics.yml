@@ -3,10 +3,9 @@ version: "2.0"
 responses:
 
   utter_saludar:
-  - text: "Hola {nombre_usuario}"
+  - text: "Hola {nombre_usuario}!"
   - text: "Buenas tardes"
-  - text: "Como dice que le va"
-  - text: "{nombre_usuario} que onda"
+  - text: "{nombre_usuario} que ondaaa"
 
   utter_responder_feliz:
   - text: "Muy bien, sentado acá en la plazita de siempre"
@@ -16,26 +15,25 @@ responses:
   - text: "Claro bien, yo hace un momento vengo de hacer unos trámites y me senté a descansar"
 
   utter_preguntar_como_está:
-  - text: "Ey como va amiguito?"
-  - text: "Todo en orden. Vos?"
-  - text: "Que onda compañero como estás?"
+  - text: "Como va amiguito?"
+  - text: "Vos que onda?"
+  - text: "Que onda compa?"
   - text: "{nombre_usuario} que tal?"
 
   utter_preguntar_que_paso:
   - text: "Que pasó amigo?"
-  - text: "Alguna nueva?"
-  - text: "Que anda pasando {nombre_usuario}"
+  - text: "Que anda pasando {nombre_usuario}, contame"
   - text: "Cuales son las noticias?"
 
   utter_inicio_conversacion:
-  - text: "Que otras novedades hay?"
   - text: "Contate algo"
+  - text: "Algun chusmerio nuevo?"
+
+  utter_cambio_tema:
+  - text: "Cambiemos de tema"
   - text: "Alguna otra novedad"
   - text: "Que mas me podes contar"
   - text: "Tenes tiempo para otro tema?"
-  - text: "Algun chusmerio nuevo?"
-  - text: "Cambiemos de tema"
-  - text: "Algo mas para decir?"
 
   utter_afirmar:
   - text: "Se"
@@ -59,7 +57,7 @@ responses:
   - text: "Abrazo grande"
   - text: "Un gusto verte {nombre_usuario}"
   - text: "Nos vemos amigo"
-  - text: "Dale, que te vaya bien!"
+  - text: "Dale, que te vaya bien! Adios"
 
   utter_levantar_animo:
   - text: "Miralo con otros ojos"

@@ -1,16 +1,6 @@
 version: "2.0"
 
 stories:
-
-- story: camino inicial rendir examen triste
-  steps:
-  - intent: modo_triste
-  - action: utter_preguntar_que_paso
-  - intent: contar_examen_desaprobado
-  - action: utter_consolar
-  - intent: volver_a_intentarlo
-  - action: utter_ofrecer_ayuda
-
 - story: camino1 triste
   steps:
   - intent: saludar
@@ -64,12 +54,3 @@ stories:
   - action: utter_indiferente
   - intent: despedir
   - action: utter_despedir
-
-- story: camino inicial rendir examen feliz
-  steps:
-  - intent: modo_feliz
-  - action: utter_preguntar_que_paso
-  - intent: contar_examen_aprobado
-  - action: utter_felicitar_examen
-  - intent: agradecer
-  - action: utter_inicio_conversacion

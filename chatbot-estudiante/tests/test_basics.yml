@@ -11,7 +11,7 @@ stories:
     intent: saludar
   - action: utter_saludar
   - user: |
-      que onda mounstro?
+      que onda mostri?
     intent: saber_como_estoy
   - action: utter_responder_feliz
   - action: utter_preguntar_como_está
@@ -36,7 +36,7 @@ stories:
   - action: utter_responder_feliz
   - action: utter_preguntar_como_está
   - user: |
-      re bien, es primavera! chau frioo
+      re bien, es primavera! no habrá más frioo
     intent: modo_feliz
   - action: utter_afirmar
   - action: utter_insistir

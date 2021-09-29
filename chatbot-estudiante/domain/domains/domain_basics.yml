@@ -11,32 +11,8 @@ intents:
   - agradecer
   - bot_challenge
 
-
-entities:
-  - año_cursante
-  - ultima_cursada
-
 slots:
   # datos del usuario a extraer
   nombre_usuario:
     type: text
     initial_value: "Marcelo Campo"
-  
-  año_cursante:
-    type: categorical
-    values:
-      - 1ro
-      - 2do
-      - 3ro
-      - 4to
-      - 5to
-
-  viene_de_la_facultad:
-    type: bool
-  
-  ultima_cursada:
-    type: categorical
-    values:
-      - diseño
-      - compiladores
-      - feypi

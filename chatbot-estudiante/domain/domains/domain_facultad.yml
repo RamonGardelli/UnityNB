@@ -8,8 +8,29 @@ intents:
 entities:
   - que_examen_rindio
   - nota_examen
+  - año_cursante
+  - ultima_cursada
 
-slots:  
+slots:
+  año_cursante:
+    type: categorical
+    values:
+      - 1ro
+      - 2do
+      - 3ro
+      - 4to
+      - 5to
+
+  viene_de_la_facultad:
+    type: bool
+  
+  ultima_cursada:
+    type: categorical
+    values:
+      - diseño
+      - compiladores
+      - feypi
+
   rindio_final:
     type: bool
   
