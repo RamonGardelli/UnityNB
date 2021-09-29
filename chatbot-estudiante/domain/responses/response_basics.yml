@@ -37,10 +37,22 @@ responses:
   - text: "Cambiemos de tema"
   - text: "Algo mas para decir?"
 
+  utter_afirmar:
+  - text: "Se"
+  - text: "Así ess"
+  - text: "Totalmente"
+  - text: "Es verdad"
+
   utter_insistir:
   - text: "Quedate un rato a charlar"
   - text: "Tenés un momento? Hablemos"
   - text: "Me quedo unos minutos y te acompaño"
+
+  utter_indiferente:
+  - text: "No te preocupes"
+  - text: "No pasa nada amigo"
+  - text: "Dale no hay drama"
+  - text: "Ningún problema"
 
   utter_despedir:
   - text: "{nombre_usuario}, nos estamos viendo"
@@ -48,6 +60,12 @@ responses:
   - text: "Un gusto verte {nombre_usuario}"
   - text: "Nos vemos amigo"
   - text: "Dale, que te vaya bien!"
+
+  utter_levantar_animo:
+  - text: "Miralo con otros ojos"
+  - text: "Arriba el animo bro"
+  - text: "La vida no es color de rosas siempre que no uses los lentes adecuados"
+  - text: "Las cosas van a mejorar"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa"

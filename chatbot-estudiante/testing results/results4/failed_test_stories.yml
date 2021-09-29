@@ -1,0 +1,38 @@
+version: "2.0"
+stories:
+- story: conversacion1 triste (.\tests\test_basics.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: action_listen  # predicted: utter_preguntar_como_está
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_preguntar_como_está  # predicted: action_listen
+  - intent: modo_triste  # predicted: contar_examen_desaprobado: son dias, un bajón anímico pero ya se me va a pasar
+  - action: utter_levantar_animo
+  - intent: despedir  # predicted: nlu_fallback: dale, me voy así no llego tarde a la otra clase
+  - action: utter_despedir
+- story: conversacion2 feliz (.\tests\test_basics.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: action_listen  # predicted: utter_preguntar_como_está
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_preguntar_como_está  # predicted: action_listen
+  - intent: modo_feliz  # predicted: despedir: re bien, es primavera! chau frioo
+  - action: utter_afirmar  # predicted: utter_inicio_conversacion
+  - action: utter_insistir  # predicted: action_default_fallback
+  - intent: afirmar
+  - action: utter_inicio_conversacion  # predicted: utter_afirmar after action_unlikely_intent
+- story: conversacion3 feliz (.\tests\test_basics.yml)
+  steps:
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - intent: afirmar  # predicted: volver_a_intentarlo: siempre feliz vos, que raro jaja
+  - action: utter_afirmar
+  - action: utter_inicio_conversacion
+  - intent: negar  # predicted: modo_triste: no amigo, en otro momento, estoy apurado
+  - action: utter_indiferente
+  - intent: despedir  # predicted: afirmar: dale, abrazo grande
+  - action: utter_despedir

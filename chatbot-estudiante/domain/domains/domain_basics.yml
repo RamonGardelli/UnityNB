@@ -13,7 +13,6 @@ intents:
 
 
 entities:
-  - nombre_usuario
   - año_cursante
   - ultima_cursada
 
@@ -21,6 +20,7 @@ slots:
   # datos del usuario a extraer
   nombre_usuario:
     type: text
+    initial_value: "Marcelo Campo"
   
   año_cursante:
     type: categorical

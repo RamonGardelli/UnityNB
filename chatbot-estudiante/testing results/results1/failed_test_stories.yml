@@ -1,0 +1,55 @@
+version: "2.0"
+stories:
+- story: conversacion1 triste (.\tests\basics\test_basics.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_como_está
+  - intent: saber_como_estoy  # predicted: negar: para el orto
+  - action: utter_preguntar_que_paso  # predicted: utter_responder_feliz after action_unlikely_intent
+  - action: action_listen  # predicted: utter_responder_feliz
+  - intent: modo_triste  # predicted: volver_a_intentarlo: son dias, un bajón anímico pero ya se me va a pasar
+  - action: utter_levantar_animo  # predicted: utter_preguntar_que_paso after action_unlikely_intent
+  - intent: despedir  # predicted: contar_examen_desaprobado: dale, me voy así no llego tarde a la otra clase
+  - action: utter_despedir
+- story: conversacion2 feliz (.\tests\basics\test_basics.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: action_listen  # predicted: utter_preguntar_como_está
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_preguntar_como_está
+  - intent: modo_feliz
+  - action: utter_afirmar  # predicted: utter_inicio_conversacion
+  - action: utter_insistir  # predicted: action_default_fallback
+  - intent: afirmar  # predicted: modo_feliz: dale me quedo un ratin
+  - action: utter_inicio_conversacion  # predicted: action_default_fallback after action_unlikely_intent
+- story: conversacion3 feliz (.\tests\basics\test_basics.yml)
+  steps:
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz  # predicted: action_unlikely_intent
+  - intent: afirmar  # predicted: agradecer: siempre feliz vos, que raro jaja
+  - action: utter_afirmar  # predicted: action_default_fallback
+  - action: utter_inicio_conversacion  # predicted: action_default_fallback
+  - intent: negar  # predicted: modo_triste: no amigo, en otro momento, estoy apurado
+  - action: utter_indiferente
+  - intent: despedir  # predicted: agradecer: dale, abrazo grande
+  - action: utter_despedir
+- story: bot_challenge (.\tests\basics\test_basics.yml)
+  steps:
+  - intent: bot_challenge
+  - action: utter_iambot  # predicted: utter_iamabot
+- story: conversacion1 triste (.\tests\test_basics.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: action_listen  # predicted: utter_preguntar_como_está
+  - intent: saber_como_estoy
+  - action: utter_preguntar_como_está  # predicted: utter_responder_feliz
+  - action: utter_preguntar_que_paso  # predicted: action_listen
+  - action: action_listen  # predicted: utter_responder_feliz
+  - intent: modo_triste  # predicted: volver_a_intentarlo: son dias, un bajón anímico pero ya se me va a pasar
+  - action: utter_levantar_animo  # predicted: utter_preguntar_que_paso after action_unlikely_intent
+  - intent: despedir  # predicted: contar_examen_desaprobado: dale, me voy así no llego tarde a la otra clase
+  - action: utter_despedir

@@ -2,16 +2,6 @@ version: "2.0"
 
 rules:
 
-- rule: Saludar
-  steps:
-    - intent: saludar
-    - action: utter_saludar
-
-- rule: Comunicar que estoy bien
-  steps:
-    - intent: saber_como_estoy
-    - action: utter_responder_feliz
-
 - rule: Despedir
   steps:
   - intent: despedir

@@ -15,6 +15,7 @@ nlu:
     - amigo que onda
     - tanto tiempo
     - querido amigo
+    - que hay de nuevo viejo
 
 - intent: saber_como_estoy
   examples: |
@@ -22,6 +23,7 @@ nlu:
     - todo bien y vos?
     - ey como va amiguito?
     - como te está yendo?
+    - como va?
     - que se cuenta
     - que es de tu vida?
     - en que andas?
@@ -43,9 +45,14 @@ nlu:
     - te veo más tarde
     - hasta pronto
     - me despido
+    - me tengo que ir bro
+    - me llama la bruja
+    - dale, abrazo grande
+    - dale, me voy así no llego tarde a la otra clase
 
 - intent: afirmar
   examples: |
+    - dale
     - si
     - exacto
     - totalmente
@@ -63,6 +70,7 @@ nlu:
     - si claro
     - claramente
     - sin duda alguna
+    - siempre feliz vos, que raro jaja
 
 - intent: negar
   examples: |
@@ -83,6 +91,7 @@ nlu:
     - claro que no
     - nonono
     - no no
+    - no amigo, en otro momento, estoy apurado
 
 - intent: modo_feliz
   examples: |
@@ -122,6 +131,7 @@ nlu:
     - extremadamente mal
     - muy mal
     - tan triste
+    - son dias, un bajón anímico pero ya se me va a pasar
 
 - intent: agradecer
   examples: |

@@ -1,0 +1,26 @@
+[
+  {
+    "text": "como va",
+    "intent": "saludar",
+    "intent_prediction": {
+      "name": "saber_como_estoy",
+      "confidence": 0.6075101494789124
+    }
+  },
+  {
+    "text": "todo bien",
+    "intent": "modo_feliz",
+    "intent_prediction": {
+      "name": "saber_como_estoy",
+      "confidence": 0.519904375076294
+    }
+  },
+  {
+    "text": "me saqué un 2",
+    "intent": "contar_examen_desaprobado",
+    "intent_prediction": {
+      "name": "contar_examen_aprobado",
+      "confidence": 0.6300660371780396
+    }
+  }
+]
