@@ -3,28 +3,41 @@ version: "2.0"
 nlu:
 - intent: saludar
   examples: |
-    - hola 
+    - hola
+    - hola ran
     - hola amigo
+    - hola que tal
     - que tal
     - buenas tardes
+    - hola buenas tardes
+    - hola que onda
     - que onda
+    - hola buen día
     - buen día
+    - hola buenas noches
     - buenas noches
+    - hola como va
     - como va
     - holanda
     - amigo que onda
     - tanto tiempo
     - querido amigo
     - que hay de nuevo viejo
+    - que haces
+    - que tal bro
+    - que onda bro
+    - que talco
 
 - intent: saber_como_estoy
   examples: |
+    - que onda?
     - que onda compañero como estás?
+    - como estás?
     - todo bien y vos?
     - ey como va amiguito?
     - como te está yendo?
     - como va?
-    - que se cuenta
+    - que se cuenta?
     - que es de tu vida?
     - en que andas?
     - vos que onda?
