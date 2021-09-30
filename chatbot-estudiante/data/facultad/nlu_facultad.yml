@@ -12,7 +12,7 @@ nlu:
     - no me presente
     - me agarraron machetiandome
     - las cuentas no me daban
-    - desaprobé el final que rendí
+    - desaprobé el examen que rendí
     - no me fue como esperaba en el examen
     - me saqué un 2
     - acabo de sumar otro desaprobado a la historia académica
@@ -33,10 +33,12 @@ nlu:
   examples: |
     - me fue bien en el examen
     - aprobé el examen!
-    - adentro
-    - este finde nos rompemos
     - me saqué un 4
-    - una menos
+    - pude aprobar el examen que rendí
+    - aprobé!
+    - promocioné
+    - logré aprobar bien
+    - pasé el examen satisfactoriamente
 
 - synonym: diseño
   examples: |

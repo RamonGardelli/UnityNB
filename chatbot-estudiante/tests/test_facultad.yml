@@ -1,0 +1,77 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+version: "2.0"
+
+stories:
+- story: camino inicial rendir examen triste 1
+  steps:
+  - user: |
+      buenas tardes
+    intent: saludar
+  - action: utter_saludar
+  - user: |
+      no me encuentro muy bien
+    intent: modo_triste
+  - action: utter_preguntar_que_paso
+  - user: |
+      no me fui muy bien en el examen de hoy
+    intent: contar_examen_desaprobado
+  - action: utter_consolar
+  - action: utter_ofrecer_ayuda
+  - user: |
+      gracias amigo, en la siguiente mesa ojalá me vaya bien
+    intent: agradecer
+  - action: utter_levantar_animo
+  - action: utter_insistir
+  - user: |
+      vos todo bien?
+    intent: saber_como_estoy
+  - action: utter_inicio_conversacion
+  - user: |
+      che se me hace tarde
+    intent: despedir
+  - action: utter_despedir
+
+- story: camino inicial rendir examen triste 2
+  steps:
+  - user: |
+      que onda compa
+    intent: saludar
+  - action: utter_saludar
+  - user: |
+      me siento mal
+    intent: modo_triste
+  - action: utter_preguntar_que_paso
+  - user: |
+      desaprobé
+    intent: contar_examen_desaprobado
+  - action: utter_consolar
+  - action: utter_levantar_animo
+  - user: |
+      no seas tan positivo
+    intent: negar
+  - action: utter_ofrecer_ayuda
+  - user: |
+      si bueno
+    intent: afirmar
+  - action: utter_levantar_animo
+  - user: |
+      chau
+    intent: despedir
+  - action: utter_despedir
+
+- story: camino inicial rendir examen feliz 2
+  steps:
+  - user: |
+      hola
+    intent: saludar
+  - action: utter_saludar
+  - user: |
+      como estás?
+    intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - user: |
+      aprobé el examen
+  - intent: contar_examen_aprobado
+  - action: utter_felicitar_examen

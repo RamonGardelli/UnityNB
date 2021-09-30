@@ -5,20 +5,17 @@ responses:
   utter_saludar:
   - text: "Hola {nombre_usuario}!"
   - text: "Buenas tardes"
-  - text: "{nombre_usuario} que ondaaa"
 
   utter_responder_feliz:
   - text: "Muy bien, sentado acá en la plazita de siempre"
   - text: "Recién salgo de cursar"
   - text: "Disfrutando el inicio de la primavera, así que ree bien"
   - text: "Bien, viste que jugó garcia lorca de titular jaja"
-  - text: "Claro bien, yo hace un momento vengo de hacer unos trámites y me senté a descansar"
+  - text: "Hace un momento vengo de hacer unos trámites y me senté a descansar"
 
   utter_preguntar_como_está:
   - text: "Como va amiguito?"
-  - text: "Vos que onda?"
-  - text: "Que onda compa?"
-  - text: "{nombre_usuario} que tal?"
+  - text: "Que onda?"
 
   utter_preguntar_que_paso:
   - text: "Que pasó amigo?"
@@ -37,7 +34,6 @@ responses:
 
   utter_afirmar:
   - text: "Se"
-  - text: "Así ess"
   - text: "Totalmente"
   - text: "Es verdad"
 

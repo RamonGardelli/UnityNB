@@ -1,0 +1,37 @@
+version: "2.0"
+stories:
+- story: camino inicial rendir examen triste 1 (.\tests\test_facultad.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: action_listen  # predicted: utter_preguntar_como_está
+  - intent: modo_triste
+  - action: utter_preguntar_que_paso  # predicted: action_unlikely_intent
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: contar_examen_desaprobado
+  - action: utter_consolar  # predicted: action_unlikely_intent
+  - action: utter_ofrecer_ayuda  # predicted: action_listen
+  - intent: agradecer
+  - action: utter_levantar_animo  # predicted: utter_cambio_tema after action_unlikely_intent
+  - action: utter_insistir  # predicted: action_listen
+  - intent: saber_como_estoy
+  - action: utter_inicio_conversacion  # predicted: action_default_fallback after action_unlikely_intent
+  - intent: despedir
+  - action: utter_despedir
+- story: camino inicial rendir examen triste 2 (.\tests\test_facultad.yml)
+  steps:
+  - intent: saludar  # predicted: saber_como_estoy: que onda compa
+  - action: utter_saludar
+  - action: action_listen  # predicted: utter_preguntar_como_está
+  - intent: modo_triste
+  - action: utter_preguntar_que_paso  # predicted: action_unlikely_intent
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: contar_examen_desaprobado
+  - action: utter_consolar  # predicted: action_unlikely_intent
+  - action: utter_levantar_animo  # predicted: action_listen
+  - intent: negar  # predicted: modo_triste: no seas tan positivo
+  - action: utter_ofrecer_ayuda  # predicted: action_default_fallback
+  - intent: afirmar  # predicted: saludar: si bueno
+  - action: utter_levantar_animo  # predicted: action_default_fallback
+  - intent: despedir
+  - action: utter_despedir

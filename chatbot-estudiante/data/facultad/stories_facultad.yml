@@ -3,17 +3,19 @@ version: "2.0"
 stories:
 - story: camino inicial rendir examen feliz
   steps:
-  - intent: modo_feliz
-  - action: utter_preguntar_que_paso
+  - intent: saludar
+  - action: utter_saludar
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  #- checkpoint: checkpoint_inicio_conv
   - intent: contar_examen_aprobado
   - action: utter_felicitar_examen
   - intent: agradecer
-  - action: utter_inicio_conversacion
+  - action: utter_cambio_tema
   
 - story: camino inicial rendir examen triste
   steps:
-  - intent: modo_triste
-  - action: utter_preguntar_que_paso
+  - checkpoint: checkpoint_inicio_conv
   - intent: contar_examen_desaprobado
   - action: utter_consolar
   - intent: volver_a_intentarlo
