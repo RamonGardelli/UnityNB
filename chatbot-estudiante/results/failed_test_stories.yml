@@ -1,37 +1,94 @@
 version: "2.0"
 stories:
+- story: conversacion1 feliz (.\tests\test_basics.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - user: |-
+      todo bien?
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_preguntar_como_esta
+  - intent: modo_feliz
+  - action: utter_condescender_alegre  # predicted: action_default_fallback
+- story: conversacion2 feliz (.\tests\test_basics.yml)
+  steps:
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: action_listen  # predicted: utter_preguntar_como_esta
+  - intent: modo_feliz  # predicted: nlu_fallback: yo estoy bien por suerte
+  - action: utter_condescender_alegre  # predicted: action_default_fallback
+  - action: utter_inicio_conversacion  # predicted: action_listen
+- story: conversacion3 feliz apurado (.\tests\test_basics.yml)
+  steps:
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_inicio_conversacion  # predicted: utter_preguntar_como_esta
+  - intent: negar  # predicted: modo_triste: no amigo, en otro momento, estoy apurado
+  - action: utter_indiferente  # predicted: utter_preguntar_que_paso
+  - intent: despedir
+  - action: utter_despedir
 - story: camino inicial rendir examen triste 1 (.\tests\test_facultad.yml)
   steps:
   - intent: saludar
   - action: utter_saludar
-  - action: action_listen  # predicted: utter_preguntar_como_está
   - intent: modo_triste
-  - action: utter_preguntar_que_paso  # predicted: action_unlikely_intent
-  - action: action_listen  # predicted: action_default_fallback
-  - intent: contar_examen_desaprobado
-  - action: utter_consolar  # predicted: action_unlikely_intent
+  - action: utter_preguntar_que_paso
+  - intent: contar_examen_desaprobado  # predicted: contar_examen_aprobado: no me fui muy bien en el examen de hoy
+  - action: utter_consolar
   - action: utter_ofrecer_ayuda  # predicted: action_listen
   - intent: agradecer
-  - action: utter_levantar_animo  # predicted: utter_cambio_tema after action_unlikely_intent
+  - action: utter_levantar_animo  # predicted: utter_indiferente
   - action: utter_insistir  # predicted: action_listen
   - intent: saber_como_estoy
-  - action: utter_inicio_conversacion  # predicted: action_default_fallback after action_unlikely_intent
+  - action: utter_inicio_conversacion  # predicted: utter_responder_feliz
   - intent: despedir
   - action: utter_despedir
 - story: camino inicial rendir examen triste 2 (.\tests\test_facultad.yml)
   steps:
   - intent: saludar  # predicted: saber_como_estoy: que onda compa
   - action: utter_saludar
-  - action: action_listen  # predicted: utter_preguntar_como_está
   - intent: modo_triste
-  - action: utter_preguntar_que_paso  # predicted: action_unlikely_intent
-  - action: action_listen  # predicted: action_default_fallback
+  - action: utter_preguntar_que_paso
   - intent: contar_examen_desaprobado
-  - action: utter_consolar  # predicted: action_unlikely_intent
+  - action: utter_consolar
   - action: utter_levantar_animo  # predicted: action_listen
-  - intent: negar  # predicted: modo_triste: no seas tan positivo
-  - action: utter_ofrecer_ayuda  # predicted: action_default_fallback
-  - intent: afirmar  # predicted: saludar: si bueno
-  - action: utter_levantar_animo  # predicted: action_default_fallback
+  - intent: negar
+  - action: utter_ofrecer_ayuda  # predicted: utter_preguntar_que_paso
+  - intent: agradecer
+  - action: utter_levantar_animo  # predicted: utter_indiferente
   - intent: despedir
   - action: utter_despedir
+- story: camino inicial rendir examen feliz 1 (.\tests\test_facultad.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_que_paso  # predicted: action_listen
+  - user: |-
+      APROBEEE furioso
+  - intent: contar_examen_aprobado
+  - action: utter_felicitar_examen
+  - user: |-
+      que felicidad, cada vez menos para el titulooo
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: modo_feliz
+  - action: utter_felicitar_examen  # predicted: action_default_fallback
+  - user: |-
+      te la debo amigo, gracias por la ayuda
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: agradecer
+  - action: utter_felicitar_examen  # predicted: utter_indiferente
+  - intent: despedir
+  - action: utter_despedir
+- story: camino inicial rendir examen feliz 2 (.\tests\test_facultad.yml)
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: action_listen  # predicted: utter_preguntar_como_esta
+  - user: |-
+      aprobé el examen
+  - action: action_listen  # predicted: utter_preguntar_como_esta
+  - intent: contar_examen_aprobado
+  - action: utter_felicitar_examen

@@ -4,44 +4,36 @@ nlu:
 - intent: saludar
   examples: |
     - hola
-    - hola ran
-    - hola amigo
-    - hola que tal
     - que tal
     - buenas tardes
-    - hola buenas tardes
-    - hola que onda
-    - que onda
-    - hola buen día
     - buen día
-    - hola buenas noches
     - buenas noches
-    - hola como va
     - holanda
-    - amigo que onda
-    - tanto tiempo
     - querido amigo
     - que hay de nuevo viejo
-    - que haces
     - que tal bro
     - que onda bro
-    - que talco
 
 - intent: saber_como_estoy
   examples: |
+    - estás bien?
     - que onda?
     - que onda compañero como estás?
     - como estás?
-    - todo bien y vos?
     - ey como va amiguito?
     - como te está yendo?
-    - que se cuenta?
     - que es de tu vida?
-    - en que andas?
-    - vos que onda?
     - todo bien?
     - todo en orden?
-    - que andas haciendo?
+    - como te sentís?
+
+- intent: que_estoy_haciendo
+  examples: |
+    - que estás haciendo?
+    - que hacés?
+    - en qué andás?
+    - que te tiene tan ocupado?
+    - contame como va tu vida
 
 - intent: despedir
   examples: |
@@ -49,39 +41,33 @@ nlu:
     - saludos
     - chau
     - nos vemos
-    - nos estamos viendo
     - nos hablamos
-    - después te veo
     - que tengas un lindo día
     - te veo más tarde
     - hasta pronto
     - me despido
     - me tengo que ir bro
     - me llama la bruja
-    - dale, abrazo grande
-    - dale, me voy así no llego tarde a la otra clase
+    - te mando un abrazo grande
+    - me voy así no llego tarde a la otra clase
 
 - intent: afirmar
   examples: |
     - dale
     - si
+    - claro
     - exacto
     - totalmente
     - por supuesto
     - eso suena bien
     - correcto
-    - así es
     - coincido con lo que me decís
     - concuerdo
     - absolutamente cierto
     - es verdad
     - afirmativo
-    - tal cual decís
-    - acertado
-    - si claro
     - claramente
     - sin duda alguna
-    - siempre feliz vos, que raro jaja
 
 - intent: negar
   examples: |
@@ -93,19 +79,17 @@ nlu:
     - de ninguna forma
     - no es en serio
     - no es así
-    - desacertado
     - ni ahí
     - para nada
     - no es cierto
     - jamás
     - nunca
     - claro que no
-    - nonono
-    - no no
-    - no amigo, en otro momento, estoy apurado
 
 - intent: modo_feliz
   examples: |
+    - bien
+    - estoy bien
     - todo bien
     - perfecto
     - joya
@@ -113,18 +97,13 @@ nlu:
     - como un rey
     - maravilloso
     - me siento muy bien
-    - estoy fascinado
     - estoy asombrado
-    - voy a salvar el mundo
     - demasiado bien
-    - extremadamente bien
-    - muy muy bien
+    - muy bien
     - tan bien
-    - tan perfecto
     - estupendo
     - genial
-    - te quedó bárbaro
-    - es una locura
+    - que felicidad siento
 
 - intent: modo_triste
   examples: |
@@ -132,7 +111,6 @@ nlu:
     - estoy triste
     - no me siento muy bien
     - estoy decepcionado
-    - muy triste
     - me siento tan triste
     - triste
     - me siento solo
@@ -141,7 +119,6 @@ nlu:
     - no estoy bien
     - extremadamente mal
     - muy mal
-    - tan triste
     - son dias, un bajón anímico pero ya se me va a pasar
 
 - intent: agradecer
@@ -150,17 +127,15 @@ nlu:
     - te agradezco
     - jaja de una
     - gracias por el apoyo
-    - sé que me tenías fe, gracias
     - no tengo más palabras de agradecimiento que ofrecerte
     - gracias bro
 
 - intent: bot_challenge
   examples: |
     - sos un bot?
-    - sos un human?
     - sos un ser humano?
-    - estoy hablando con un bot?
+    - que sos?
+    - quien sos?
     - estoy hablando con un chatbot?
     - estoy hablando con un humano?
-    - eres un bot?
     - eres un ser humano?

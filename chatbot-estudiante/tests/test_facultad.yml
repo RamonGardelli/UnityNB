@@ -53,11 +53,36 @@ stories:
     intent: negar
   - action: utter_ofrecer_ayuda
   - user: |
-      si bueno
-    intent: afirmar
+      si bueno. gracias
+    intent: agradecer
   - action: utter_levantar_animo
   - user: |
       chau
+    intent: despedir
+  - action: utter_despedir
+
+
+- story: camino inicial rendir examen feliz 1
+  steps:
+  - user: |
+      holandaaaa
+    intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_que_paso
+  - user: |
+      APROBEEE furioso
+  - intent: contar_examen_aprobado
+  - action: utter_felicitar_examen
+  - user: |
+      que felicidad, cada vez menos para el titulooo
+  - intent: modo_feliz
+  - action: utter_felicitar_examen
+  - user: |
+      te la debo amigo, gracias por la ayuda
+  - intent: agradecer
+  - action: utter_felicitar_examen
+  - user: |
+      adioss, juega boke en momentos
     intent: despedir
   - action: utter_despedir
 

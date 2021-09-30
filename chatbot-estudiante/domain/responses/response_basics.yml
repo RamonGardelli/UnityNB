@@ -4,33 +4,35 @@ responses:
 
   utter_saludar:
   - text: "Hola {nombre_usuario}!"
-  - text: "Buenas tardes"
 
   utter_responder_feliz:
-  - text: "Muy bien, sentado acá en la plazita de siempre"
+  - text: "Muy bien"
+  - text: "Contento"
+
+  utter_que_estoy_haciendo:
+  - text: "Sentado acá en la plazita de siempre"
   - text: "Recién salgo de cursar"
-  - text: "Disfrutando el inicio de la primavera, así que ree bien"
-  - text: "Bien, viste que jugó garcia lorca de titular jaja"
+  - text: "Disfrutando el inicio de la primavera"
   - text: "Hace un momento vengo de hacer unos trámites y me senté a descansar"
 
-  utter_preguntar_como_está:
-  - text: "Como va amiguito?"
+  utter_comentario_inicial_calor:
+  - text: "Jugó garcia lorca de titular"
+  - text: "Que calor que hace!"
+
+  utter_preguntar_como_esta:
+  - text: "Como estás amigo?"
   - text: "Que onda?"
 
   utter_preguntar_que_paso:
   - text: "Que pasó amigo?"
   - text: "Que anda pasando {nombre_usuario}, contame"
-  - text: "Cuales son las noticias?"
 
   utter_inicio_conversacion:
   - text: "Contate algo"
-  - text: "Algun chusmerio nuevo?"
 
   utter_cambio_tema:
   - text: "Cambiemos de tema"
-  - text: "Alguna otra novedad"
-  - text: "Que mas me podes contar"
-  - text: "Tenes tiempo para otro tema?"
+  - text: "Alguna otra novedad?"
 
   utter_afirmar:
   - text: "Se"
@@ -40,26 +42,29 @@ responses:
   utter_insistir:
   - text: "Quedate un rato a charlar"
   - text: "Tenés un momento? Hablemos"
-  - text: "Me quedo unos minutos y te acompaño"
 
   utter_indiferente:
   - text: "No te preocupes"
   - text: "No pasa nada amigo"
-  - text: "Dale no hay drama"
-  - text: "Ningún problema"
+
+  utter_condescender:
+  - text: "Así es"
+  - text: "Viste jaja"
+
+  utter_condescender_alegre:
+  - text: "Me pongo contento entonces"
+  - text: "Me alegro amigo"
 
   utter_despedir:
   - text: "{nombre_usuario}, nos estamos viendo"
   - text: "Abrazo grande"
-  - text: "Un gusto verte {nombre_usuario}"
   - text: "Nos vemos amigo"
-  - text: "Dale, que te vaya bien! Adios"
 
   utter_levantar_animo:
-  - text: "Miralo con otros ojos"
   - text: "Arriba el animo bro"
   - text: "La vida no es color de rosas siempre que no uses los lentes adecuados"
   - text: "Las cosas van a mejorar"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa"
+  # Respuesta de que soy un compañero de la facultad ;)

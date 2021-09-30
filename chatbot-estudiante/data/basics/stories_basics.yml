@@ -1,46 +1,93 @@
 version: "2.0"
 
 stories:
+- story: camino1 feliz
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_preguntar_como_esta
+  - intent: modo_feliz
+  - action: utter_condescender_alegre
+
+- story: camino2 feliz
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_como_esta
+  - or:
+    - intent: modo_feliz
+    - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_inicio_conversacion
+
+- story: camino3 feliz
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_como_esta
+  - intent: modo_feliz
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_comentario_inicial_calor
+  - or:
+    - intent: afirmar
+    - intent: modo_feliz
+  - action: utter_inicio_conversacion
+
+- story: camino4 feliz apurado
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_como_esta
+  - intent: modo_feliz
+  - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_inicio_conversacion
+  - or:
+    - intent: despedir
+    - intent: negar
+  - action: utter_despedir
+
+- story: camino5 feliz insistir
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_como_esta
+  - or:
+    - intent: modo_feliz
+    - intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - action: utter_insistir
+  - intent: afirmar
+  - action: utter_inicio_conversacion
+
+- story: camino1 triste
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - action: utter_preguntar_como_esta
+  - intent: modo_triste
+  - action: utter_preguntar_que_paso
+  - action: utter_levantar_animo
+  - intent: agradecer
+  - action: utter_indiferente
+
 - story: camino2 triste
   steps:
   - intent: saludar
   - action: utter_saludar
   - intent: saber_como_estoy
   - action: utter_responder_feliz
-  - action: utter_preguntar_como_está
+  - action: utter_preguntar_como_esta
   - intent: modo_triste
   - action: utter_levantar_animo
-  - checkpoint: checkpoint_inicio_conv
 
-- story: camino1 triste
+- story: camino3 triste
   steps:
   - intent: saludar
   - action: utter_saludar
-  - action: utter_preguntar_como_está
+  - action: utter_preguntar_como_esta
   - intent: modo_triste
   - action: utter_preguntar_que_paso
-  - action: utter_levantar_animo
-  - intent: despedir
-  - action: utter_despedir
-
-
-- story: camino1
-  steps:
-  - intent: saludar
-  - action: utter_saludar
-  - intent: saber_como_estoy
-  - action: utter_responder_feliz
-  - action: utter_preguntar_como_está
-  - checkpoint: checkpoint_inicio_conv
-
-- story: camino2 feliz
-  steps:
-  - intent: saludar
-  - action: utter_saludar
-  - intent: saber_como_estoy
-  - action: utter_responder_feliz
-  - action: utter_preguntar_como_está
-  - intent: modo_feliz
-  - action: utter_inicio_conversacion
-  - checkpoint: checkpoint_inicio_conv
-

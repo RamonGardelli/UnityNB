@@ -3,6 +3,7 @@ version: "2.0"
 intents:
   - saludar
   - saber_como_estoy
+  - que_estoy_haciendo
   - despedir
   - afirmar
   - negar
