@@ -4,19 +4,18 @@ nlu:
 
 - intent: contar_examen_desaprobado
   examples: |
-    - me fue mal en un examen
-    - me rompieron el orto
-    - fue muy dificil
-    - tomaron cosas que no dieron
-    - no estudie nada
-    - no me presente
-    - me agarraron machetiandome
-    - las cuentas no me daban
-    - desaprobé el examen que rendí
-    - no me fue como esperaba en el examen
-    - me saqué un 2
-    - acabo de sumar otro desaprobado a la historia académica
-    - firmé el ausente y me fui
+    - me fue mal en un [examen]("examen")
+    - fue muy dificil el [final]("examen")
+    - tomaron cosas en el [parcial]("examen") que no dieron 
+    - no estudie nada para el [oral]("examen")
+    - me pusieron un [1]("nota_examen_desaprobado") en el [parcial]("examen")
+    - no me presenté al [final]("examen")
+    - las cuentas no me daban en un punto del [final]("examen")
+    - desaprobé el [parcial]("examen") que rendí
+    - no me fue como esperaba en el [examen]("examen")
+    - me saqué un [2]("nota_examen_desaprobado") en el [recuperatorio]("examen")
+    - firmé el ausente y me fui del [final]("examen")
+    - me clavaron un [0]("nota_examen_desaprobado") por machetearme
 
 - intent: volver_a_intentarlo
   examples: |
@@ -26,19 +25,17 @@ nlu:
     - más adelante se vuelve a dar
     - y si nos hacemos cartoneros? seguro nos va mejor
     - tenes razon, tengo que dedicarle mas tiempo aunque no me guste la materia
-    - siempre tan optimista vos
-    - ya te va a tocar a vos gato
 
 - intent: contar_examen_aprobado
   examples: |
-    - me fue bien en el examen
-    - aprobé el examen!
-    - me saqué un 4
-    - pude aprobar el examen que rendí
+    - me fue bien en el [examen]("examen")
+    - aprobé el [final]("examen")!
+    - me saqué un [4]("nota_examen_aprobado")
+    - pude aprobar el [parcial]("examen") que rendí con [6]("nota_examen_aprobado")
     - aprobé!
-    - promocioné
-    - logré aprobar bien
-    - pasé el examen satisfactoriamente
+    - aprobé el [oral]("examen") con [9]("nota_examen_aprobado")
+    - logré aprobar bien con [7]("nota_examen_aprobado")
+    - pasé el [prefinal]("examen") con lo justo, [4]("nota_examen_aprobado")
 
 - synonym: diseño
   examples: |
@@ -77,3 +74,30 @@ nlu:
 - synonym: 5to
   examples: |
     - quinto
+
+- synonym: examen
+  examples: | 
+    - parcial
+    - recuperatorio
+    - prefinal
+    - final
+    - evaluación
+    - oral
+    - parcialito
+
+- synonym: nota_examen_desaprobado
+  examples: |
+    - 0
+    - 1
+    - 2
+    - 3
+
+- synonym: nota_examen_aprobado
+  examples: |
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10

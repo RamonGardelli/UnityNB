@@ -12,5 +12,8 @@ stories:
   steps:
   - intent: contar_examen_desaprobado
   - action: utter_consolar
-  - intent: volver_a_intentarlo
+  - or:
+    - intent: agradecer
+    - intent: volver_a_intentarlo
   - action: utter_ofrecer_ayuda
+

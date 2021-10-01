@@ -4,21 +4,18 @@ responses:
   utter_consolar:
     - text: "No te preocupes! Aún hay tiempo de remontar la ola"
     - text: "La próxima será, siempre se puede volver a intentar"
-    - text: "Mas se perdio en la guerra"
     - text: "Sabes, la experiencia no es mas que la suba de los fracasos"
-    - text: "tranca palanca, es cuestion de seguir intentando"
   
   utter_ofrecer_ayuda:
-    - text: "Si necesitas ayuda tengo algunos contactos"
-    - text: "Chiflame si te hace falta una mano"
+    - text: "Si necesitas ayuda chiflame"
     - text: "Es cuestion de dedicarle mas horas al estudio y menos a la joda"
     - text: "Hay que ponerse las pilas"
-    - text: "Puedo darte una mano el proximo finde"
-    - text: "No estudies de apuntes de otros"
   
   utter_felicitar_examen:
     - text: "Te felicito!"
     - text: "IDOLO!"
-    - text: "Nunca dudé de vos"
     - text: "Me dicen por cucaracha que vayas a alumnos a retirar el titulo"
-    - text: "Este finde se festeja duro"
+
+  utter_que_rendiste:
+    - text: "Que rendiste?"
+    - text: "Que examen diste?"

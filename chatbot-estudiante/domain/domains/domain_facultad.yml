@@ -6,20 +6,11 @@ intents:
   - volver_a_intentarlo
 
 entities:
-  - que_examen_rindio
+  - examen
   - nota_examen
-  - año_cursante
   - ultima_cursada
 
 slots:
-  año_cursante:
-    type: categorical
-    values:
-      - 1ro
-      - 2do
-      - 3ro
-      - 4to
-      - 5to
 
   viene_de_la_facultad:
     type: bool
@@ -33,9 +24,6 @@ slots:
 
   rindio_final:
     type: bool
-  
-  que_examen_rindio:
-    type: text
 
   como_cree_fue_examen:
     type: categorical
@@ -44,11 +32,6 @@ slots:
       - mas o menos
       - mal
       - no sabe
-  
-  nota_examen:
-    type: float
-    min_value: 0.0
-    max_value: 10.0
 
   temario_diseño:
     type: list
@@ -60,6 +43,3 @@ slots:
       - mas o menos
       - mal
       - no sabe
-
-  esfuerzo:
-    type: bool
