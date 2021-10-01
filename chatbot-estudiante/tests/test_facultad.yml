@@ -44,23 +44,34 @@ stories:
     intent: modo_triste
   - action: utter_preguntar_que_paso
   - user: |
-      desaprobé
+      desaprobé el final de algoritmos
     intent: contar_examen_desaprobado
   - action: utter_consolar
-  - action: utter_levantar_animo
   - user: |
-      no seas tan positivo
-    intent: negar
-  - action: utter_ofrecer_ayuda
-  - user: |
-      si bueno. gracias
+      gracias
     intent: agradecer
   - action: utter_levantar_animo
-  - user: |
-      chau
-    intent: despedir
-  - action: utter_despedir
+  - action: utter_cambio_tema
 
+- story: camino inicial rendir examen triste 3
+  steps:
+  - user: |
+      hola como te va
+    intent: saludar
+  - action: utter_saludar
+  - user: |
+      desaprobé el oral ese de mierda
+    intent: contar_examen_desaprobado
+  - action: action_preguntar_examen
+  - action: action_materia_examen
+  - user: |
+      analisis 2
+    intent: contar_que_rendi
+  - action: utter_consolar
+  - user: |
+      gracias amigo, sos el 1
+    intent: agradecer
+  - action: utter_cambio_tema
 
 - story: camino inicial rendir examen feliz 1
   steps:
@@ -100,3 +111,117 @@ stories:
       aprobé el examen
   - intent: contar_examen_aprobado
   - action: utter_felicitar_examen
+
+- story: camino inicial rendir examen feliz 3
+  steps:
+  - user: |
+      Buenas buenas
+    intent: saludar
+  - action: utter_saludar
+  - action: utter_donde_viene
+  - user: |
+      vengo de rendir ayda 
+  - intent: contar_que_rendi
+  - action: utter_como_le_fue
+  - user: |
+      tranka palanca
+  - intent: contar_como_fue
+  - action: utter_ofrecer_ayuda
+  - user: |
+      graciela
+  - intent: agradecer
+  - action: utter_respuesta_cursada
+  - user: |
+      diego
+    intent: contar_examen_aprobado_materia
+  - action: utter_felicitar_examen_con_nota
+  - user: |
+      soy grande pa
+    intent: agradecer
+  - action: utter_cambio_tema
+  - user: |
+      la bruja me tiene loco, me tengo que ir
+    intent: despedir
+  - action: utter_insistir
+  - user: |
+      me gustaria pero no puedo
+    intent: despedir
+  - action: utter_despedir
+
+- story: camino inicial rendir examen feliz 4
+  steps:
+  - user: |
+      buenas tardes
+    intent: saludar
+  - action: utter_saludar
+  - user: |
+      como estás?
+    intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - user: |
+      me saqué un 10
+  - intent: contar_examen_aprobado
+  - action: utter_felicitar_examen_con_nota
+  - action: action_materia_examen
+  - user: |
+      rendí programacion
+  - intent: contar_que_rendi
+  - action: utter_felicitar_examen
+
+- story: camino inicial rendir examen feliz 5
+  steps:
+  - user: |
+      holaaa
+    intent: saludar
+  - action: utter_saludar
+  - user: |
+      todo en orden?
+    intent: saber_como_estoy
+  - action: utter_responder_feliz
+  - user: |
+      aprobé diseño!
+  - intent: contar_examen_aprobado_materia
+  - action: utter_felicitar_examen
+  - action: action_preguntar_examen
+  - user: |
+      Marcelo me puso un 9
+  - intent: nota_que_me_saque
+  - action: utter_felicitar_examen_con_nota
+  - user: |
+      me voy
+  - intent: despedir
+  - action: utter_despedir
+
+- story: camino inicial rendir examen triste
+  steps:
+  - user: |
+      Buenas buenas
+    intent: saludar
+  - action: utter_saludar
+  - action: utter_donde_viene
+  - user: |
+      vengo de rendir ayda 
+  - intent: contar_que_rendi
+  - action: utter_como_le_fue
+  - user: |
+      una mierda
+  - intent: contar_examen_desaprobado
+  - action: utter_consolar
+  - action: utter_ofrecer_ayuda
+  - user: |
+      voy a poner una bomba en cualquier momento
+  - intent: psycho_killer
+  - action: utter_calmar
+  - user: |
+      no me calmo nada
+    intent: psycho_killer
+  - action: utter_calmar
+  - action: utter_levantar_animo
+  - user: |
+      y bue, gracias por el aliento
+    intent: modo_triste
+  - action: utter_cambio_tema
+  - user: |
+      nada nuevo, con ganas de unos mates
+    intent: despedir
+  - action: utter_despedir

@@ -18,7 +18,6 @@ nlu:
   examples: |
     - estás bien?
     - que onda?
-    - que onda compañero como estás?
     - como estás?
     - ey como va amiguito?
     - como te está yendo?
@@ -74,7 +73,6 @@ nlu:
     - no
     - negativo
     - no creo
-    - ni en sueños
     - no me gusta
     - de ninguna forma
     - no es en serio
@@ -139,3 +137,17 @@ nlu:
     - estoy hablando con un chatbot?
     - estoy hablando con un humano?
     - eres un ser humano?
+  
+- intent: psycho_killer 
+  examples: |
+    - Dios quiero matar a todos
+    - los voy a matar
+    - quiero ver sus cuerpos arder
+    - matar bien muerto
+    - quiero ver sangre
+    - como les clavaria un cuchillo
+    - meto cuchillo saco las tripas
+    - lo voy a hacer pedacitos
+    - papilla va a quedar
+    - lo veo y lo mato
+    - lo atropello

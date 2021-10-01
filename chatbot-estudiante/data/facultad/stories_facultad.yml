@@ -1,15 +1,104 @@
 version: "2.0"
 
 stories:
-- story: camino inicial rendir examen feliz
+- story: camino inicial rendir examen feliz 1
   steps:
   - intent: contar_examen_aprobado
+  - action: action_preguntar_examen
+  - intent: agradecer
+  - action: utter_condescender_alegre
+  - action: utter_cambio_tema
+
+- story: camino inicial rendir examen feliz 2
+  steps:
+  - intent: contar_examen_aprobado
+  - action: action_preguntar_examen
+  - intent: nota_que_me_saque
+  - action: utter_felicitar_examen_con_nota
+  - intent: agradecer
+  - action: utter_cambio_tema
+
+- story: camino inicial rendir examen feliz 3
+  steps:
+  - intent: contar_examen_aprobado
+  - action: action_preguntar_examen
+  - intent: nota_que_me_saque
+  - action: utter_felicitar_examen_con_nota
+  - action: action_materia_examen
+  - intent: contar_que_rendi
+  - action: utter_cambio_tema
+
+- story: camino inicial rendir examen feliz 4
+  steps:
+  - intent: contar_examen_aprobado
+  - action: action_preguntar_examen
+  - intent: nota_que_me_saque
+  - action: utter_felicitar_examen_con_nota
+  - intent: agradecer
+  - action: utter_cambio_tema
+
+- story: camino inicial rendir examen feliz 5
+  steps:
+  - intent: contar_examen_aprobado
+  - action: action_preguntar_examen
+  - intent: contar_que_rendi
   - action: utter_felicitar_examen
   - intent: agradecer
-  - action: utter_indiferente
+  - action: utter_condescender_alegre
 
 - story: camino inicial rendir examen triste
   steps:
+  - intent: contar_examen_desaprobado
+  - action: action_preguntar_examen
+  - or:
+    - intent: agradecer
+    - intent: volver_a_intentarlo
+  - action: utter_ofrecer_ayuda
+
+- story: camino inicial rendir examen triste 2
+  steps:
+  - intent: contar_examen_desaprobado
+  - action: action_preguntar_examen
+  - intent: contar_que_rendi
+  - action: utter_consolar
+  - or:
+    - intent: agradecer
+    - intent: volver_a_intentarlo
+  - action: utter_cambio_tema
+
+- story: camino preguntar de donde viene
+  steps:
+  - intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - intent: contar_como_fue
+  - action: utter_respuesta_cursada
+  - or:
+    - intent: contar_examen_aprobado_materia
+    - intent: nota_que_me_saque
+  - action: utter_felicitar_examen
+  - intent: agradecer
+
+- story: camino preguntar de donde viene 2
+  steps:
+    - intent: saludar
+    - action: utter_preguntar_como_esta
+    - action: utter_donde_viene
+    - intent: contar_de_donde_vengo
+    - action: utter_como_le_fue
+    - intent: contar_como_fue
+    - action: utter_respuesta_cursada2 
+    - or:
+      - intent: contar_examen_aprobado_materia
+      - intent: nota_que_me_saque
+    - action: utter_felicitar_examen
+    - intent: agradecer
+
+- story: camino preguntar de donde viene 3
+  steps:
+  - intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - intent: contar_como_fue
+  - action: utter_respuesta_cursada
   - intent: contar_examen_desaprobado
   - action: utter_consolar
   - or:
@@ -17,3 +106,37 @@ stories:
     - intent: volver_a_intentarlo
   - action: utter_ofrecer_ayuda
 
+- story: camino preguntar de donde viene 4
+  steps:
+    - intent: saludar
+    - action: utter_preguntar_como_esta
+    - action: utter_donde_viene
+    - intent: contar_de_donde_vengo
+    - action: utter_como_le_fue
+    - intent: contar_como_fue
+    - action: utter_respuesta_cursada2 
+    - action: utter_como_le_fue
+    - intent: utter_que_rendiste
+    - intent: contar_examen_desaprobado
+    - action: utter_consolar
+    - or:
+      - intent: agradecer
+      - intent: volver_a_intentarlo
+    - action: utter_ofrecer_ayuda
+
+- story: camino preguntar de donde viene 5
+  steps:
+    - intent: saludar
+    - action: utter_preguntar_como_esta
+    - action: utter_donde_viene
+    - intent: contar_de_donde_vengo
+    - action: utter_como_le_fue
+    - intent: contar_como_fue
+    - action: utter_respuesta_cursada
+    - action: utter_como_le_fue
+    - intent: utter_que_rendiste
+    - intent: contar_examen_desaprobado
+    - action: utter_consolar
+    - intent: psycho_killer
+    - action: utter_calmar
+    - action: utter_ofrecer_ayuda

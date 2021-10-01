@@ -11,6 +11,7 @@ intents:
   - modo_triste
   - agradecer
   - bot_challenge
+  - psycho_killer
 
 slots:
   # datos del usuario a extraer

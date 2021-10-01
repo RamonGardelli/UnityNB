@@ -16,10 +16,11 @@ nlu:
     - me saqué un [2]("nota_examen_desaprobado") en el [recuperatorio]("examen")
     - firmé el ausente y me fui del [final]("examen")
     - me clavaron un [0]("nota_examen_desaprobado") por machetearme
+    - el profesor de [diseño]("materia") no me quiere
 
 - intent: volver_a_intentarlo
   examples: |
-    - si, ya fue, pruebo el proximo año
+    - si, ya fue, pruebo la próxima fecha
     - que se le va a hacer, la siguiente
     - la tercera será la vencida
     - más adelante se vuelve a dar
@@ -32,19 +33,180 @@ nlu:
     - aprobé el [final]("examen")!
     - me saqué un [4]("nota_examen_aprobado")
     - pude aprobar el [parcial]("examen") que rendí con [6]("nota_examen_aprobado")
-    - aprobé!
     - aprobé el [oral]("examen") con [9]("nota_examen_aprobado")
     - logré aprobar bien con [7]("nota_examen_aprobado")
     - pasé el [prefinal]("examen") con lo justo, [4]("nota_examen_aprobado")
+    - aprobé
+    - pude aprobar
+    - safaroni en el [examen]("examen")
+    - aprobe raspando
+    - adentro el [examen]("examen")
+    - una menos
+
+- intent: contar_que_rendi
+  examples: |
+    - rendí [programacion]("materia")
+    - rendí el [final]("examen") de [algoritmos]("materia")
+    - di el [oral]("examen") de [metodologia]("materia")
+    - di el final [diseño]("materia") hace un rato
+    - vengo de rendir [diseño]("materia")
+
+- intent: nota_que_me_saque
+  examples: |
+    - me saqué un [4]("nota_examen_aprobado")
+    - clavé un [10]("nota_examen_aprobado")!
+    - me saqué un [1]("nota_examen_desaprobado") miserable
+    - me pusieron un [5]("nota_examen_aprobado")
+    - [6]("nota_examen_aprobado")
+
+- intent: contar_examen_aprobado_materia
+  examples: |
+    - me fue bien en [diseño]("materia")
+    - pude aprobar [diseño]("materia")
+    - safaroni en [diseño]("materia")
+    - aprobe raspando [diseño]("materia")
+    - adentro [diseño]("materia")
+    - me saque de encima [diseño]("materia")
+    - condena cumplida con [diseño]("materia")
+    - me olvido de [diseño]("materia")
+    - [diseño]("materia") la tiene adentro
+  
+- intent: contar_de_donde_vengo
+  examples: |
+    - sali de [exactas]("establecimiento") curse [diseño]("materia")
+    - sali de [exactas]("establecimiento") rendi [diseño]("materia")
+    - sali de [diseño]("materia")
+    - vengo de [exactas]("establecimiento") curse [diseño]("materia")
+    - vengo de [exactas]("establecimiento") rendi [diseño]("materia")
+    - vengo de [diseño]("materia")
+    - salgo de [exactas]("establecimiento") curse [diseño]("materia")
+    - salgo de [exactas]("establecimiento") rendi [diseño]("materia")
+    - termine con [diseño]("materia") por hoy
+    - [exactas]("establecimiento") sali de [diseño]("materia")
+    - rendi [diseño]("materia")
+    - salgo de rendir en [exactas]("establecimiento")
+
+- intent: contar_como_fue
+  examples: |
+    - bien yo que se
+    - bien
+    - maso
+    - un bodrio
+    - aburrido
+    - interesante
+    - meta mate y galletitas
+    - me dormi
+    - con paja
+
+- synonym: establecimiento
+  examples: |
+    - pab 1
+    - pab 2
+    - pab 3
+    - pab 4
+    - isistan
+    - pladema
+    - ifimat
+    - laboratorio
+    - exactas
+    - economicas
+    - vete
+    - veterinaria
+    - humanas
+    - biblio
+    - biblioteca
+    - comedor
+    - bienestar
+    - cancha
+
+- synonym: materia
+  examples: |
+    - diseño
+    - compiladores
+    - feypi
+    - programacion
+    - matematica
+    - quimica
+    - algebra
+    - ciencias
+    - fisica
+    - algoritmos
+    - electricidad
+    - ingles
+    - electronica digital
+    - electronica
+    - proba
+    - comu 1
+    - comu 2
+    - objetos
+    - estructuras
+    - metodologia
+    - arqui 1
+    - arqui 2
+    - arquitectura
+    - base de datos
+    - exploratoria
+    - lenguajes
+
+- synonym: matematica
+  examples: |
+    - matematica 1
+    - matematica 2
+    - analisis matematico 1
+    - analisis matematico 2
+    - analisis
+    - analisis 1
+    - analisis 2
+    - mat 1
+    - mat 2
+    - matematica discreta
+    - discreta
+
+- synonym: algebra
+  examples: |
+    - las viejas
+    - algebra 1
+    - algebra lineal
+    - lineal
+
+- synonym: ciencias
+  examples: |
+    - ciencias de la computacion 1
+    - ciencias de la computacion 2
+    - ciencias 1
+    - ciencias 2
+    - virginia
+    - rosa
+  
+- synonym: algoritmos
+  examples: |
+    - ayda 1
+    - ayda 2
+    - algoritmos 1
+    - algoritmos 2
+    - analisis y diseño de algoritmos
+    - analisis y diseño de algoritmos 1
+    - analisis y diseño de algoritmos 2
+
+- synonym: programacion
+  examples: |
+    - prog
+    - introduccion a la programacion 1
+    - introduccion a la programacion 2
+    - intro prog
+    - intro prog 1
+    - intro prog 2
 
 - synonym: diseño
   examples: |
-    - Diseño de Sistemas de Software
+    - Disenio de Sistemas de Software
     - DSS
+    - Campo
+    - el viejo
 
 - synonym: compiladores
   examples: |
-    - Diseño de Compiladores I
+    - Disenio de Compiladores I
     - compis
     - diseño de compiladores
 
@@ -74,6 +236,7 @@ nlu:
 - synonym: 5to
   examples: |
     - quinto
+    - quintana
 
 - synonym: examen
   examples: | 
@@ -88,16 +251,22 @@ nlu:
 - synonym: nota_examen_desaprobado
   examples: |
     - 0
+    - ausente
     - 1
+    - one
     - 2
+    - pato
     - 3
+    - tricota
 
 - synonym: nota_examen_aprobado
   examples: |
     - 4
+    - cuatrobich
     - 5
     - 6
     - 7
     - 8
     - 9
     - 10
+    - diego

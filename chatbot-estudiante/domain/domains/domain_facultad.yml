@@ -3,14 +3,23 @@ version: "2.0"
 intents:
   - contar_examen_desaprobado
   - contar_examen_aprobado
+  - contar_examen_aprobado_materia
   - volver_a_intentarlo
+  - contar_que_rendi
+  - nota_que_me_saque
+  - contar_de_donde_vengo
+  - contar_como_fue
 
 entities:
   - examen
-  - nota_examen
+  - nota_examen_aprobado
+  - nota_examen_desaprobado
   - ultima_cursada
 
 slots:
+
+  nota:
+    type: text
 
   viene_de_la_facultad:
     type: bool
@@ -18,7 +27,7 @@ slots:
   ultima_cursada:
     type: categorical
     values:
-      - diseño
+      - disenio
       - compiladores
       - feypi
 

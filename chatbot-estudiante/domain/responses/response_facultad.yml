@@ -1,5 +1,9 @@
 version: "2.0"
 
+actions:
+  - action_preguntar_examen
+  - action_materia_examen
+  
 responses:
   utter_consolar:
     - text: "No te preocupes! Aún hay tiempo de remontar la ola"
@@ -10,12 +14,48 @@ responses:
     - text: "Si necesitas ayuda chiflame"
     - text: "Es cuestion de dedicarle mas horas al estudio y menos a la joda"
     - text: "Hay que ponerse las pilas"
+    - text: "Mas horas culo silla bro"
   
   utter_felicitar_examen:
     - text: "Te felicito!"
     - text: "IDOLO!"
+    - text: "CHAMPION"
+    - text: "VAMOOO"
     - text: "Me dicen por cucaracha que vayas a alumnos a retirar el titulo"
+
+  utter_felicitar_examen_con_nota:
+    - text: "Felicidades por el {nota_examen_aprobado}"
 
   utter_que_rendiste:
     - text: "Que rendiste?"
     - text: "Que examen diste?"
+    - text: "Cual diste?"
+
+  utter_cuanto_te_sacaste:
+    - text: "Que nota te sacaste?"
+    - text: "Cuanto te sacaste?"
+    - text: "Con cuanto genio?"
+
+  utter_donde_viene:
+    - text: "De donde venis?"
+    - text: "Por donde andabas?"
+    - text: "De donde saliste?"
+    - text: "De que tortura salis?"
+  
+  utter_como_le_fue:
+    -  text: "Como fue eso?"
+    -  text: "Y como estuvo?"
+    -  text: "Aspero?"
+    -  text: "Que onda con eso?"
+    -  text: "Y eso?"
+
+  utter_respuesta_cursada:
+    - text: "Y alguna novedad?" 
+    - text: "Como te fue en el ultimo examen?" 
+    - text: "Que onda con el TP?" 
+
+  utter_respuesta_cursada2:
+    - text: "Te noto cansado" 
+    - text: "Parece que te volaron el cerebro" 
+    - text: "Muy duro fue?" 
+ 

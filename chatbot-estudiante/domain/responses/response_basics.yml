@@ -31,8 +31,9 @@ responses:
   - text: "Contate algo"
 
   utter_cambio_tema:
-  - text: "Cambiemos de tema"
+  - text: "Que mas tenes para contar?"
   - text: "Alguna otra novedad?"
+  - text: "Contate otra"
 
   utter_afirmar:
   - text: "Se"
@@ -65,6 +66,11 @@ responses:
   - text: "La vida no es color de rosas siempre que no uses los lentes adecuados"
   - text: "Las cosas van a mejorar"
 
+  utter_calmar:
+  - text: "Calma bro"
+  - text: "Che, tranki, respira hondo"
+  - text: "Las cosas van a mejorar"
+
   utter_iamabot:
   - text: "I am a bot, powered by Rasa"
-  # Respuesta de que soy un compañero de la facultad ;)
+  # Respuesta de que soy un estudiante de la facultad ;)

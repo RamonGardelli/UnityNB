@@ -3,179 +3,227 @@
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 5
+    "support": 15
   },
   "despedir": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 6
   },
   "utter_saludar": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6
-  },
-  "bot_challenge": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
+    "support": 9
   },
   "utter_responder_feliz": {
-    "precision": 0.8333333333333334,
-    "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 5
-  },
-  "utter_insistir": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1
-  },
-  "saber_como_estoy": {
-    "precision": 0.8571428571428571,
-    "recall": 1.0,
-    "f1-score": 0.923076923076923,
-    "support": 6
-  },
-  "utter_ofrecer_ayuda": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
-  },
-  "saludar": {
-    "precision": 1.0,
-    "recall": 0.8333333333333334,
-    "f1-score": 0.9090909090909091,
-    "support": 6
-  },
-  "action_listen": {
-    "precision": 0.868421052631579,
-    "recall": 0.868421052631579,
-    "f1-score": 0.868421052631579,
-    "support": 38
-  },
-  "utter_inicio_conversacion": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 3
-  },
-  "utter_felicitar_examen": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 4
-  },
-  "contar_examen_aprobado": {
-    "precision": 0.4,
-    "recall": 1.0,
-    "f1-score": 0.5714285714285715,
-    "support": 2
-  },
-  "utter_preguntar_como_esta": {
-    "precision": 0.3333333333333333,
-    "recall": 1.0,
-    "f1-score": 0.5,
-    "support": 2
-  },
-  "utter_despedir": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5
-  },
-  "utter_consolar": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "negar": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 2
-  },
-  "modo_triste": {
     "precision": 0.75,
     "recall": 1.0,
     "f1-score": 0.8571428571428571,
     "support": 3
   },
-  "utter_iamabot": {
-    "precision": 1.0,
+  "saber_como_estoy": {
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1-score": 0.75,
+    "support": 4
+  },
+  "nota_que_me_saque": {
+    "precision": 0.3333333333333333,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.5,
     "support": 1
   },
-  "utter_condescender_alegre": {
+  "utter_preguntar_que_paso": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 3
+  },
+  "action_preguntar_examen": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 2
   },
-  "modo_feliz": {
-    "precision": 0.5,
-    "recall": 0.6666666666666666,
-    "f1-score": 0.5714285714285715,
-    "support": 3
-  },
-  "utter_levantar_animo": {
-    "precision": 1.0,
+  "utter_consolar": {
+    "precision": 0.3333333333333333,
     "recall": 0.25,
-    "f1-score": 0.4,
+    "f1-score": 0.28571428571428575,
     "support": 4
   },
   "contar_examen_desaprobado": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1-score": 0.8571428571428571,
+    "support": 4
+  },
+  "utter_inicio_conversacion": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "utter_levantar_animo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "action_materia_examen": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2
+  },
+  "modo_feliz": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_calmar": {
     "precision": 1.0,
     "recall": 0.5,
     "f1-score": 0.6666666666666666,
     "support": 2
   },
   "agradecer": {
-    "precision": 0.75,
-    "recall": 1.0,
-    "f1-score": 0.8571428571428571,
-    "support": 3
+    "precision": 0.625,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.7142857142857143,
+    "support": 6
   },
-  "utter_preguntar_que_paso": {
-    "precision": 0.5,
+  "modo_triste": {
+    "precision": 1.0,
     "recall": 0.6666666666666666,
-    "f1-score": 0.5714285714285715,
+    "f1-score": 0.8,
     "support": 3
   },
-  "utter_indiferente": {
+  "saludar": {
+    "precision": 0.8,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.8421052631578948,
+    "support": 9
+  },
+  "utter_respuesta_cursada": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 1
   },
+  "utter_felicitar_examen": {
+    "precision": 0.6666666666666666,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4444444444444444,
+    "support": 6
+  },
+  "contar_como_fue": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_cambio_tema": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_despedir": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5
+  },
+  "contar_examen_aprobado_materia": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2
+  },
+  "utter_insistir": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "contar_examen_aprobado": {
+    "precision": 0.6,
+    "recall": 1.0,
+    "f1-score": 0.7499999999999999,
+    "support": 3
+  },
+  "None": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 11
+  },
+  "utter_donde_viene": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "utter_como_le_fue": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "utter_ofrecer_ayuda": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "contar_que_rendi": {
+    "precision": 0.42857142857142855,
+    "recall": 0.75,
+    "f1-score": 0.5454545454545454,
+    "support": 4
+  },
+  "utter_felicitar_examen_con_nota": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 3
+  },
+  "action_listen": {
+    "precision": 0.8301886792452831,
+    "recall": 0.7213114754098361,
+    "f1-score": 0.7719298245614035,
+    "support": 61
+  },
+  "psycho_killer": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2
+  },
   "micro avg": {
-    "precision": 0.7927927927927928,
-    "recall": 0.7521367521367521,
-    "f1-score": 0.7719298245614036,
-    "support": 117
+    "precision": 0.6907894736842105,
+    "recall": 0.5526315789473685,
+    "f1-score": 0.6140350877192983,
+    "support": 190
   },
   "macro avg": {
-    "precision": 0.6458550221708117,
-    "recall": 0.6455802968960864,
-    "f1-score": 0.613009662402375,
-    "support": 117
+    "precision": 0.5083458855240209,
+    "recall": 0.4885353048323154,
+    "f1-score": 0.4762934519900464,
+    "support": 190
   },
   "weighted avg": {
-    "precision": 0.7630443630443631,
-    "recall": 0.7521367521367521,
-    "f1-score": 0.7366331674023981,
-    "support": 117
+    "precision": 0.5957322551662174,
+    "recall": 0.5526315789473685,
+    "f1-score": 0.5621360218728639,
+    "support": 190
   },
   "conversation_accuracy": {
-    "accuracy": 0.2222222222222222,
-    "correct": 2,
+    "accuracy": 0.0,
+    "correct": 0,
     "with_warnings": 0,
     "total": 9
   }
