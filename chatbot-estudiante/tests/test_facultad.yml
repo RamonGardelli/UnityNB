@@ -65,11 +65,11 @@ stories:
   - action: action_preguntar_examen
   - action: action_materia_examen
   - user: |
-      analisis 2
+      compiladores
     intent: contar_que_rendi
   - action: utter_consolar
   - user: |
-      gracias amigo, sos el 1
+      gracias amigo, sos el uno!
     intent: agradecer
   - action: utter_cambio_tema
 
@@ -81,7 +81,7 @@ stories:
   - action: utter_saludar
   - action: utter_preguntar_que_paso
   - user: |
-      APROBEEE furioso
+      APROBEEE furioso con un 8
   - intent: contar_examen_aprobado
   - action: utter_felicitar_examen
   - user: |
@@ -136,7 +136,7 @@ stories:
     intent: contar_examen_aprobado_materia
   - action: utter_felicitar_examen_con_nota
   - user: |
-      soy grande pa
+      gracias, soy grande pa ;)
     intent: agradecer
   - action: utter_cambio_tema
   - user: |
@@ -195,7 +195,7 @@ stories:
 - story: camino inicial rendir examen triste
   steps:
   - user: |
-      Buenas buenas
+      buenas buenas
     intent: saludar
   - action: utter_saludar
   - action: utter_donde_viene
@@ -218,10 +218,10 @@ stories:
   - action: utter_calmar
   - action: utter_levantar_animo
   - user: |
-      y bue, gracias por el aliento
+      y bue, gracias por el aliento, pero no sirve porque voy mal
     intent: modo_triste
   - action: utter_cambio_tema
   - user: |
-      nada nuevo, con ganas de unos mates
-    intent: despedir
-  - action: utter_despedir
+      vengo de diseño, estoy con ganas de unos mates
+    intent: contar_de_donde_vengo
+  - action: utter_condescender_alegre

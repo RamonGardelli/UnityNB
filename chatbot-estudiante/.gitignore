@@ -1,6 +1,6 @@
-# Testing files from: rasa test
+# Testing results files from: rasa test
 ./testing\ results
-./results
+./results/
 
 
 ## Ignore Visual Studio temporary files, build results, and

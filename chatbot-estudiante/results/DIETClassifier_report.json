@@ -1,4 +1,11 @@
 {
+  "\"nota_examen_aprobado\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
   "\"materia\"": {
     "precision": 1.0,
     "recall": 1.0,
@@ -6,11 +13,11 @@
     "support": 26,
     "confused_with": {}
   },
-  "\"nota_examen_aprobado\"": {
+  "\"nota_examen_desaprobado\"": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 9,
+    "support": 4,
     "confused_with": {}
   },
   "\"establecimiento\"": {
@@ -25,13 +32,6 @@
     "recall": 1.0,
     "f1-score": 0.975609756097561,
     "support": 20,
-    "confused_with": {}
-  },
-  "\"nota_examen_desaprobado\"": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
     "confused_with": {}
   },
   "micro avg": {

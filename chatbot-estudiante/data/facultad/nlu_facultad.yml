@@ -17,6 +17,7 @@ nlu:
     - firmé el ausente y me fui del [final]("examen")
     - me clavaron un [0]("nota_examen_desaprobado") por machetearme
     - el profesor de [diseño]("materia") no me quiere
+    - no me fui muy bien en el examen de hoy
 
 - intent: volver_a_intentarlo
   examples: |

@@ -131,3 +131,28 @@ Usuario: Así es amigo, si muero en el intento sabrás de mí jaja
 Bot: Dale que se llega al veranito
 Usuario: A pescar covid en la playa :)
 ## Fin conversación de la facultad bot-usuario
+
+
+## Anotaciones
+1. Ejemplos por extensión de NLU
+2. Valores de las entidades escritas mediante intención. Ejemplo:
+
+- intent: carrera
+  examples: |
+    - [ingenieria de sistemas](carrera)
+    - [ingenieria informatica](carrera)
+    - [robotica](carrera)
+    - [desarrollo de videojuegos](carrera)
+    - [diseño multimedial](carrera)
+
+- intent: genero
+  examples: |
+    - [hombre](ubicacion)
+    - [mujer](ubicacion)
+    - [otro](ubicacion)
+
+- intent: pedirCarrerasPorGenero
+  examples: |
+    - Soy [mujer](genero) que carreras me recomendas?
+    - Soy [hombre](genero) que carreras me recomendas?
+    - Soy [otro](genero) que carreras me recomendas?
