@@ -1,7 +1,9 @@
 version: "2.0"
 
 actions:
-  - action_preguntar_examen
+  - action_rindio_examen
+  - action_nota_examen_aprobado
+  - action_nota_examen_desaprobado
   - action_materia_examen
   
 responses:
@@ -9,16 +11,20 @@ responses:
     - text: "No te preocupes! Aún hay tiempo de remontar la ola"
     - text: "La próxima será, siempre se puede volver a intentar"
     - text: "Sabes, la experiencia no es mas que la suba de los fracasos"
-  
-  utter_ofrecer_ayuda:
-    - text: "Si necesitas ayuda chiflame"
     - text: "Es cuestion de dedicarle mas horas al estudio y menos a la joda"
     - text: "Hay que ponerse las pilas"
-    - text: "Mas horas culo silla bro"
+  
+  utter_jodida_materia:
+    - text: "Y... Es jodida {materia}"
+    - text: "Es difiícil rendir el {examen} de {materia}"
+  
+  utter_ofrecer_ayuda:
+    - text: "Si necesitas ayuda con {materia}, chiflame"
+    - text: "La próxima te ayudo para que apruebes \"{materia}\""
   
   utter_felicitar_examen:
-    - text: "Te felicito!"
-    - text: "IDOLO!"
+    - text: "Te felicito {nombre_usuario} por aprobar ese {examen}!"
+    - text: "IDOLO! Aprobaste ese {examen}"
     - text: "CHAMPION"
     - text: "VAMOOO"
     - text: "Me dicen por cucaracha que vayas a alumnos a retirar el titulo"
@@ -27,8 +33,8 @@ responses:
     - text: "Felicidades por el {nota_examen_aprobado}"
 
   utter_que_rendiste:
-    - text: "Que rendiste?"
-    - text: "Que examen diste?"
+    - text: "Que {examen} rendiste?"
+    - text: "Que {examen} diste?"
     - text: "Cual diste?"
 
   utter_cuanto_te_sacaste:
@@ -40,14 +46,10 @@ responses:
     - text: "De donde venis?"
     - text: "Por donde andabas?"
     - text: "De donde saliste?"
-    - text: "De que tortura salis?"
   
   utter_como_le_fue:
     -  text: "Como fue eso?"
     -  text: "Y como estuvo?"
-    -  text: "Aspero?"
-    -  text: "Que onda con eso?"
-    -  text: "Y eso?"
 
   utter_respuesta_cursada:
     - text: "Y alguna novedad?" 

@@ -1,23 +1,9 @@
 {
-  "\"examen\"": {
-    "precision": 0.9523809523809523,
-    "recall": 1.0,
-    "f1-score": 0.975609756097561,
-    "support": 20,
-    "confused_with": {}
-  },
-  "\"establecimiento\"": {
+  "\"nota_examen_aprobado\"": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "\"materia\"": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 26,
+    "support": 9,
     "confused_with": {}
   },
   "\"nota_examen_desaprobado\"": {
@@ -27,29 +13,43 @@
     "support": 4,
     "confused_with": {}
   },
-  "\"nota_examen_aprobado\"": {
-    "precision": 0.9,
+  "\"establecimiento\"": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9473684210526316,
-    "support": 9,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "\"examen\"": {
+    "precision": 0.9523809523809523,
+    "recall": 1.0,
+    "f1-score": 0.975609756097561,
+    "support": 20,
+    "confused_with": {}
+  },
+  "\"materia\"": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 26,
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.9710144927536232,
+    "precision": 0.9852941176470589,
     "recall": 1.0,
-    "f1-score": 0.9852941176470589,
+    "f1-score": 0.9925925925925926,
     "support": 67
   },
   "macro avg": {
-    "precision": 0.9704761904761906,
+    "precision": 0.9904761904761905,
     "recall": 1.0,
-    "f1-score": 0.9845956354300386,
+    "f1-score": 0.9951219512195122,
     "support": 67
   },
   "weighted avg": {
-    "precision": 0.9723525230987917,
+    "precision": 0.9857853589196873,
     "recall": 1.0,
-    "f1-score": 0.9856494165884314,
+    "f1-score": 0.9927193301783764,
     "support": 67
   }
 }

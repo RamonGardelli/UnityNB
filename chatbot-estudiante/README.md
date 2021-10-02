@@ -5,8 +5,8 @@ Este repositorio almacena un chatbot implementado con el framework RASA para un 
 # console
 rasa train --domain ./domain
 
-# Probar en consola
-rasa shell
+# Probar en consola bajo nivel
+rasa shell --debug
 
 # RASA Test para correr los tests stories (salida en results)
 rasa test

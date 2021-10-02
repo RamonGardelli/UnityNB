@@ -7,7 +7,7 @@ responses:
 
   utter_responder_feliz:
   - text: "Muy bien"
-  - text: "Contento"
+  - text: "Estoy contento"
 
   utter_que_estoy_haciendo:
   - text: "Sentado acá en la plazita de siempre"
@@ -20,8 +20,8 @@ responses:
   - text: "Que calor que hace!"
 
   utter_preguntar_como_esta:
-  - text: "Como estás amigo?"
-  - text: "Que onda?"
+  - text: "Como estás {nombre_usuario}?"
+  - text: "Que onda amigo?"
 
   utter_preguntar_que_paso:
   - text: "Que pasó amigo?"
@@ -59,7 +59,7 @@ responses:
   utter_despedir:
   - text: "{nombre_usuario}, nos estamos viendo"
   - text: "Abrazo grande"
-  - text: "Nos vemos amigo"
+  - text: "Nos vemos {nombre_usuario}"
 
   utter_levantar_animo:
   - text: "Arriba el animo bro"
@@ -67,10 +67,10 @@ responses:
   - text: "Las cosas van a mejorar"
 
   utter_calmar:
-  - text: "Calma bro"
+  - text: "Calma {nombre_usuario}"
   - text: "Che, tranki, respira hondo"
   - text: "Las cosas van a mejorar"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa"
+  - text: "Yo soy Fred, emperador de Rasa"
   # Respuesta de que soy un estudiante de la facultad ;)

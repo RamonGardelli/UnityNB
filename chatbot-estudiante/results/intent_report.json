@@ -1,23 +1,23 @@
 {
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "que_estoy_haciendo": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
   "volver_a_intentarlo": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 6,
-    "confused_with": {}
-  },
-  "afirmar": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 15,
-    "confused_with": {}
-  },
-  "modo_triste": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
     "confused_with": {}
   },
   "contar_de_donde_vengo": {
@@ -27,27 +27,11 @@
     "support": 12,
     "confused_with": {}
   },
-  "contar_como_fue": {
-    "precision": 1.0,
-    "recall": 0.8888888888888888,
-    "f1-score": 0.9411764705882353,
-    "support": 9,
-    "confused_with": {
-      "modo_feliz": 1
-    }
-  },
-  "psycho_killer": {
+  "contar_examen_desaprobado": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 12,
-    "confused_with": {}
-  },
-  "out_of_scope": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
+    "support": 14,
     "confused_with": {}
   },
   "nota_que_me_saque": {
@@ -57,25 +41,11 @@
     "support": 5,
     "confused_with": {}
   },
-  "bot_challenge": {
-    "precision": 1.0,
+  "saber_como_estoy": {
+    "precision": 0.9,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "contar_examen_aprobado_materia": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9473684210526316,
     "support": 9,
-    "confused_with": {}
-  },
-  "despedir": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
     "confused_with": {}
   },
   "agradecer": {
@@ -94,11 +64,11 @@
       "nota_que_me_saque": 1
     }
   },
-  "contar_examen_desaprobado": {
+  "negar": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 14,
+    "support": 13,
     "confused_with": {}
   },
   "saludar": {
@@ -108,28 +78,43 @@
     "support": 10,
     "confused_with": {}
   },
-  "que_estoy_haciendo": {
+  "modo_triste": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
+    "support": 13,
+    "confused_with": {}
+  },
+  "despedir": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 17,
+    "confused_with": {}
+  },
+  "contar_examen_aprobado_materia": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
     "confused_with": {}
   },
   "modo_feliz": {
-    "precision": 0.9375,
-    "recall": 0.9375,
-    "f1-score": 0.9375,
+    "precision": 1.0,
+    "recall": 0.875,
+    "f1-score": 0.9333333333333333,
     "support": 16,
     "confused_with": {
-      "saber_como_estoy": 1
+      "saber_como_estoy": 1,
+      "contar_como_fue": 1
     }
-  },
-  "saber_como_estoy": {
-    "precision": 0.9,
-    "recall": 1.0,
-    "f1-score": 0.9473684210526316,
-    "support": 9,
-    "confused_with": {}
   },
   "contar_que_rendi": {
     "precision": 1.0,
@@ -138,24 +123,38 @@
     "support": 5,
     "confused_with": {}
   },
-  "negar": {
+  "afirmar": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 13,
+    "support": 15,
     "confused_with": {}
   },
-  "accuracy": 0.9853658536585366,
+  "contar_como_fue": {
+    "precision": 0.9,
+    "recall": 1.0,
+    "f1-score": 0.9473684210526316,
+    "support": 9,
+    "confused_with": {}
+  },
+  "psycho_killer": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "accuracy": 0.9856459330143541,
   "macro avg": {
-    "precision": 0.9835416666666668,
-    "recall": 0.9874732905982906,
-    "f1-score": 0.9847567900365888,
-    "support": 205
+    "precision": 0.9816666666666667,
+    "recall": 0.9899038461538462,
+    "f1-score": 0.9848580542264752,
+    "support": 209
   },
   "weighted avg": {
-    "precision": 0.9866666666666667,
-    "recall": 0.9853658536585366,
-    "f1-score": 0.9854749198547432,
-    "support": 205
+    "precision": 0.9874003189792664,
+    "recall": 0.9856459330143541,
+    "f1-score": 0.9857005715681113,
+    "support": 209
   }
 }

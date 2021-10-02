@@ -1,10 +1,18 @@
 [
   {
+    "text": "bien",
+    "intent": "modo_feliz",
+    "intent_prediction": {
+      "name": "contar_como_fue",
+      "confidence": 0.5455034375190735
+    }
+  },
+  {
     "text": "todo bien",
     "intent": "modo_feliz",
     "intent_prediction": {
       "name": "saber_como_estoy",
-      "confidence": 0.5423930883407593
+      "confidence": 0.587209939956665
     }
   },
   {
@@ -12,15 +20,7 @@
     "intent": "contar_examen_aprobado",
     "intent_prediction": {
       "name": "nota_que_me_saque",
-      "confidence": 0.752812922000885
-    }
-  },
-  {
-    "text": "bien",
-    "intent": "contar_como_fue",
-    "intent_prediction": {
-      "name": "modo_feliz",
-      "confidence": 0.5094918608665466
+      "confidence": 0.7486796379089355
     }
   }
 ]

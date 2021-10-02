@@ -1,69 +1,89 @@
 version: "2.0"
 
 stories:
-- story: camino inicial rendir examen feliz 1
+- story: rendir examen + aprobado + materia + nota
   steps:
   - intent: contar_examen_aprobado
-  - action: action_preguntar_examen
+  - action: action_rindio_examen
+  - slot_was_set:
+    - materia
+    - nota
+  - action: action_nota_examen_aprobado
   - intent: agradecer
   - action: utter_condescender_alegre
-  - action: utter_cambio_tema
 
-- story: camino inicial rendir examen feliz 2
+- story: rendir examen + aprobado + nota
   steps:
-  - intent: contar_examen_aprobado
-  - action: action_preguntar_examen
-  - intent: nota_que_me_saque
-  - action: utter_felicitar_examen_con_nota
+  - or:
+    - intent: contar_examen_aprobado
+    - intent: nota_que_me_saque
+  - action: action_rindio_examen
+  - slot_was_set:
+    - nota
+  - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_cambio_tema
-
-- story: camino inicial rendir examen feliz 3
-  steps:
-  - intent: contar_examen_aprobado
-  - action: action_preguntar_examen
-  - intent: nota_que_me_saque
-  - action: utter_felicitar_examen_con_nota
+  - action: utter_condescender_alegre
   - action: action_materia_examen
   - intent: contar_que_rendi
+  - action: action_rindio_examen
+  - slot_was_set:
+    - materia
+  - action: action_materia_examen
   - action: utter_cambio_tema
 
-- story: camino inicial rendir examen feliz 4
+- story: rendir examen + aprobado + materia
   steps:
   - intent: contar_examen_aprobado
-  - action: action_preguntar_examen
+  - action: action_rindio_examen
+  - slot_was_set:
+    - materia
+  - action: action_nota_examen_aprobado
   - intent: nota_que_me_saque
-  - action: utter_felicitar_examen_con_nota
+  - action: action_rindio_examen
+  - action: action_nota_examen_aprobado
   - intent: agradecer
+  - action: utter_condescender_alegre
   - action: utter_cambio_tema
 
-- story: camino inicial rendir examen feliz 5
+- story: rendir examen + aprobado
   steps:
   - intent: contar_examen_aprobado
-  - action: action_preguntar_examen
-  - intent: contar_que_rendi
-  - action: utter_felicitar_examen
+  - action: action_rindio_examen
+  - action: action_nota_examen_aprobado
+  - intent: nota_que_me_saque
+  - action: action_rindio_examen
+  - action: action_nota_examen_aprobado
   - intent: agradecer
   - action: utter_condescender_alegre
 
-- story: camino inicial rendir examen triste
+- story: rendir examen + desaprobado + materia + nota
   steps:
   - intent: contar_examen_desaprobado
-  - action: action_preguntar_examen
+  - action: action_rindio_examen
+  - slot_was_set:
+    - materia
+    - nota
+  - action: action_materia_examen
   - or:
     - intent: agradecer
     - intent: volver_a_intentarlo
+    - intent: negar
   - action: utter_ofrecer_ayuda
 
-- story: camino inicial rendir examen triste 2
+- story: rendir examen + desaprobado
   steps:
   - intent: contar_examen_desaprobado
-  - action: action_preguntar_examen
+  - action: action_rindio_examen
+  - action: action_materia_examen
   - intent: contar_que_rendi
+  - action: action_rindio_examen
+  - slot_was_set:
+    - materia
   - action: utter_consolar
   - or:
     - intent: agradecer
     - intent: volver_a_intentarlo
+    - intent: negar
   - action: utter_cambio_tema
 
 - story: camino preguntar de donde viene

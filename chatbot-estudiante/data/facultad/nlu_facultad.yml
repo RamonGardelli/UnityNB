@@ -99,7 +99,17 @@ nlu:
     - me dormi
     - con paja
 
-- synonym: establecimiento
+- lookup: examen
+  examples: | 
+    - parcial
+    - recuperatorio
+    - prefinal
+    - final
+    - evaluación
+    - oral
+    - parcialito
+
+- lookup: establecimiento
   examples: |
     - pab 1
     - pab 2
@@ -120,7 +130,7 @@ nlu:
     - bienestar
     - cancha
 
-- synonym: materia
+- lookup: materia
   examples: |
     - diseño
     - compiladores
@@ -148,6 +158,32 @@ nlu:
     - base de datos
     - exploratoria
     - lenguajes
+
+- lookup: año_cursante
+  examples: |
+    - ingreso
+    - primero
+    - segundo
+    - tercero
+    - cuarto
+    - quinto
+
+- lookup: nota_examen_desaprobado
+  examples: |
+    - 0
+    - 1
+    - 2
+    - 3
+
+- lookup: nota_examen_aprobado
+  examples: |
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
 
 - synonym: matematica
   examples: |
@@ -200,14 +236,11 @@ nlu:
 
 - synonym: diseño
   examples: |
-    - Disenio de Sistemas de Software
-    - DSS
-    - Campo
-    - el viejo
+    - Diseño de Sistemas de Software
 
 - synonym: compiladores
   examples: |
-    - Disenio de Compiladores I
+    - Diseño de Compiladores I
     - compis
     - diseño de compiladores
 
@@ -238,36 +271,3 @@ nlu:
   examples: |
     - quinto
     - quintana
-
-- synonym: examen
-  examples: | 
-    - parcial
-    - recuperatorio
-    - prefinal
-    - final
-    - evaluación
-    - oral
-    - parcialito
-
-- synonym: nota_examen_desaprobado
-  examples: |
-    - 0
-    - ausente
-    - 1
-    - one
-    - 2
-    - pato
-    - 3
-    - tricota
-
-- synonym: nota_examen_aprobado
-  examples: |
-    - 4
-    - cuatrobich
-    - 5
-    - 6
-    - 7
-    - 8
-    - 9
-    - 10
-    - diego

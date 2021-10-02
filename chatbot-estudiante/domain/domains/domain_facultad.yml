@@ -12,43 +12,26 @@ intents:
 
 entities:
   - examen
+  - materia
   - nota_examen_aprobado
   - nota_examen_desaprobado
   - ultima_cursada
+  - establecimiento
+  - año_cursante
 
 slots:
 
   nota:
-    type: text
+    type: any
 
   viene_de_la_facultad:
     type: bool
   
   ultima_cursada:
-    type: categorical
-    values:
-      - disenio
-      - compiladores
-      - feypi
+    type: text
 
-  rindio_final:
+  rindio_examen:
     type: bool
-
-  como_cree_fue_examen:
-    type: categorical
-    values:
-      - bien
-      - mas o menos
-      - mal
-      - no sabe
 
   temario_diseño:
     type: list
-
-  como_cree_cursada:
-    type: categorical
-    values:
-      - bien
-      - mas o menos
-      - mal
-      - no sabe
