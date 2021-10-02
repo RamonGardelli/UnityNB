@@ -30,7 +30,8 @@
 ## init actions
 
 from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker, CollectingDispatcher
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SessionStarted, ActionExecuted, SlotSet, EventType
 from rasa_sdk.types import TrackerState
 
