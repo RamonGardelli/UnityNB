@@ -8,6 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - saludo
+  - mercaderia
+  - pantalon
 
 responses:
   utter_greet:
@@ -28,6 +31,20 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_saludo:
+  - text: "Hola, en que lo puedo ayudar?"
+  - text: "Como le va? Que se le ofrece?"
+
+  utter_mercaderia:
+  - text: "Estoy vendiendo ropa, remeras, pantalones, medias, buzos. Le interesa algo?"
+  - text: "Vendo remeras, pantalones, medias, buzos. Ropa en general, cualquier cosa puedo consultar"
+
+  utter_pantalon:
+  - text: "Tengo estos"
+  - text: "Puedo ofrecerte algo como esto"
+  - text: "Esto es lo que tengo"
+  - text: "Me quedo esto por hoy"
 
 session_config:
   session_expiration_time: 60

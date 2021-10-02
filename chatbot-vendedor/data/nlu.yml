@@ -90,3 +90,28 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: saludo
+  examples: |
+    - Hola
+    - Que tal?
+    - Buenas tardes
+    - Buenos dias
+    - Buenas noches
+    - Como le va?
+    - Todo bien?
+
+- intent: mercaderia
+  examples: |
+    - Que vende?
+    - Que ofrece?
+    - Que tiene para vender?
+    - Que hay?  
+
+- intent: pantalon
+  examples: |    
+    - Estoy buscando un pantalon
+    - Pantalones tenes?
+    - Podria ver que pantalones tenes?
+    - Pantalones
+
