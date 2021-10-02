@@ -4,20 +4,15 @@ nlu:
 
 - intent: contar_examen_desaprobado
   examples: |
-    - me fue mal en un [examen]("examen")
-    - fue muy dificil el [final]("examen")
-    - tomaron cosas en el [parcial]("examen") que no dieron 
-    - no estudie nada para el [oral]("examen")
-    - me pusieron un [1]("nota_examen_desaprobado") en el [parcial]("examen")
-    - no me presenté al [final]("examen")
-    - las cuentas no me daban en un punto del [final]("examen")
-    - desaprobé el [parcial]("examen") que rendí
-    - no me fue como esperaba en el [examen]("examen")
-    - me saqué un [2]("nota_examen_desaprobado") en el [recuperatorio]("examen")
-    - firmé el ausente y me fui del [final]("examen")
-    - me clavaron un [0]("nota_examen_desaprobado") por machetearme
-    - el profesor de [diseño]("materia") no me quiere
-    - no me fui muy bien en el examen de hoy
+    - me fue mal en un [examen](examen)
+    - fue muy dificil el [final](examen)
+    - no estudie nada para el [oral](examen)
+    - me pusieron un [1](nota_examen_desaprobado) en el [parcial](examen)
+    - no me presenté al [final](examen)
+    - desaprobé el [parcial](examen) que rendí
+    - me saqué un [2](nota_examen_desaprobado) en el [recuperatorio](examen)
+    - firmé el ausente y me fui del [final](examen)
+    - me clavaron un [0](nota_examen_desaprobado) por machetearme
 
 - intent: volver_a_intentarlo
   examples: |
@@ -30,62 +25,62 @@ nlu:
 
 - intent: contar_examen_aprobado
   examples: |
-    - me fue bien en el [examen]("examen")
-    - aprobé el [final]("examen")!
-    - me saqué un [4]("nota_examen_aprobado")
-    - pude aprobar el [parcial]("examen") que rendí con [6]("nota_examen_aprobado")
-    - aprobé el [oral]("examen") con [9]("nota_examen_aprobado")
-    - logré aprobar bien con [7]("nota_examen_aprobado")
-    - pasé el [prefinal]("examen") con lo justo, [4]("nota_examen_aprobado")
-    - aprobé
-    - pude aprobar
-    - safaroni en el [examen]("examen")
+    - me fue bien en el [examen](examen)
+    - aprobé el [final](examen)!
+    - me saqué un [4](nota_examen_aprobado)
+    - pude aprobar el [parcial](examen) que rendí con [6](nota_examen_aprobado)
+    - aprobé el [oral](examen) con [9](nota_examen_aprobado)
+    - logré aprobar bien con [7](nota_examen_aprobado)
+    - pasé el [prefinal](examen) con lo justo, [4](nota_examen_aprobado)
+    - aprobé el [parcial](examen)
+    - pude aprobar un [parcialito](examen) con [5](nota_examen_aprobado)
+    - safaroni en el [examen](examen)
     - aprobe raspando
-    - adentro el [examen]("examen")
+    - adentro el [examen](examen)
     - una menos
 
 - intent: contar_que_rendi
   examples: |
-    - rendí [programacion]("materia")
-    - rendí el [final]("examen") de [algoritmos]("materia")
-    - di el [oral]("examen") de [metodologia]("materia")
-    - di el final [diseño]("materia") hace un rato
-    - vengo de rendir [diseño]("materia")
+    - rendí [programacion](materia)
+    - rendí el [final](examen) de [algoritmos](materia)
+    - di el [oral](examen) de [metodologia](materia)
+    - di el final [diseño](materia) hace un rato
+    - vengo de rendir [diseño](materia)
 
 - intent: nota_que_me_saque
   examples: |
-    - me saqué un [4]("nota_examen_aprobado")
-    - clavé un [10]("nota_examen_aprobado")!
-    - me saqué un [1]("nota_examen_desaprobado") miserable
-    - me pusieron un [5]("nota_examen_aprobado")
-    - [6]("nota_examen_aprobado")
+    - me saqué un [4](nota_examen_aprobado)
+    - clavé un [10](nota_examen_aprobado)!
+    - me saqué un [1](nota_examen_desaprobado) miserable
+    - me pusieron un [5](nota_examen_aprobado)
+    - [6](nota_examen_aprobado)
 
 - intent: contar_examen_aprobado_materia
   examples: |
-    - me fue bien en [diseño]("materia")
-    - pude aprobar [diseño]("materia")
-    - safaroni en [diseño]("materia")
-    - aprobe raspando [diseño]("materia")
-    - adentro [diseño]("materia")
-    - me saque de encima [diseño]("materia")
-    - condena cumplida con [diseño]("materia")
-    - me olvido de [diseño]("materia")
-    - [diseño]("materia") la tiene adentro
+    - me fue bien en [diseño](materia)
+    - pude aprobar [diseño](materia)
+    - safaroni en [diseño](materia)
+    - aprobe raspando [diseño](materia)
+    - adentro [diseño](materia)
+    - me saque de encima [diseño](materia)
+    - condena cumplida con [diseño](materia)
+    - me olvido de [diseño](materia)
+    - [diseño](materia) la tiene adentro
   
 - intent: contar_de_donde_vengo
   examples: |
-    - sali de [exactas]("establecimiento") curse [diseño]("materia")
-    - sali de [exactas]("establecimiento") rendi [diseño]("materia")
-    - sali de [diseño]("materia")
-    - vengo de [exactas]("establecimiento") curse [diseño]("materia")
-    - vengo de [exactas]("establecimiento") rendi [diseño]("materia")
-    - vengo de [diseño]("materia")
-    - salgo de [exactas]("establecimiento") curse [diseño]("materia")
-    - salgo de [exactas]("establecimiento") rendi [diseño]("materia")
-    - termine con [diseño]("materia") por hoy
-    - [exactas]("establecimiento") sali de [diseño]("materia")
-    - rendi [diseño]("materia")
-    - salgo de rendir en [exactas]("establecimiento")
+    - sali de [exactas](establecimiento) curse [diseño](materia)
+    - sali de [exactas](establecimiento) rendi [diseño](materia)
+    - sali de [diseño](materia)
+    - vengo de [exactas](establecimiento) curse [diseño](materia)
+    - vengo de [exactas](establecimiento) rendi [diseño](materia)
+    - vengo de [diseño](materia)
+    - salgo de [exactas](establecimiento) curse [diseño](materia)
+    - salgo de [exactas](establecimiento) rendi [diseño](materia)
+    - termine con [diseño](materia) por hoy
+    - [exactas](establecimiento) sali de [diseño](materia)
+    - rendi [diseño](materia)
+    - salgo de rendir en [exactas](establecimiento)
 
 - intent: contar_como_fue
   examples: |

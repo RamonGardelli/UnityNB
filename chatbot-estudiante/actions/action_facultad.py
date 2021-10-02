@@ -15,20 +15,13 @@ class ActionRindioExamen(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        current_intent = tracker.get_intent_of_latest_message(tracker, True)
+        current_intent = tracker.get_intent_of_latest_message()
 
-        materia = tracker.get_slot("materia") or next(tracker.get_latest_entity_values("materia"), None)
-        
-        examen = tracker.get_slot("examen") or next(tracker.get_latest_entity_values("examen"), None) or "examen"
+        print("examen", tracker.get_slot("examen"))
+        print("materia", tracker.get_slot("materia"))
+        print("nota_examen_aprobado", tracker.get_slot("nota_examen_aprobado"))
 
-        nota = next(tracker.get_latest_entity_values("nota_examen_aprobado"), tracker.get_latest_entity_values("nota_examen_aprobado"), None)
-
-        events = [SlotSet("rindio_examen", current_intent in self.dict_examen),
-        SlotSet("materia", materia), SlotSet("examen", examen),
-        SlotSet("nota", nota)]
-        
-        return events
-        #return [SlotSet("rindio_examen", current_intent in self.dict_examen)]
+        return [SlotSet("rindio_examen", current_intent in self.dict_examen)]
 
 class ActionNotaExamenAprobado(Action):
 
@@ -39,7 +32,7 @@ class ActionNotaExamenAprobado(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        intent_examen = tracker.get_intent_of_latest_message(tracker, True)
+        intent_examen = tracker.get_intent_of_latest_message()
         print(intent_examen)
 
         nota = tracker.get_slot("nota")
@@ -61,7 +54,7 @@ class ActionNotaExamenDesaprobado(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        intent_examen = tracker.get_intent_of_latest_message(tracker, True)
+        intent_examen = tracker.get_intent_of_latest_message()
         print(intent_examen)
 
         dispatcher.utter_message(response = "utter_consolar")
@@ -78,6 +71,9 @@ class ActionMateriaExamen(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        intent_examen = tracker.get_intent_of_latest_message()
+        print(intent_examen)
     
         materia = tracker.get_slot("materia") or next(tracker.get_latest_entity_values("materia"), None)
         

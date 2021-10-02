@@ -1,14 +1,42 @@
 version: "2.0"
 
 intents:
-  - contar_examen_desaprobado
-  - contar_examen_aprobado
-  - contar_examen_aprobado_materia
-  - volver_a_intentarlo
-  - contar_que_rendi
-  - nota_que_me_saque
-  - contar_de_donde_vengo
-  - contar_como_fue
+  - contar_examen_desaprobado:
+      use_entities:
+      - examen
+      - materia
+      - nota_examen_aprobado
+      - nota_examen_desaprobado
+  - contar_examen_aprobado:
+      use_entities:
+      - examen
+      - materia
+      - nota_examen_aprobado
+      - nota_examen_desaprobado
+  - contar_examen_aprobado_materia:
+      use_entities:
+      - examen
+      - materia
+      - nota_examen_aprobado
+      - nota_examen_desaprobado
+  - volver_a_intentarlo:
+      use_entities: []
+  - contar_que_rendi:
+      use_entities:
+      - examen
+      - materia
+      - nota_examen_aprobado
+      - nota_examen_desaprobado
+  - nota_que_me_saque:
+      use_entities:
+      - examen
+      - materia
+      - nota_examen_aprobado
+      - nota_examen_desaprobado
+  - contar_de_donde_vengo:
+      use_entities: []
+  - contar_como_fue:
+      use_entities: []
 
 entities:
   - examen
@@ -20,18 +48,41 @@ entities:
   - año_cursante
 
 slots:
+  examen:
+    type: text
+    auto_fill: true
+
+  materia:
+    type: text
+    auto_fill: true
+  
+  nota_examen_aprobado:
+    type: text
+    auto_fill: true
+    influence_conversation: true
+
+  nota_examen_desaprobado:
+    type: text
+    auto_fill: true
+    influence_conversation: true
 
   nota:
-    type: any
-
-  viene_de_la_facultad:
-    type: bool
+    type: text
   
   ultima_cursada:
     type: text
+    auto_fill: true
+  
+  establecimiento:
+    type: text
+    auto_fill: true
+
+  viene_de_la_facultad:
+    type: bool
 
   rindio_examen:
     type: bool
+    influence_conversation: true
 
   temario_diseño:
     type: list

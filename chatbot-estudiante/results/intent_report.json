@@ -1,44 +1,25 @@
 {
-  "bot_challenge": {
+  "negar": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 13,
     "confused_with": {}
   },
-  "que_estoy_haciendo": {
+  "modo_feliz": {
+    "precision": 0.9375,
+    "recall": 0.9375,
+    "f1-score": 0.9375,
+    "support": 16,
+    "confused_with": {
+      "saber_como_estoy": 1
+    }
+  },
+  "despedir": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "volver_a_intentarlo": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "contar_de_donde_vengo": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12,
-    "confused_with": {}
-  },
-  "contar_examen_desaprobado": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
-  },
-  "nota_que_me_saque": {
-    "precision": 0.8333333333333334,
-    "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 5,
+    "support": 13,
     "confused_with": {}
   },
   "saber_como_estoy": {
@@ -48,11 +29,11 @@
     "support": 9,
     "confused_with": {}
   },
-  "agradecer": {
+  "que_estoy_haciendo": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 5,
     "confused_with": {}
   },
   "contar_examen_aprobado": {
@@ -64,11 +45,25 @@
       "nota_que_me_saque": 1
     }
   },
-  "negar": {
+  "contar_examen_aprobado_materia": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 13,
+    "support": 9,
+    "confused_with": {}
+  },
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "contar_que_rendi": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
     "confused_with": {}
   },
   "saludar": {
@@ -78,18 +73,20 @@
     "support": 10,
     "confused_with": {}
   },
-  "modo_triste": {
+  "contar_como_fue": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
-    "confused_with": {}
+    "recall": 0.8888888888888888,
+    "f1-score": 0.9411764705882353,
+    "support": 9,
+    "confused_with": {
+      "modo_feliz": 1
+    }
   },
-  "despedir": {
+  "volver_a_intentarlo": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 13,
+    "support": 6,
     "confused_with": {}
   },
   "out_of_scope": {
@@ -99,28 +96,11 @@
     "support": 17,
     "confused_with": {}
   },
-  "contar_examen_aprobado_materia": {
+  "agradecer": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 9,
-    "confused_with": {}
-  },
-  "modo_feliz": {
-    "precision": 1.0,
-    "recall": 0.875,
-    "f1-score": 0.9333333333333333,
-    "support": 16,
-    "confused_with": {
-      "saber_como_estoy": 1,
-      "contar_como_fue": 1
-    }
-  },
-  "contar_que_rendi": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
+    "support": 6,
     "confused_with": {}
   },
   "afirmar": {
@@ -130,11 +110,18 @@
     "support": 15,
     "confused_with": {}
   },
-  "contar_como_fue": {
-    "precision": 0.9,
+  "modo_triste": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9473684210526316,
-    "support": 9,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
+  "contar_examen_desaprobado": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
     "confused_with": {}
   },
   "psycho_killer": {
@@ -144,17 +131,31 @@
     "support": 12,
     "confused_with": {}
   },
+  "contar_de_donde_vengo": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "nota_que_me_saque": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5,
+    "confused_with": {}
+  },
   "accuracy": 0.9856459330143541,
   "macro avg": {
-    "precision": 0.9816666666666667,
-    "recall": 0.9899038461538462,
-    "f1-score": 0.9848580542264752,
+    "precision": 0.9835416666666665,
+    "recall": 0.9874732905982906,
+    "f1-score": 0.9847567900365888,
     "support": 209
   },
   "weighted avg": {
-    "precision": 0.9874003189792664,
+    "precision": 0.9869218500797448,
     "recall": 0.9856459330143541,
-    "f1-score": 0.9857005715681113,
+    "f1-score": 0.9857529118192456,
     "support": 209
   }
 }

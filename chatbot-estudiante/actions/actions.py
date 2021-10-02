@@ -45,8 +45,8 @@ class ActionSessionStart(Action):
 
         # Set username
         username = metadata.sender
-        doSlots = SlotSet("nombre_usuario", username)
+        addUser = SlotSet("nombre_usuario", username)
 
         # the session should begin with a `session_started` event and an `action_listen`
         # as a user message follows
-        return [SessionStarted(), doSlots, ActionExecuted("action_listen")]
+        return [SessionStarted(), addUser, ActionExecuted("action_listen")]
