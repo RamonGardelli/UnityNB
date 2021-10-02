@@ -73,13 +73,13 @@ class ActionSessionStart(Action):
                 # Does this metadata have slots?
                 if message_metadata and "slots" in message_metadata:
                     for key, value in message_metadata["slots"].items():
-                        #logger.info(f"{key} | {value}")
+                        print("warn:", f"{key} | {value}")
                         if value is not None:
                             # Take username from message_metadata and store
-                            events.append(SlotSet(key=key, value=value))
+                            print(SlotSet(key=key, value=value))
                     break
-        #if len(message_metadata) == 0:
-            #logger.warn(f"session_start but no metadata, tracker.events: {tracker.events}")
+        if len(message_metadata) == 0:
+            print("warn:", f"session_start but no metadata, tracker.events: {tracker.events}")
 
         # an `action_listen` should be added at the end as a user message follows
         events.append(ActionExecuted("action_listen"))
