@@ -52,7 +52,7 @@ responses:
     -  text: "Y como estuvo?"
 
   utter_respuesta_cursada:
-    - text: "Y alguna novedad?" 
+    - text: "Y alguna novedad por tu lado?" 
     - text: "Como te fue en el ultimo examen?" 
     - text: "Que onda con el TP?" 
 
@@ -61,3 +61,12 @@ responses:
     - text: "Parece que te volaron el cerebro" 
     - text: "Muy duro fue?" 
  
+  utter_respuesta_cursada3:
+    - text: "Estoy haciendo solo {materia}, estoy re dejado" 
+    - text: "Me quede con {materia}, es que pasaron cosas" 
+    - text: "Se me paso el bondi y estoy haciendo {materia}" 
+
+  utter_respuesta_cursada4:
+    - text: "Llevar la llevo" 
+    - text: "Este año es el mio!" 
+    - text: "Bondiola pipi" 

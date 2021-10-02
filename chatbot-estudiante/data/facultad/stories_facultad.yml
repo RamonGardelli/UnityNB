@@ -196,3 +196,21 @@ stories:
     - intent: psycho_killer
     - action: utter_calmar
     - action: utter_ofrecer_ayuda
+
+- story: camino preguntar de donde viene 5
+  steps:
+    - intent: preguntar_que_cursa
+    - action: utter_respuesta_cursada3
+    - intent: preguntar_como_le_va
+    - action: utter_respuesta_cursada4
+    - action: utter_respuesta_cursada
+    - or:
+      - intent: contar_de_donde_vengo
+      - intent: contar_que_rendi
+      - intent: nota_que_me_saque
+    - action: utter_como_le_fue
+    - intent: contar_como_fue
+    - action: utter_jodida_materia
+    - action: utter_ofrecer_ayuda
+    - intent: agradecer
+    - action: utter_despedir

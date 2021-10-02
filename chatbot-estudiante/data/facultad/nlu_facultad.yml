@@ -82,6 +82,16 @@ nlu:
     - rendi [diseño](materia)
     - salgo de rendir en [exactas](establecimiento)
 
+- intent: preguntar_que_cursa
+  examples: |
+    - que estas cursando este cuatri?
+    - que estas cursando?
+    - que materias estas haciendo?
+    - como va la facu?
+    - como va la facultad?
+    - que se cuentan esas materias?
+    - que garompa estas cursando?
+
 - intent: contar_como_fue
   examples: |
     - bien yo que se
@@ -93,6 +103,21 @@ nlu:
     - meta mate y galletitas
     - me dormi
     - con paja
+
+- intent: preguntar_como_le_va
+  examples: |
+    - y como la llevas?
+    - y que onda con esa?
+    - como te esta yendo entonces?
+    - y como pasas la tortura?
+    - que onda con eso?
+    - como te va?
+
+
+
+
+
+
 
 - lookup: examen
   examples: | 
