@@ -24,8 +24,11 @@ Content-Type: application/json
 
 body: 
 {
-  "sender": "Maxi",
+  "sender": "421342512312423",
   "message": "Hola amigo"
+  "metadata": {
+      "nombre_usuario":
+  }
 }
 
 # Respuesta esperada:

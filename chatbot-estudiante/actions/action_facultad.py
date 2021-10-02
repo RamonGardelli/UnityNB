@@ -17,11 +17,18 @@ class ActionRindioExamen(Action):
 
         current_intent = tracker.get_intent_of_latest_message()
 
+        save_rindio_examen = SlotSet("rindio_examen", current_intent in self.dict_examen)
+        
+        nota = tracker.get_slot("nota_examen_aprobado") or tracker.get_slot("nota_examen_desaprobado")
+
+        nota = nota or tracker.get_latest_entity_values("nota_examen_aprobado") or tracker.get_latest_entity_values("nota_examen_desaprobado")
+        save_nota = SlotSet("nota", nota)
+
         print("examen", tracker.get_slot("examen"))
         print("materia", tracker.get_slot("materia"))
-        print("nota_examen_aprobado", tracker.get_slot("nota_examen_aprobado"))
+        print("nota_examen_aprobado", save_nota, nota)
 
-        return [SlotSet("rindio_examen", current_intent in self.dict_examen)]
+        return [save_rindio_examen, save_nota]
 
 class ActionNotaExamenAprobado(Action):
 
@@ -33,9 +40,9 @@ class ActionNotaExamenAprobado(Action):
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         intent_examen = tracker.get_intent_of_latest_message()
-        print(intent_examen)
-
         nota = tracker.get_slot("nota")
+
+        print(intent_examen, nota)
         if (not nota):
             dispatcher.utter_message(response = "utter_felicitar_examen_sin_nota")
             dispatcher.utter_message(response = "utter_cuanto_te_sacaste")
