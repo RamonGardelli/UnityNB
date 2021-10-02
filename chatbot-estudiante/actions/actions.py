@@ -73,7 +73,7 @@ class ActionSessionStart(Action):
                 # Does this metadata have slots?
                 if message_metadata and "slots" in message_metadata:
                     for key, value in message_metadata["slots"].items():
-                        print("warn:", f"{key} | {value}")
+                        print("info:", f"{key} | {value}")
                         if value is not None:
                             # Take username from message_metadata and store
                             print(SlotSet(key=key, value=value))

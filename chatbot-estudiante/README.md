@@ -27,7 +27,9 @@ body:
   "sender": "421342512312423",
   "message": "Hola amigo"
   "metadata": {
-      "nombre_usuario":
+      "slots": {
+          "nombre_usuario": <Maxi>
+      }
   }
 }
 
