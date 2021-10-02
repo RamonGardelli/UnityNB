@@ -152,3 +152,11 @@ nlu:
     - lo veo y lo mato
     - lo atropello
     - no me calmo nada
+
+- intent: condecender_neutro
+  examples: |
+    - y si pipi
+    - se va llevando
+    - la cosa marcha
+    - mal o bien pero siempre avanzando
+    - sin culo-silla no hay gloria

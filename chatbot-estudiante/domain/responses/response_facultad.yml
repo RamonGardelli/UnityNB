@@ -62,9 +62,11 @@ responses:
     - text: "Muy duro fue?" 
  
   utter_respuesta_cursada3:
-    - text: "Estoy haciendo solo {materia}, estoy re dejado" 
-    - text: "Me quede con {materia}, es que pasaron cosas" 
-    - text: "Se me paso el bondi y estoy haciendo {materia}" 
+    - text: "Estoy haciendo solo AyDA2 y Electricidad, estoy re dejado" 
+    - text: "Me quede con Compiladores y Fundamentos, es que pasaron cosas" 
+    - text: "Se me paso el bondi y estoy haciendo #MicroDiseño con Campo" 
+    - text: "Todas las materias de 3ro excepto operativa, la dejo para el año que viene" 
+    - text: "Ya sabes, alguna de un año, otras de otro" 
 
   utter_respuesta_cursada4:
     - text: "Llevar la llevo" 

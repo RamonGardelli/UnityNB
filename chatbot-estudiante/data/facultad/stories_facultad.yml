@@ -197,7 +197,7 @@ stories:
     - action: utter_calmar
     - action: utter_ofrecer_ayuda
 
-- story: camino preguntar de donde viene 5
+- story: camino preguntar de donde viene 6
   steps:
     - intent: preguntar_que_cursa
     - action: utter_respuesta_cursada3

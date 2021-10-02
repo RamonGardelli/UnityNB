@@ -225,3 +225,49 @@ stories:
       vengo de diseño, estoy con ganas de unos mates
     intent: contar_de_donde_vengo
   - action: utter_condescender_alegre
+
+- story: camino charla casual
+  steps:
+  - user: |
+      que bondi?
+    intent: saludar
+  - action: utter_saludar
+  - action: utter_donde_viene
+  - user: |
+      vengo de cursar 
+  - intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - user: |
+      una mierda
+  - intent: contar_como_fue
+  - action: utter_jodida_materia
+  - action: utter_ofrecer_ayuda
+  - user: |
+      voy a poner una bomba en cualquier momento
+  - intent: psycho_killer
+  - action: utter_calmar
+  - user: |
+      no me calmo nada
+    intent: psycho_killer
+  - action: utter_calmar
+  - action: utter_levantar_animo
+  - user: |
+      y bue, gracias por el aliento, pero no sirve porque voy mal
+    intent: modo_triste
+  - action: utter_cambio_tema
+  - user: |
+      vos de donde venis?
+    intent: preguntar_como_le_va
+  - action: utter_respuesta_cursada3
+  - user: |
+      se lleva, de a poco se lleva la cosa
+    intent: condecender_neutro
+  - action: utter_respuesta_cursada2
+  - user: |
+      si vengo de micro
+    intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - user: |
+      marcha, che me tengo que tomar el palo
+    intent: despedir
+  - action: utter_despedir
