@@ -1,11 +1,4 @@
 {
-  "contar_examen_desaprobado": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
-  },
   "volver_a_intentarlo": {
     "precision": 1.0,
     "recall": 1.0,
@@ -13,11 +6,11 @@
     "support": 6,
     "confused_with": {}
   },
-  "que_estoy_haciendo": {
+  "afirmar": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
+    "support": 15,
     "confused_with": {}
   },
   "modo_triste": {
@@ -25,59 +18,6 @@
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 13,
-    "confused_with": {}
-  },
-  "agradecer": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "saber_como_estoy": {
-    "precision": 1.0,
-    "recall": 0.8888888888888888,
-    "f1-score": 0.9411764705882353,
-    "support": 9,
-    "confused_with": {
-      "modo_feliz": 1
-    }
-  },
-  "despedir": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
-    "confused_with": {}
-  },
-  "nota_que_me_saque": {
-    "precision": 1.0,
-    "recall": 0.8,
-    "f1-score": 0.888888888888889,
-    "support": 5,
-    "confused_with": {
-      "contar_examen_aprobado": 1
-    }
-  },
-  "contar_que_rendi": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "contar_examen_aprobado": {
-    "precision": 0.9285714285714286,
-    "recall": 1.0,
-    "f1-score": 0.962962962962963,
-    "support": 13,
-    "confused_with": {}
-  },
-  "contar_examen_aprobado_materia": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 9,
     "confused_with": {}
   },
   "contar_de_donde_vengo": {
@@ -100,35 +40,21 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 11,
+    "support": 12,
     "confused_with": {}
   },
-  "afirmar": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 15,
-    "confused_with": {}
-  },
-  "saludar": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "modo_feliz": {
-    "precision": 0.8888888888888888,
-    "recall": 1.0,
-    "f1-score": 0.9411764705882353,
-    "support": 16,
-    "confused_with": {}
-  },
-  "negar": {
+  "out_of_scope": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 13,
+    "confused_with": {}
+  },
+  "nota_que_me_saque": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5,
     "confused_with": {}
   },
   "bot_challenge": {
@@ -138,17 +64,98 @@
     "support": 7,
     "confused_with": {}
   },
-  "accuracy": 0.9842931937172775,
+  "contar_examen_aprobado_materia": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "despedir": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
+  "agradecer": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "contar_examen_aprobado": {
+    "precision": 1.0,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.9600000000000001,
+    "support": 13,
+    "confused_with": {
+      "nota_que_me_saque": 1
+    }
+  },
+  "contar_examen_desaprobado": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "saludar": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "que_estoy_haciendo": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "modo_feliz": {
+    "precision": 0.9375,
+    "recall": 0.9375,
+    "f1-score": 0.9375,
+    "support": 16,
+    "confused_with": {
+      "saber_como_estoy": 1
+    }
+  },
+  "saber_como_estoy": {
+    "precision": 0.9,
+    "recall": 1.0,
+    "f1-score": 0.9473684210526316,
+    "support": 9,
+    "confused_with": {}
+  },
+  "contar_que_rendi": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "negar": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
+  "accuracy": 0.9853658536585366,
   "macro avg": {
-    "precision": 0.990392648287385,
-    "recall": 0.9777777777777776,
-    "f1-score": 0.9829148033482399,
-    "support": 191
+    "precision": 0.9835416666666668,
+    "recall": 0.9874732905982906,
+    "f1-score": 0.9847567900365888,
+    "support": 205
   },
   "weighted avg": {
-    "precision": 0.985830632427491,
-    "recall": 0.9842931937172775,
-    "f1-score": 0.9840992825286019,
-    "support": 191
+    "precision": 0.9866666666666667,
+    "recall": 0.9853658536585366,
+    "f1-score": 0.9854749198547432,
+    "support": 205
   }
 }

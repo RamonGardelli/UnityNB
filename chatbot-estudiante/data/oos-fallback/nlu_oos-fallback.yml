@@ -1,0 +1,18 @@
+version: "2.0"
+
+nlu:
+- intent: out_of_scope
+  examples: |
+    - Quiero comer
+    - Cuanto es 2 + 2?
+    - Quien es el gobernador de buenos aires?
+    - Che te gustan las mujeres o los hombres?
+    - Voy a conquistar el mundo
+    - Mi comida favorita es la milanga con fritas
+    - Setear animaciones con unity
+    - Se puede saltar en este jueguito?
+    - Che mirá ese edificio está re cheto
+    - Loco, vos creés en Dios?
+    - A que te dedicas?
+    - Esto es real?
+    - Me gusta el rock nacional, aguante callejeros

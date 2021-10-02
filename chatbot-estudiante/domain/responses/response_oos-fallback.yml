@@ -1,0 +1,9 @@
+version: "2.0"
+
+responses:
+  utter_out_of_scope:
+  - text: "No entendí amigo"
+
+  utter_please_rephrase:
+  - text: "Que dijiste rey?"
+  - text: "No te escuché nada, como decís?"

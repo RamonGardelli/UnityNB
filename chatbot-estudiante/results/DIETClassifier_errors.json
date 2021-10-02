@@ -14,7 +14,7 @@
         "entity": "\"examen\"",
         "start": 6,
         "end": 11,
-        "confidence_entity": 0.701987087726593,
+        "confidence_entity": 0.582399845123291,
         "value": "examen",
         "extractor": "DIETClassifier",
         "processors": [
@@ -25,8 +25,25 @@
         "entity": "\"materia\"",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9996980428695679,
+        "confidence_entity": 0.999342143535614,
         "value": "materia",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Cuanto es 2 + 2?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "\"nota_examen_aprobado\"",
+        "start": 14,
+        "end": 15,
+        "confidence_entity": 0.650921642780304,
+        "value": "nota_examen_desaprobado",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"

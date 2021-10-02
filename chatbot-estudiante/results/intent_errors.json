@@ -1,18 +1,18 @@
 [
   {
-    "text": "todo bien?",
-    "intent": "saber_como_estoy",
+    "text": "todo bien",
+    "intent": "modo_feliz",
     "intent_prediction": {
-      "name": "modo_feliz",
-      "confidence": 0.6528236865997314
+      "name": "saber_como_estoy",
+      "confidence": 0.5423930883407593
     }
   },
   {
     "text": "me saqué un 4",
-    "intent": "nota_que_me_saque",
+    "intent": "contar_examen_aprobado",
     "intent_prediction": {
-      "name": "contar_examen_aprobado",
-      "confidence": 0.5119796991348267
+      "name": "nota_que_me_saque",
+      "confidence": 0.752812922000885
     }
   },
   {
@@ -20,7 +20,7 @@
     "intent": "contar_como_fue",
     "intent_prediction": {
       "name": "modo_feliz",
-      "confidence": 0.6441758275032043
+      "confidence": 0.5094918608665466
     }
   }
 ]
