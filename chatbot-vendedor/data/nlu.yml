@@ -115,3 +115,15 @@ nlu:
     - Podria ver que pantalones tenes?
     - Pantalones
 
+- intent: comprar
+  examples: |
+    - Quiero comprar un [pantalon](ropa)
+    - Quiero comprar una remera
+    - Quiero comprar unas medias
+    - Quiero comprar unos soquetes
+
+- intent: marca
+  examples: |
+    - [nike](marca)
+    - [adidas](marca)
+    - [puma](marca)

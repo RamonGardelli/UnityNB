@@ -29,18 +29,11 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: saludos
+- story: compra
   steps:
   - intent: saludo
   - action: utter_saludo
-  
-- story: mercaderias
-  steps:
-  - intent: mercaderia
-  - action: utter_mercaderia
- #se puede poner los distintos intentes y que siga uno dependiendo del input?
-
-- story: pantalones 
-  steps:
-  - intent: pantalon
-  - action: utter_pantalon
+  - intent: comprar
+  - action: utter_comprar
+  - intent: marca
+  - action: action_mostrar_prendas

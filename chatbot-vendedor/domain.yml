@@ -11,6 +11,11 @@ intents:
   - saludo
   - mercaderia
   - pantalon
+  - comprar
+
+entities:
+  - ropa
+  - marca
 
 responses:
   utter_greet:
@@ -33,18 +38,24 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_saludo:
-  - text: "Hola, en que lo puedo ayudar?"
-  - text: "Como le va? Que se le ofrece?"
+  - text: "Hola, bienvenido a mi tienda de ropa. En qué puedo ayudarlo?"
+  - text: "Como le va? Soy un vendedor de ropa. Qué desea comprar?"
 
   utter_mercaderia:
   - text: "Estoy vendiendo ropa, remeras, pantalones, medias, buzos. Le interesa algo?"
-  - text: "Vendo remeras, pantalones, medias, buzos. Ropa en general, cualquier cosa puedo consultar"
+  - text: "Vendo remeras, pantalones, medias, buzos. Ropa en general, cualquier cosa puede consultar"
 
   utter_pantalon:
   - text: "Tengo estos"
   - text: "Puedo ofrecerte algo como esto"
   - text: "Esto es lo que tengo"
   - text: "Me quedo esto por hoy"
+
+  utter_comprar:
+  - text: "Alguna marca en particular?"
+
+actions:
+  - action_mostrar_prendas
 
 session_config:
   session_expiration_time: 60
