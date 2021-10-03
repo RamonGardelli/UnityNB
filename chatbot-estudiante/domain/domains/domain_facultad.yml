@@ -37,6 +37,12 @@ intents:
       use_entities: []
   - contar_como_fue:
       use_entities: []
+  - preguntar_que_cursa:
+      use_entities:
+      - materia
+  - preguntar_como_le_va:
+      use_entities:
+      - materia
 
 entities:
   - examen

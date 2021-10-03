@@ -13,7 +13,7 @@ stories:
       - materia: any
       - examen: any
   - action: action_rindio_examen
-  - action: utter_cuanto_te_sacaste
+  - action: action_nota_examen_aprobado
   - intent: contar_examen_aprobado
     entities:
     - nota: any
@@ -28,7 +28,7 @@ stories:
     entities:
     - materia: any
   - action: action_rindio_examen
-  - action: utter_cuanto_te_sacaste
+  - action: action_nota_examen_aprobado
   - intent: contar_examen_aprobado
     entities:
     - nota: any
@@ -113,7 +113,7 @@ stories:
   - action: action_materia_examen
   - intent: contar_que_rendi
     entities:
-    - materia: "any"
+    - materia: any
   - action: action_rindio_examen
   - action: utter_consolar
   - or:

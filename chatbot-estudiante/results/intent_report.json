@@ -6,71 +6,25 @@
     "support": 13,
     "confused_with": {}
   },
-  "modo_feliz": {
-    "precision": 0.9375,
-    "recall": 0.9375,
-    "f1-score": 0.9375,
-    "support": 16,
-    "confused_with": {
-      "saber_como_estoy": 1
-    }
-  },
-  "despedir": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
-    "confused_with": {}
-  },
-  "saber_como_estoy": {
-    "precision": 0.9,
-    "recall": 1.0,
-    "f1-score": 0.9473684210526316,
-    "support": 9,
-    "confused_with": {}
-  },
-  "que_estoy_haciendo": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "contar_examen_aprobado": {
-    "precision": 1.0,
-    "recall": 0.9230769230769231,
-    "f1-score": 0.9600000000000001,
-    "support": 13,
-    "confused_with": {
-      "nota_que_me_saque": 1
-    }
-  },
-  "contar_examen_aprobado_materia": {
+  "contar_examen_desaprobado": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 9,
     "confused_with": {}
   },
-  "bot_challenge": {
+  "volver_a_intentarlo": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 6,
     "confused_with": {}
   },
-  "contar_que_rendi": {
+  "preguntar_como_le_va": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "saludar": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
+    "support": 6,
     "confused_with": {}
   },
   "contar_como_fue": {
@@ -82,18 +36,57 @@
       "modo_feliz": 1
     }
   },
-  "volver_a_intentarlo": {
-    "precision": 1.0,
+  "saber_como_estoy": {
+    "precision": 0.9,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
+    "f1-score": 0.9473684210526316,
+    "support": 9,
     "confused_with": {}
   },
-  "out_of_scope": {
+  "modo_feliz": {
+    "precision": 0.9375,
+    "recall": 0.9375,
+    "f1-score": 0.9375,
+    "support": 16,
+    "confused_with": {
+      "saber_como_estoy": 1
+    }
+  },
+  "contar_que_rendi": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 17,
+    "support": 5,
+    "confused_with": {}
+  },
+  "contar_examen_aprobado_materia": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "contar_examen_aprobado": {
+    "precision": 1.0,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.9600000000000001,
+    "support": 13,
+    "confused_with": {
+      "nota_que_me_saque": 1
+    }
+  },
+  "nota_que_me_saque": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 5,
+    "confused_with": {}
+  },
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
     "confused_with": {}
   },
   "agradecer": {
@@ -103,11 +96,11 @@
     "support": 6,
     "confused_with": {}
   },
-  "afirmar": {
+  "que_estoy_haciendo": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 15,
+    "support": 5,
     "confused_with": {}
   },
   "modo_triste": {
@@ -117,18 +110,11 @@
     "support": 13,
     "confused_with": {}
   },
-  "contar_examen_desaprobado": {
+  "despedir": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
-  },
-  "psycho_killer": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12,
+    "support": 13,
     "confused_with": {}
   },
   "contar_de_donde_vengo": {
@@ -138,24 +124,59 @@
     "support": 12,
     "confused_with": {}
   },
-  "nota_que_me_saque": {
-    "precision": 0.8333333333333334,
+  "afirmar": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9090909090909091,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 29,
+    "confused_with": {}
+  },
+  "preguntar_que_cursa": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "condecender_neutro": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "accuracy": 0.9856459330143541,
+  "psycho_killer": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "saludar": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "accuracy": 0.9871794871794872,
   "macro avg": {
-    "precision": 0.9835416666666665,
-    "recall": 0.9874732905982906,
-    "f1-score": 0.9847567900365888,
-    "support": 209
+    "precision": 0.9856884057971015,
+    "recall": 0.9891072092159049,
+    "f1-score": 0.9867450348144251,
+    "support": 234
   },
   "weighted avg": {
-    "precision": 0.9869218500797448,
-    "recall": 0.9856459330143541,
-    "f1-score": 0.9857529118192456,
-    "support": 209
+    "precision": 0.9883190883190882,
+    "recall": 0.9871794871794872,
+    "f1-score": 0.9872750366248819,
+    "support": 234
   }
 }

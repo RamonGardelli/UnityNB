@@ -1,5 +1,8 @@
 version: "2.0"
 
+actions:
+  - action_session_start
+
 responses:
 
   utter_saludar:
@@ -31,7 +34,7 @@ responses:
   - text: "Contate algo"
 
   utter_cambio_tema:
-  - text: "Que mas tenes para contar?"
+  - text: "Que mas tenes para contarme, {nombre_usuario}?"
   - text: "Alguna otra novedad?"
   - text: "Contate otra"
 
@@ -42,7 +45,7 @@ responses:
 
   utter_insistir:
   - text: "Quedate un rato a charlar"
-  - text: "Tenés un momento? Hablemos"
+  - text: "Tenés un momento {nombre_usuario}? Hablemos"
 
   utter_indiferente:
   - text: "No te preocupes"
@@ -58,13 +61,13 @@ responses:
 
   utter_despedir:
   - text: "{nombre_usuario}, nos estamos viendo"
-  - text: "Abrazo grande"
+  - text: "Abrazo grande!"
   - text: "Nos vemos {nombre_usuario}"
 
   utter_levantar_animo:
-  - text: "Arriba el animo bro"
-  - text: "La vida no es color de rosas siempre que no uses los lentes adecuados"
-  - text: "Las cosas van a mejorar"
+  - text: "Arriba el ánimo bro"
+  - text: "La vida no es color de rosas, siempre que no uses los lentes adecuados"
+  - text: "Ya fue {nombre_usuario}, salimo' de joda para ahogar las penas"
 
   utter_calmar:
   - text: "Calma {nombre_usuario}"

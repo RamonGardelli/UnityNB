@@ -24,13 +24,8 @@ Content-Type: application/json
 
 body: 
 {
-  "sender": "421342512312423",
+  "sender": "Maxi",
   "message": "Hola amigo"
-  "metadata": {
-      "slots": {
-          "nombre_usuario": <Maxi>
-      }
-  }
 }
 
 # Respuesta esperada:

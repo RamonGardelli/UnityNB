@@ -30,7 +30,7 @@ responses:
     - text: "Me dicen por cucaracha que vayas a alumnos a retirar el titulo"
 
   utter_felicitar_examen_con_nota:
-    - text: "Felicidades por el {nota_examen_aprobado}"
+    - text: "Felicidades por el {nota_examen_aprobado}!"
 
   utter_que_rendiste:
     - text: "Que {examen} rendiste?"

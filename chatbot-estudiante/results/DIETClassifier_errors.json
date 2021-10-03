@@ -6,24 +6,38 @@
         "start": 12,
         "end": 18,
         "value": "diseño",
-        "entity": "\"materia\""
+        "entity": "materia"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "\"examen\"",
+        "entity": "examen",
         "start": 6,
         "end": 11,
-        "confidence_entity": 0.6209127306938171,
+        "confidence_entity": 0.6899188160896301,
         "value": "final",
         "extractor": "DIETClassifier"
       },
       {
-        "entity": "\"materia\"",
+        "entity": "materia",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9993745684623718,
+        "confidence_entity": 0.9991218447685242,
         "value": "diseño",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "123456",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "nota_examen_aprobado",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.7415882349014282,
+        "value": "123456",
         "extractor": "DIETClassifier"
       }
     ]
