@@ -1,0 +1,164 @@
+version: "2.0"
+
+nlu:
+  - intent: preguntar_hincha_futbol
+    examples: |
+      - de que cuadro sos?
+      - hincha de que sos?
+      - con que equipo de fútbol te identificás?
+      - cual es tu equipo de fútbol favorito?
+      - vos sos hincha de?
+      - de que equipo eras?
+      - de qué cuadro de fútbol sos?
+      - con que club simpatizás?
+      - de qué club sos?
+
+  - intent: decir_hincha_fútbol
+    examples: |
+      - yo soy de [boca](equipo_futbol)
+      - hincha de [river](equipo_futbol)
+      - toda la vida fui hincha del [rojo](equipo_futbol)
+      - me identifico con [estudiantes](equipo_futbol)
+      - soy del [club de la rivera](equipo_futbol)
+
+  - intent: preguntar_sobre_ver_partido
+    examples: |
+      - viste el partido de ayer?
+      - miraste a [river](equipo_futbol) contra [boca](equipo_futbol)?
+      - viste el clásico [independiente](equipo_futbol) contra [racing](equipo_futbol)?
+      - viste el partido?
+      - viste como salió [san lorenzo](equipo_futbol)?
+
+  - intent: comentar_resultado
+    examples: |
+      - el partido salió [3](goles) a [2](goles)
+      - fue [1](goles) iguales
+      - empataron
+      - ganó [river](equipo_futbol) [2](goles)-[1](goles)
+      - perdió [colon](equipo_futbol) [1](goles)-[0](goles)
+      - [boca](equipo_futbol) le gano a [racing](equipo_futbol) [4](goles) a [2](goles)
+      - salieron [0](goles) [0](goles)
+      - volvió a perder [river](equipo_futbol) contra [lanus](equipo_futbol)
+      - volvió al triunfo [rosario central](equipo_futbol)
+
+  - intent: comentar_goles
+    examples: |
+      - el golazo que hizo el [9](posicion_jugador)
+      - un gol de tiro de libre espectacular hizo el [3](posicion_jugador)
+      - la jugada que se mandó el [10](posicion_jugador) es tremenda
+      - el cabezazo del [2](posicion_jugador) en el último minuto fue épico
+      - no sabés el golazo que hizo el [8](posicion_jugador) que juega en [velez](equipo_futbol)
+      - viste el gol que hizo [boca](equipo_futbol)?
+      - te perdiste el gol de [9](posicion_jugador) que hizo el [6](posicion_jugador)
+
+  - intent: comentar_faltas
+    examples: |
+      - la patada que le pegó el [2](posicion_jugador) es criminal
+      - a uno de [river](equipo_futbol) le fueron a barrer fuerte al piso
+      - a otro se lo llevaron en camilla del codazo que le metió en la cara
+      - el [4](posicion_jugador) de [velez](equipo_futbol) le pegó a uno de [racing](equipo_futbol)
+      - fue tremenda la patada que le dió
+      - la falta que le hicieron fue tremenda
+
+  - intent: comentar_errores_arbitros
+    examples: |
+      - vos podés creer que no lo echaron?
+      - solamente le sacaron [amarilla](tarjeta)
+      - ni [amarilla](tarjeta) le pusieron
+      - a ese no lo echaron de casualidad
+      - siempre es la misma historia con las [amarilla](tarjeta)
+      - cobraron offside que no fue
+      - el var no sirve
+      - el [arbitro](árbitro) robó feo
+      - el [arbitro](árbitro) estaba re comprado
+      - ese [arbitro](árbitro) cobró todo para ellos
+      - era una jugada para [roja](tarjeta)
+      - ni lo amonestaron!
+      - nos viven perjudicando
+
+  - intent: comentar_antifutbol
+    examples: |
+      - jaja sos re antifutbol
+      - no seas trolo man
+      - como no te va a gustar el futbol?
+      - no puede ser jaja el futbol es lo más
+      - sos un tibio jeje
+      - alto tibio
+
+  - lookup: equipo_futbol
+    examples: |
+      - boca
+      - river
+      - racing
+      - independiente
+      - san lorenzo
+      - velez sarsfield
+      - estudiantes de la plata
+      - talleres
+      - lanus
+      - defensa y justicia
+      - rosario central
+      - colon
+      - gimnasia y esgrima de la plata
+
+  - regex: goles
+    examples: |
+      - \d{1,2}
+
+  - lookup: posicion_jugador
+    examples: |
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+
+  - lookup: tarjeta
+    examples: |
+      - amarilla
+      - roja
+
+  - synonym: boca
+    examples: |
+      - boca juniors
+      - boke
+      - cabj
+      - xeneize
+      - bostero
+      - club de la rivera
+      - Club Atlético Boca Juniors
+
+  - synonym: river
+    examples: |
+      - river plate
+      - millonario
+      - el millo
+      - Club Atlético River Plate
+
+  - synonym: independiente
+    examples: |
+      - rojo
+      - diablito
+      - el rey de copas
+      - Club Atlético Independiente
+      - independiente de Avellaneda
+
+  - synonym: colon
+    examples: |
+      - colon de santa fe
+      - sabalero
+      - negro
+      - aurinegro
+      - el sabalé
+
+  - synonym: árbitro
+    examples: |
+      - arbitro
+      - juez
+      - juez de línea

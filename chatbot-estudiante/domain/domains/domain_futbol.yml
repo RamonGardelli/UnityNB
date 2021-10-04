@@ -1,5 +1,34 @@
-#version: "2.0"
+version: "2.0"
 
-#intents:
+intents:
+  - preguntar_hincha_futbol
+  - decir_hincha_fútbol
+  - preguntar_sobre_ver_partido
+  - comentar_resultado
+  - comentar_goles
+  - comentar_faltas
+  - comentar_errores_arbitros
+  - comentar_antifutbol
 
-#responses:
+entities:
+  - equipo_futbol
+  - goles
+  - posicion_jugador
+  - tarjeta
+
+slots:
+  equipo_futbol:
+    type: text
+    auto_fill: true
+  
+  goles:
+    type: text
+    auto_fill: true
+
+  posicion_jugador:
+    type: text
+    auto_fill: true
+
+  tarjeta:
+    type: text
+    auto_fill: true

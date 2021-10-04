@@ -81,6 +81,9 @@ nlu:
     - [exactas](establecimiento) sali de [diseño](materia)
     - rendi [diseño](materia)
     - salgo de rendir en [exactas](establecimiento)
+    - vengo de mi casa
+    - recien salgo de cursar
+    - hace un rato cursé [algoritmos](materia)
 
 - intent: preguntar_que_cursa
   examples: |
@@ -113,11 +116,7 @@ nlu:
     - que onda con eso?
     - como te va?
 
-
-
-
-
-
+    
 
 - lookup: examen
   examples: | 

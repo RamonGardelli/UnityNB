@@ -26,7 +26,7 @@ responses:
 
   utter_preguntar_como_esta:
   - text: "Como estás {nombre_usuario}?"
-  - text: "Que onda amigo?"
+  - text: "Que onda?"
 
   utter_preguntar_que_paso:
   - text: "Que pasó {nombre_usuario}?"
@@ -73,6 +73,13 @@ responses:
   utter_calmar:
   - text: "Calma {nombre_usuario}, ya pasó ya fue"
   - text: "Che, tranki, respira hondo"
+
+  utter_reir:
+  - text: "JAJAJA"
+
+  utter_sorprendido:
+  - text: "Increible"
+  - text: "Tremendoo jaja"
 
   utter_iamabot:
   - text: "Yo soy Fred, emperador de Rasa"

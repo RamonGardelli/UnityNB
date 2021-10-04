@@ -97,7 +97,7 @@ nlu:
     - me siento muy bien
     - estoy asombrado
     - demasiado bien
-    - muy bien
+    - muy bien por suerte
     - tan bien
     - estupendo
     - genial
@@ -160,3 +160,11 @@ nlu:
     - la cosa marcha
     - mal o bien pero siempre avanzando
     - sin culo-silla no hay gloria
+
+- intent: reir
+  examples: |
+    - jajaja
+    - JAJAJAJAJJAJ
+    - jejej
+    - aksasfjkhdslfj
+    - jjajkasjaskjaskda
