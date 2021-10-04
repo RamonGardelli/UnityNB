@@ -32,6 +32,9 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SessionStarted, ActionExecuted, SlotSet
+import logging
+
+logger = logging.getLogger(__name__)
 
 class ActionSessionStart(Action):
 
@@ -40,6 +43,8 @@ class ActionSessionStart(Action):
 
   async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-      
       sender_id = tracker.sender_id
+
+      logger.info(f"** Nueva conversación con {sender_id}")
+
       return [SessionStarted(), ActionExecuted("action_listen"),SlotSet("nombre_usuario", sender_id)]

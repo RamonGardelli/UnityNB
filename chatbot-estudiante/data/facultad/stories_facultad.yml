@@ -12,30 +12,30 @@ stories:
       entities:
       - materia: any
       - examen: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: contar_examen_aprobado
     entities:
     - nota: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_condescender_alegre
+  - action: action_delSlots_examen
 
 - story: rendir examen + materia
   steps:
   - intent: contar_que_rendi
     entities:
     - materia: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: contar_examen_aprobado
     entities:
     - nota: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_condescender_alegre
+  - action: action_delSlots_examen
 
 - story: rendir examen + aprobado + materia + nota
   steps:
@@ -43,10 +43,10 @@ stories:
     entities:
     - materia: any
     - nota: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_condescender_alegre
+  - action: action_delSlots_examen
 
 - story: rendir examen + aprobado + nota
   steps:
@@ -55,16 +55,15 @@ stories:
     - intent: nota_que_me_saque
       entities:
       - nota: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_condescender_alegre
   - action: action_materia_examen
   - intent: contar_que_rendi
     entities:
     - materia: any
-  - action: action_rindio_examen
   - action: action_materia_examen
+  - action: action_delSlots_examen
   - action: utter_cambio_tema
 
 - story: rendir examen + aprobado + materia
@@ -72,25 +71,25 @@ stories:
   - intent: contar_examen_aprobado
     entities:
     - materia: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: nota_que_me_saque
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_condescender_alegre
+  - action: action_delSlots_examen
   - action: utter_cambio_tema
 
 - story: rendir examen + aprobado
   steps:
   - intent: contar_examen_aprobado
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: nota_que_me_saque
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
   - intent: agradecer
-  - action: utter_condescender_alegre
+  - action: action_delSlots_examen
 
 - story: rendir examen + desaprobado + materia + nota
   steps:
@@ -98,28 +97,29 @@ stories:
     entities:
     - materia: any
     - nota: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_materia_examen
   - or:
     - intent: agradecer
     - intent: volver_a_intentarlo
     - intent: negar
-  - action: utter_ofrecer_ayuda
+  - action: action_delSlots_examen
 
 - story: rendir examen + desaprobado
   steps:
   - intent: contar_examen_desaprobado
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: action_materia_examen
   - intent: contar_que_rendi
     entities:
     - materia: any
-  - action: action_rindio_examen
+  - action: action_saveSlots_examen
   - action: utter_consolar
   - or:
     - intent: agradecer
     - intent: volver_a_intentarlo
     - intent: negar
+  - action: action_delSlots_examen
   - action: utter_cambio_tema
 
 - story: camino preguntar de donde viene
@@ -133,21 +133,23 @@ stories:
     - intent: nota_que_me_saque
   - action: utter_felicitar_examen
   - intent: agradecer
+  - action: action_delSlots_examen
 
 - story: camino preguntar de donde viene 2
   steps:
-    - intent: saludar
-    - action: utter_preguntar_como_esta
-    - action: utter_donde_viene
-    - intent: contar_de_donde_vengo
-    - action: utter_como_le_fue
-    - intent: contar_como_fue
-    - action: utter_respuesta_cursada2 
-    - or:
-      - intent: contar_examen_aprobado_materia
-      - intent: nota_que_me_saque
-    - action: utter_felicitar_examen
-    - intent: agradecer
+  - intent: saludar
+  - action: utter_preguntar_como_esta
+  - action: utter_donde_viene
+  - intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - intent: contar_como_fue
+  - action: utter_respuesta_cursada2 
+  - or:
+    - intent: contar_examen_aprobado_materia
+    - intent: nota_que_me_saque
+  - action: utter_felicitar_examen
+  - intent: agradecer
+  - action: action_delSlots_examen
 
 - story: camino preguntar de donde viene 3
   steps:
@@ -160,6 +162,7 @@ stories:
   - or:
     - intent: agradecer
     - intent: volver_a_intentarlo
+  - action: action_delSlots_examen
   - action: utter_ofrecer_ayuda
 
 - story: camino preguntar de donde viene 4
@@ -178,6 +181,7 @@ stories:
     - or:
       - intent: agradecer
       - intent: volver_a_intentarlo
+    - action: action_delSlots_examen
     - action: utter_ofrecer_ayuda
 
 - story: camino preguntar de donde viene 5
@@ -196,6 +200,7 @@ stories:
     - intent: psycho_killer
     - action: utter_calmar
     - action: utter_ofrecer_ayuda
+    - action: action_delSlots_examen
 
 - story: camino preguntar de donde viene 6
   steps:
@@ -213,4 +218,5 @@ stories:
     - action: utter_jodida_materia
     - action: utter_ofrecer_ayuda
     - intent: agradecer
+    - action: action_delSlots_examen
     - action: utter_despedir

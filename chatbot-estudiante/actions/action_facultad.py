@@ -1,34 +1,41 @@
 from typing import Any, Text, Dict, List
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+import logging
+
+logger = logging.getLogger(__name__)
 
 class ActionRindioExamen(Action):
 
     dict_examen = ["contar_examen_aprobado", "contar_examen_desaprobado", "nota_que_me_saque", "contar_examen_aprobado_materia", "contar_que_rendi"]
 
     def name(self) -> Text:
-        return "action_rindio_examen"
+        return "action_saveSlots_examen"
 
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        current_intent = tracker.get_intent_of_latest_message()
+        rindio_examen = tracker.get_slot("rindio_examen")
+        nota_tracker = tracker.get_slot("nota")
 
-        save_rindio_examen = SlotSet("rindio_examen", current_intent in self.dict_examen)
+        events = []
+        sender_id = tracker.sender_id
+
+        if (not rindio_examen or rindio_examen is None):
+            current_intent = tracker.get_intent_of_latest_message()
+            events.append(SlotSet("rindio_examen", current_intent in self.dict_examen))
+            logger.info(f"** Olvidando slots examen del usuario {sender_id}")
         
-        nota = tracker.get_slot("nota_examen_aprobado") or tracker.get_slot("nota_examen_desaprobado")
+        ultima_nota = next(tracker.get_latest_entity_values("nota_examen_aprobado"), None) or next(tracker.get_latest_entity_values("nota_examen_aprobado"), None)
+       
+        nota = ultima_nota or nota_tracker
 
-        nota = nota or tracker.get_latest_entity_values("nota_examen_aprobado") or tracker.get_latest_entity_values("nota_examen_desaprobado")
-        save_nota = SlotSet("nota", nota)
+        if (nota != nota_tracker):
+            events.append(SlotSet("nota", nota))
 
-        print("examen", tracker.get_slot("examen"))
-        print("materia", tracker.get_slot("materia"))
-        print("nota_examen_aprobado", save_nota, nota)
-
-        return [save_rindio_examen, save_nota]
+        return events
 
 class ActionNotaExamenAprobado(Action):
 
@@ -39,16 +46,17 @@ class ActionNotaExamenAprobado(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        intent_examen = tracker.get_intent_of_latest_message()
-        nota = tracker.get_slot("nota")
+        rindio_examen = tracker.get_slot("rindio_examen")
 
-        print(intent_examen, nota)
-        if (not nota):
-            dispatcher.utter_message(response = "utter_felicitar_examen_sin_nota")
-            dispatcher.utter_message(response = "utter_cuanto_te_sacaste")
+        if (rindio_examen):
+            nota = tracker.get_slot("nota")
+            if (not nota):
+                dispatcher.utter_message(response = "utter_felicitar_examen_sin_nota")
+                dispatcher.utter_message(response = "utter_cuanto_te_sacaste")
+            else:
+                dispatcher.utter_message(response = "utter_felicitar_examen_con_nota", nota_examen_aprobado = nota)
         else:
-            print("nota = ", nota)
-            dispatcher.utter_message(response = "utter_felicitar_examen_con_nota", nota_examen_aprobado = nota)
+            logger.warn("** Examen aprobado sin rendir_examen")
 
         return []
 
@@ -61,12 +69,18 @@ class ActionNotaExamenDesaprobado(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        intent_examen = tracker.get_intent_of_latest_message()
-        print(intent_examen)
+        rindio_examen = tracker.get_slot("rindio_examen")
+        estado_animo = tracker.get_slot("estado_animo")
 
-        dispatcher.utter_message(response = "utter_consolar")
-        nota = tracker.get_slot("nota") or next(tracker.get_latest_entity_values("nota_examen_desaprobado"), None)
-        print("desaprobado ", nota)
+        if (rindio_examen):
+            dispatcher.utter_message(response = "utter_consolar")
+
+            if (estado_animo == "triste" or estado_animo is None):
+                dispatcher.utter_message(response = "utter_levantar_animo")
+            else:
+                dispatcher.utter_message(response = "utter_dejar_joder")
+        else:
+            logger.warn("** Examen desaprobado sin rendir_examen")
 
         return []
 
@@ -78,9 +92,6 @@ class ActionMateriaExamen(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        intent_examen = tracker.get_intent_of_latest_message()
-        print(intent_examen)
     
         materia = tracker.get_slot("materia") or next(tracker.get_latest_entity_values("materia"), None)
         
@@ -92,3 +103,33 @@ class ActionMateriaExamen(Action):
             dispatcher.utter_message(response = "utter_jodida_materia", materia = materia, examen = examen)
         
         return []
+
+class ActionOlvidarExamen(Action):
+
+    def name(self) -> Text:
+        return "action_delSlots_examen"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    
+        events = []
+
+        events.append(SlotSet("examen", None))
+        events.append(SlotSet("materia", None))
+        events.append(SlotSet("nota", None))
+        events.append(SlotSet("nota_examen_aprobado", None))
+        events.append(SlotSet("nota_examen_desaprobado", None))
+
+        aprobado = tracker.get_slot("nota_examen_aprobado")
+
+        if (aprobado):
+            dispatcher.utter_message(response = "utter_condescender_alegre")
+        else:
+            dispatcher.utter_message(response = "utter_ofrecer_ayuda")
+
+        sender_id = tracker.sender_id
+
+        logger.info(f"** Olvidando slots examen del usuario {sender_id}")
+
+        return events

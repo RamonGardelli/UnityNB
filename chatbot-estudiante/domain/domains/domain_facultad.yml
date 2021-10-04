@@ -34,15 +34,15 @@ intents:
       - nota_examen_aprobado
       - nota_examen_desaprobado
   - contar_de_donde_vengo:
-      use_entities: []
+      use_entities:
+      - establecimiento
+      - materia
   - contar_como_fue:
       use_entities: []
   - preguntar_que_cursa:
-      use_entities:
-      - materia
+      use_entities: []
   - preguntar_como_le_va:
-      use_entities:
-      - materia
+      use_entities: []
 
 entities:
   - examen

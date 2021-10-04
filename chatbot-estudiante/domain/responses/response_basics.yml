@@ -2,6 +2,7 @@ version: "2.0"
 
 actions:
   - action_session_start
+  - action_set_animo
 
 responses:
 
@@ -10,6 +11,7 @@ responses:
 
   utter_responder_feliz:
   - text: "Muy bien"
+  - text: "Muy bien por suerte"
   - text: "Estoy contento"
 
   utter_que_estoy_haciendo:
@@ -27,20 +29,19 @@ responses:
   - text: "Que onda amigo?"
 
   utter_preguntar_que_paso:
-  - text: "Que pasó amigo?"
+  - text: "Que pasó {nombre_usuario}?"
   - text: "Que anda pasando {nombre_usuario}, contame"
 
   utter_inicio_conversacion:
   - text: "Contate algo"
 
   utter_cambio_tema:
-  - text: "Que mas tenes para contarme, {nombre_usuario}?"
-  - text: "Alguna otra novedad?"
-  - text: "Contate otra"
+  - text: "Alguna otra novedad {nombre_usuario}?"
+  - text: "Cambiemos de tema"
 
   utter_afirmar:
   - text: "Se"
-  - text: "Totalmente"
+  - text: "Totalmente {nombre_usuario}"
   - text: "Es verdad"
 
   utter_insistir:
@@ -51,7 +52,7 @@ responses:
   - text: "No te preocupes"
   - text: "No pasa nada amigo"
 
-  utter_condescender:
+  utter_condescender_neutro:
   - text: "Así es"
   - text: "Viste jaja"
 
@@ -70,10 +71,10 @@ responses:
   - text: "Ya fue {nombre_usuario}, salimo' de joda para ahogar las penas"
 
   utter_calmar:
-  - text: "Calma {nombre_usuario}"
+  - text: "Calma {nombre_usuario}, ya pasó ya fue"
   - text: "Che, tranki, respira hondo"
-  - text: "Las cosas van a mejorar"
 
   utter_iamabot:
   - text: "Yo soy Fred, emperador de Rasa"
+  - text: "Me llamo Fred, estudio ingeniería en sistemas en la UNICEN"
   # Respuesta de que soy un estudiante de la facultad ;)

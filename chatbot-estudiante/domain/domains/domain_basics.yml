@@ -18,3 +18,10 @@ slots:
   nombre_usuario:
     type: text
     initial_value: "Marcelo Campo"
+
+  estado_animo:
+    type: categorical
+    initial_value: feliz
+    values:
+      - feliz
+      - triste

@@ -4,7 +4,7 @@
     "intent": "modo_feliz",
     "intent_prediction": {
       "name": "saber_como_estoy",
-      "confidence": 0.7438087463378906
+      "confidence": 0.5274925827980042
     }
   },
   {
@@ -12,7 +12,7 @@
     "intent": "contar_examen_aprobado",
     "intent_prediction": {
       "name": "nota_que_me_saque",
-      "confidence": 0.6533837914466858
+      "confidence": 0.774071991443634
     }
   },
   {
@@ -20,7 +20,7 @@
     "intent": "contar_como_fue",
     "intent_prediction": {
       "name": "modo_feliz",
-      "confidence": 0.655671238899231
+      "confidence": 0.6766090393066406
     }
   }
 ]

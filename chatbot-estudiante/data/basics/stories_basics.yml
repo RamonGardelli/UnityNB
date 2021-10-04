@@ -1,7 +1,7 @@
 version: "2.0"
 
 stories:
-- story: camino1 feliz
+- story: camino feliz 
   steps:
   - intent: saludar
   - action: utter_saludar
@@ -9,39 +9,40 @@ stories:
   - action: utter_responder_feliz
   - action: utter_preguntar_como_esta
   - intent: modo_feliz
-  - action: utter_condescender_alegre
+  - action: action_set_animo
 
-- story: camino2 feliz
+- story: camino feliz + preguntar_como_esta
   steps:
   - intent: saludar
   - action: utter_saludar
   - action: utter_preguntar_como_esta
-  - or:
-    - intent: modo_feliz
-    - intent: saber_como_estoy
+  - intent: modo_feliz
+  - action: action_set_animo
+  - intent: saber_como_estoy
   - action: utter_responder_feliz
   - action: utter_inicio_conversacion
 
-- story: camino3 feliz
+- story: camino feliz + comentario_calor
   steps:
   - intent: saludar
   - action: utter_saludar
   - action: utter_preguntar_como_esta
   - intent: modo_feliz
+  - action: action_set_animo
   - intent: saber_como_estoy
-  - action: utter_responder_feliz
   - action: utter_comentario_inicial_calor
   - or:
     - intent: afirmar
     - intent: modo_feliz
   - action: utter_inicio_conversacion
 
-- story: camino4 feliz apurado
+- story: camino feliz + apurado
   steps:
   - intent: saludar
   - action: utter_saludar
   - action: utter_preguntar_como_esta
   - intent: modo_feliz
+  - action: action_set_animo
   - intent: saber_como_estoy
   - action: utter_responder_feliz
   - action: utter_inicio_conversacion
@@ -50,7 +51,7 @@ stories:
     - intent: negar
   - action: utter_despedir
 
-- story: camino5 feliz insistir
+- story: camino feliz + insistir
   steps:
   - intent: saludar
   - action: utter_saludar
@@ -58,23 +59,23 @@ stories:
   - or:
     - intent: modo_feliz
     - intent: saber_como_estoy
+  - action: action_set_animo
   - action: utter_responder_feliz
   - action: utter_insistir
   - intent: afirmar
   - action: utter_inicio_conversacion
 
-- story: camino1 triste
+- story: camino triste
   steps:
   - intent: saludar
   - action: utter_saludar
   - action: utter_preguntar_como_esta
   - intent: modo_triste
-  - action: utter_preguntar_que_paso
-  - action: utter_levantar_animo
+  - action: action_set_animo
   - intent: agradecer
   - action: utter_indiferente
 
-- story: camino2 triste
+- story: camino triste + preguntar_que_paso
   steps:
   - intent: saludar
   - action: utter_saludar
@@ -82,12 +83,19 @@ stories:
   - action: utter_responder_feliz
   - action: utter_preguntar_como_esta
   - intent: modo_triste
-  - action: utter_levantar_animo
+  - action: action_set_animo
+  - action: utter_preguntar_que_paso
 
-- story: camino3 triste
+- story: camino triste + condescender_neutro + psycho_killer + inicio_conversacion
   steps:
   - intent: saludar
   - action: utter_saludar
   - action: utter_preguntar_como_esta
   - intent: modo_triste
-  - action: utter_preguntar_que_paso
+  - action: action_set_animo
+  - intent: agradecer
+  - action: utter_condescender_neutro
+  - intent: psycho_killer
+  - action: utter_calmar
+  - intent: afirmar
+  - action: utter_inicio_conversacion
