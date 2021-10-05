@@ -35,6 +35,7 @@ nlu:
       - fue [1](goles) iguales
       - empataron
       - ganó [river](equipo_futbol) [2](goles)-[1](goles)
+      - gano [river](equipo_futbol) [2](goles)-[1](goles)
       - perdió [colon](equipo_futbol) [1](goles)-[0](goles)
       - [boca](equipo_futbol) le gano a [racing](equipo_futbol) [4](goles) a [2](goles)
       - salieron [0](goles) [0](goles)
