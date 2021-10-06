@@ -52,6 +52,10 @@ entities:
   - año_cursante
 
 slots:
+
+  rindio_examen:
+    type: bool
+
   examen:
     type: text
     auto_fill: true
