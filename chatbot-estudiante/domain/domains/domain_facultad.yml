@@ -40,6 +40,8 @@ intents:
       use_entities: []
   - preguntar_como_le_va:
       use_entities: []
+  - contar_como_fue_examen:
+      use_entities: []
 
 entities:
   - examen

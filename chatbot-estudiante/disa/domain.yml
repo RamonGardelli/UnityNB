@@ -1,0 +1,76 @@
+intents:
+  - explicarTema
+  - darEjemplo
+  - temas
+  - examenes
+  - preguntarFechas
+  - noSeEntiende
+  - saludar
+  - agradecer
+  
+
+entities:
+  - tema
+  - examen
+
+slots:
+  tema:
+    type: categorical
+    values:
+    - uniones quimicas
+    - estructura atomica
+    - tabla periodica
+  examen:
+    type: categorical
+    values:
+    - parcial
+    - recuperatorio
+    - prefinal
+
+responses:
+  utter_explicarUniones:
+  - text: "Las intensas fuerzas que mantienen unidos los átomos en las distintas sustancias se denominan enlaces químicos.Los átomos se unen porque, al estar unidos, adquieren una situación más estable que cuando estaban separados. Las uniones quimicas son dos, enlaces ionicos donde se transfieren electrones y enlaces covalentes, donde los electrones son compartidos por los atomos"
+  
+  utter_explicarTabla:
+  - text: "Las columnas de la tabla periodica se denominan grupos y las filas periodos.El numero de grupo coincide  con el numero de electrones del ultimo nivel de que tienen sus atomos.El numero de fila coincide con el numero de niveles de energia que tiene el atomo"
+  
+  utter_explicarEstructura:
+  - text:  "El átomo está compuesto por un núcleo y uno o más electrones ligados al núcleo. El núcleo está hecho de uno o más protones y, típicamente, un número similar de neutrones; los protones y neutrones se denominan nucleones.El numero atomico (z) es igual al numero de protones que coincide con el numero de electrones. En cambio, el numero masico (A) es la suma del numero de protones + el numero de neutrones"
+  
+  utter_preguntarPorTema:
+  - text: "que tema necesitas que te explique"
+  
+  utter_darEjemploTabla:
+  - text: "El Litio esta en el grupo 1, periodo 2. Esto quiere decir que es un no metal que tiene dos niveles de energia donde en el ultimo hay 1 electron."
+  
+  utter_darEjemploUniones:
+  - text: "El enlace entre el cloro y el potacio es un enlace covalente yaa que son dos no metales, esto quiere decir que van a compartir electrones. Como el potacio tiene un electron en su ultimo nivel de energia y el cloro tiene 7, van a compartir un electron para que el cloro llegue a 8"
+  
+  utter_darEjemploEstructura:
+  - text: "El potasio tiene 22 neutrones, 17 protones y 16 electrones. Entonces A=39 y Z=17"
+  
+  utter_preguntarPorEjemplo:
+  - text: "sobre que tema necesitas que te de un ejemplo"
+  
+  utter_darFechasExamenes:
+  - text: "EL parcial es el 30 de septiembre a las 8hs, el recuperatorio el 14 de octubre a las 9hs y el prefinal el 2 de noviembre a las 8hs"
+  
+  utter_darFechasParcial:
+  - text: "EL parcial es el 30 de septiembre a las 8hs"
+  
+  utter_darFechasRecuperatorio:
+  - text: "El recuperatorio es el 14 de octubre a las 9hs"
+  
+  utter_darFechasPrefinal:
+  - text: "El prefinal es el 2 de noviembre a las 8hs"
+  
+  utter_agradecer:
+  - text: "de nada"
+  
+  utter_saludar:
+  - text: "hola, en que puedo ayudarte"
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
