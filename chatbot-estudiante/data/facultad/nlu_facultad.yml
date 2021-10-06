@@ -37,6 +37,7 @@ nlu:
 
 - intent: contar_que_rendi
   examples: |
+    - rendi [fisica](materia)
     - rendí [programacion](materia)
     - rendí el [final](examen) de [algoritmos](materia)
     - di el [oral](examen) de [metodologia](materia)
@@ -46,9 +47,12 @@ nlu:
 - intent: nota_que_me_saque
   examples: |
     - me saqué un [4](nota_examen_aprobado)
+    - me saque un [4](nota_examen_aprobado)
     - clavé un [10](nota_examen_aprobado)!
+    - clave un [4](nota_examen_aprobado)
     - me saqué un [1](nota_examen_desaprobado) miserable
     - me pusieron un [5](nota_examen_aprobado)
+    - un [8](nota_examen_aprobado)
 
 - intent: contar_examen_aprobado_materia
   examples: |
