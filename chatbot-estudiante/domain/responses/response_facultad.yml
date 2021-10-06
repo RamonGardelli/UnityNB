@@ -19,7 +19,7 @@ responses:
   
   utter_jodida_materia:
     - text: "Y... Es jodida {materia}"
-    - text: "Es difiícil rendir el {examen} de {materia}"
+    - text: "Es difícil rendir el {examen} de {materia}"
   
   utter_ofrecer_ayuda:
     - text: "Si necesitas ayuda con {materia}, chiflame"
@@ -50,12 +50,18 @@ responses:
     - text: "Por donde andabas bro?"
   
   utter_como_le_fue:
-    -  text: "Como te fue con eso?"
+    - text: "Como te fue con eso?"
+    - text: "Y que talco?"
 
   utter_respuesta_cursada:
     - text: "Y alguna novedad por tu lado?" 
     - text: "Como te fue en el ultimo examen?" 
     - text: "Que onda con el TP?" 
+
+  utter_preguntar_por_examen:
+    - text: "Puede ser que hayas rendido un examen hace poco?" 
+    - text: "Como te fue en el ultimo examen?" 
+    - text: "Que onda con el examen?" 
 
   utter_respuesta_cursada2:
     - text: "Te noto cansado" 
@@ -63,13 +69,18 @@ responses:
     - text: "Muy duro fue?" 
  
   utter_respuesta_cursada3:
-    - text: "Estoy haciendo solo AyDA2 y Electricidad, estoy re dejado" 
-    - text: "Me quede con Compiladores y Fundamentos, es que pasaron cosas" 
-    - text: "Se me paso el bondi y estoy haciendo #MicroDiseño con Campo" 
-    - text: "Todas las materias de 3ro excepto operativa, la dejo para el año que viene" 
+    - text: "Te va a causar gracias pero estoy haciendo Lenguajes, Operativa y Diseño. Cada dia siento que una parte de mi alma se apaga"
+    - text: "Estoy haciendo solo Lenguajes, Diseño y Operativa, estoy re dejado" 
+    - text: "Me quede con Compiladores, Diseño y Lenguajes, es que pasaron cosas" 
+    - text: "Se me paso el bondi y estoy ahora estoy a full con Lenguajes, Operativa y Diseño" 
+    - text: "Un poco de 3ero y un poco de 4to. O sea, Lenguajes, Operativa y Diseño" 
     - text: "Ya sabes, alguna de un año, otras de otro" 
 
   utter_respuesta_cursada4:
     - text: "Llevar la llevo" 
     - text: "Este año es el mio!" 
     - text: "Bondiola pipi" 
+  
+  utter_condescender_examen:
+    - text: "Y qué te pareció?"
+    - text: "Dificil?"

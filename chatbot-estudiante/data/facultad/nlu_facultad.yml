@@ -16,12 +16,10 @@ nlu:
 
 - intent: volver_a_intentarlo
   examples: |
-    - si, ya fue, pruebo la próxima fecha
+    - voy a probar la próxima fecha
     - que se le va a hacer, la siguiente
     - la tercera será la vencida
     - más adelante se vuelve a dar
-    - y si nos hacemos cartoneros? seguro nos va mejor
-    - tenes razon, tengo que dedicarle mas tiempo aunque no me guste la materia
 
 - intent: contar_examen_aprobado
   examples: |
@@ -35,9 +33,7 @@ nlu:
     - aprobé el [parcial](examen)
     - pude aprobar un [parcialito](examen) con [5](nota_examen_aprobado)
     - safaroni en el [examen](examen)
-    - aprobe raspando
     - adentro el [examen](examen)
-    - una menos
 
 - intent: contar_que_rendi
   examples: |
@@ -53,7 +49,6 @@ nlu:
     - clavé un [10](nota_examen_aprobado)!
     - me saqué un [1](nota_examen_desaprobado) miserable
     - me pusieron un [5](nota_examen_aprobado)
-    - [6](nota_examen_aprobado)
 
 - intent: contar_examen_aprobado_materia
   examples: |
@@ -69,21 +64,21 @@ nlu:
   
 - intent: contar_de_donde_vengo
   examples: |
-    - sali de [exactas](establecimiento) curse [diseño](materia)
-    - sali de [exactas](establecimiento) rendi [diseño](materia)
+    - sali de [exactas](establecimiento) 
     - sali de [diseño](materia)
-    - vengo de [exactas](establecimiento) curse [diseño](materia)
-    - vengo de [exactas](establecimiento) rendi [diseño](materia)
+    - vengo de [exactas](establecimiento)
     - vengo de [diseño](materia)
-    - salgo de [exactas](establecimiento) curse [diseño](materia)
-    - salgo de [exactas](establecimiento) rendi [diseño](materia)
+    - salgo de [exactas](establecimiento)
     - termine con [diseño](materia) por hoy
     - [exactas](establecimiento) sali de [diseño](materia)
-    - rendi [diseño](materia)
-    - salgo de rendir en [exactas](establecimiento)
     - vengo de mi casa
     - recien salgo de cursar
     - hace un rato cursé [algoritmos](materia)
+
+- intent: contar_sali_examen
+  examples: |
+    - recien salgo de [examen](examen) [diseño](materia) 
+    - sali de un [examen](examen) de [diseño](materia)
 
 - intent: preguntar_que_cursa
   examples: |
@@ -106,6 +101,19 @@ nlu:
     - meta mate y galletitas
     - me dormi
     - con paja
+    - simple
+    - claro
+
+- intent: contar_como_fue_examen
+  examples: |
+    - es simple, es claro
+    - sencillo
+    - tranquilo
+    - bastante dificil
+    - rebuscado
+    - preguntaron cosas que no sabia
+    - un caramelito
+    - jodido
 
 - intent: preguntar_como_le_va
   examples: |
@@ -118,154 +126,160 @@ nlu:
 
     
 
-- lookup: examen
+- intent: examenes
   examples: | 
-    - parcial
-    - recuperatorio
-    - prefinal
-    - final
-    - evaluación
-    - oral
-    - parcialito
+    - [parcial] (examen)
+    - [parcialito] (examen)
+    - [recuperatorio] (exame)
+    - [prefinal] (examen)
+    - [final] (examen)
+    - [evaluación] (examen)
+    - [oral] (examen)
+    - [defensa] (examen)
 
-- lookup: establecimiento
+- intent: establecimientos
   examples: |
-    - pab 1
-    - pab 2
-    - pab 3
-    - pab 4
-    - isistan
-    - pladema
-    - ifimat
-    - laboratorio
-    - exactas
-    - economicas
-    - vete
-    - veterinaria
-    - humanas
-    - biblio
-    - biblioteca
-    - comedor
-    - bienestar
-    - cancha
+    - [pab1] (establecimiento)
+    - [pab2] (establecimiento)
+    - [pab3] (establecimiento)
+    - [pab4] (establecimiento)
+    - [isistan] (establecimiento)
+    - [pladema] (establecimiento)
+    - [ifimat] (establecimiento)
+    - [laboratorio] (establecimiento)
+    - [laboratorio1] (establecimiento)
+    - [laboratorio2] (establecimiento)
+    - [laboratorio3] (establecimiento)
+    - [laboratorio4] (establecimiento)
+    - [exactas] (establecimiento)
+    - [economicas] (establecimiento)
+    - [vete] (establecimiento)
+    - [veterinaria] (establecimiento)
+    - [humanas] (establecimiento)
+    - [biblio] (establecimiento)
+    - [biblioteca] (establecimiento)
+    - [comedor] (establecimiento)
+    - [bienestar] (establecimiento)
+    - [cancha] (establecimiento)
 
-- lookup: materia
+- intent: materias
   examples: |
-    - diseño
-    - compiladores
-    - feypi
-    - programacion
-    - matematica
-    - quimica
-    - algebra
-    - ciencias
-    - fisica
-    - algoritmos
-    - electricidad
-    - ingles
-    - electronica digital
-    - electronica
-    - proba
-    - comu 1
-    - comu 2
-    - objetos
-    - estructuras
-    - metodologia
-    - arqui 1
-    - arqui 2
-    - arquitectura
-    - base de datos
-    - exploratoria
-    - lenguajes
+    - [diseño] (materias)
+    - [compiladores] (materias)
+    - [feypi] (materia)
+    - [programacion] (materia)
+    - [matematica] (materia)
+    - [quimica] (materia)
+    - [algebra] (materia)
+    - [ciencias] (materia)
+    - [fisica] (materia)
+    - [algoritmos] (materia)
+    - [electricidad] (materia)
+    - [ingles] (materia)
+    - [electronica digital] (materia)
+    - [electronica] (materia)
+    - [proba] (materia)
+    - [comu1] (materia)
+    - [comu2] (materia)
+    - [objetos] (materia)
+    - [estructuras] (materia)
+    - [metodologia] (materia)
+    - [arqui1] (materia)
+    - [arqui2] (materia)
+    - [arquitectura] (materia)
+    - [base de datos] (materia)
+    - [exploratoria] (materia)
+    - [lenguajes] (materia)
 
-- lookup: año_cursante
+- intent: año_cursantes
   examples: |
-    - ingreso
-    - primero
-    - segundo
-    - tercero
-    - cuarto
-    - quinto
+    - [ingreso] (año_cursante)
+    - [primero] (año_cursante)
+    - [segundo] (año_cursante)
+    - [tercero] (año_cursante)
+    - [cuarto] (año_cursante)
+    - [quinto] (año_cursante)
 
-- lookup: nota_examen_desaprobado
+- intent: nota_examen_desaprobados
   examples: |
-    - 0
-    - 1
-    - 2
-    - 3
+    - [0] (nota_examen_desaprobado)
+    - [1] (nota_examen_desaprobado)
+    - [2] (nota_examen_desaprobado)
+    - [3] (nota_examen_desaprobado)
 
-- lookup: nota_examen_aprobado
+- intent: nota_examen_aprobados
   examples: |
-    - 4
-    - 5
-    - 6
-    - 7
-    - 8
-    - 9
-    - 10
+    - [4] (nota_examen_aprobado)
+    - [5] (nota_examen_aprobado)
+    - [6] (nota_examen_aprobado)
+    - [7] (nota_examen_aprobado)
+    - [8] (nota_examen_aprobado)
+    - [9] (nota_examen_aprobado)
+    - [10] (nota_examen_aprobado)
 
 - synonym: matematica
   examples: |
-    - matematica 1
-    - matematica 2
-    - analisis matematico 1
-    - analisis matematico 2
+    - matematica1
+    - matematica2
+    - analisis matematico1
+    - analisis matematico2
     - analisis
-    - analisis 1
-    - analisis 2
-    - mat 1
-    - mat 2
+    - analisis1
+    - analisis2
+    - mat1
+    - mat2
     - matematica discreta
     - discreta
 
 - synonym: algebra
   examples: |
-    - las viejas
-    - algebra 1
+    - algebra1
     - algebra lineal
     - lineal
 
 - synonym: ciencias
   examples: |
-    - ciencias de la computacion 1
-    - ciencias de la computacion 2
-    - ciencias 1
-    - ciencias 2
-    - virginia
-    - rosa
+    - ciencias de la computacion1
+    - ciencias de la computacion2
+    - ciencias1
+    - ciencias2
   
 - synonym: algoritmos
   examples: |
-    - ayda 1
-    - ayda 2
-    - algoritmos 1
-    - algoritmos 2
+    - ayda1
+    - ayda2
+    - algoritmos1
+    - algoritmos2
     - analisis y diseño de algoritmos
-    - analisis y diseño de algoritmos 1
-    - analisis y diseño de algoritmos 2
+    - analisis y diseño de algoritmos1
+    - analisis y diseño de algoritmos2
 
 - synonym: programacion
   examples: |
     - prog
-    - introduccion a la programacion 1
-    - introduccion a la programacion 2
+    - introduccion a la programacion1
+    - introduccion a la programacion2
     - intro prog
-    - intro prog 1
-    - intro prog 2
+    - intro prog1
+    - intro prog2
 
 - synonym: diseño
   examples: |
     - Diseño de Sistemas de Software
+    - diseño de sistemas
+    - diseño de sistemas de software
 
 - synonym: compiladores
   examples: |
-    - Diseño de Compiladores I
+    - Diseño de Compiladores1
     - compis
     - diseño de compiladores
+    - diseño de compiladores1
 
 - synonym: feypi
   examples: |
     - Fundamentos de la Economía y Proyectos de Inversión
+    - fundamentos de la economía y proyectos de inversión
     - fundamentos
 
 - synonym: 1ro

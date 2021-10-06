@@ -1,126 +1,73 @@
 version: "2.0"
 
 stories:
-- story: rendir examen + materia + examen
+- story: rendir examen + materia + nota
   steps:
-  - or:
-    - intent: contar_examen_aprobado
-      entities:
-      - materia: any
-      - examen: any
-    - intent: contar_que_rendi
-      entities:
-      - materia: any
-      - examen: any
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
   - intent: contar_examen_aprobado
     entities:
-    - nota: any
+    - materia: any
+    - examen: any
   - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
-  - intent: agradecer
-  - action: action_delSlots_examen
 
 - story: rendir examen + materia
   steps:
-  - intent: contar_que_rendi
-    entities:
-    - materia: any
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: contar_examen_aprobado
-    entities:
-    - nota: any
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: agradecer
-  - action: action_delSlots_examen
-
-- story: rendir examen + aprobado + materia + nota
-  steps:
-  - intent: contar_examen_aprobado
-    entities:
-    - materia: any
-    - nota: any
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: agradecer
-  - action: action_delSlots_examen
-
-- story: rendir examen + aprobado + nota
-  steps:
-  - or:
-    - intent: contar_examen_aprobado
-    - intent: nota_que_me_saque
-      entities:
-      - nota: any
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: agradecer
-  - action: action_materia_examen
-  - intent: contar_que_rendi
-    entities:
-    - materia: any
-  - action: action_materia_examen
-  - action: action_delSlots_examen
-  - action: utter_cambio_tema
-
-- story: rendir examen + aprobado + materia
-  steps:
   - intent: contar_examen_aprobado
     entities:
     - materia: any
   - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
+
+- story: rendir examen + nota
+  steps:
+  - intent: contar_examen_aprobado
+    entities:
+    - examen: any
+  - action: action_saveSlots_examen
+  - action: action_nota_examen_aprobado
+
+- story: contar que me saqué (luego de preguntar cuanto te sacaste)
+  steps:
   - intent: nota_que_me_saque
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: agradecer
-  - action: action_delSlots_examen
-  - action: utter_cambio_tema
+  - action: action_saber_nota
 
-- story: rendir examen + aprobado
+- story: contar qué rendí
   steps:
-  - intent: contar_examen_aprobado
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: nota_que_me_saque
-  - action: action_saveSlots_examen
-  - action: action_nota_examen_aprobado
-  - intent: agradecer
-  - action: action_delSlots_examen
-
-- story: rendir examen + desaprobado + materia + nota
-  steps:
-  - intent: contar_examen_desaprobado
-    entities:
-    - materia: any
-    - nota: any
-  - action: action_saveSlots_examen
-  - action: action_materia_examen
-  - or:
-    - intent: agradecer
-    - intent: volver_a_intentarlo
-    - intent: negar
-  - action: action_delSlots_examen
-
-- story: rendir examen + desaprobado
-  steps:
-  - intent: contar_examen_desaprobado
-  - action: action_saveSlots_examen
-  - action: action_materia_examen
   - intent: contar_que_rendi
-    entities:
-    - materia: any
-  - action: action_saveSlots_examen
-  - action: utter_consolar
-  - or:
-    - intent: agradecer
-    - intent: volver_a_intentarlo
-    - intent: negar
-  - action: action_delSlots_examen
+  - action: utter_condescender_examen
+
+- story: camino casual 1
+  steps:
+  - intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - intent: contar_como_fue
+  - action: utter_preguntar_por_examen
+
+- story: camino casual 2
+  steps:
+  - intent: preguntar_como_le_va
+  - action: utter_respuesta_cursada4
+
+- story: camino casual 3
+  steps:
+  - intent: preguntar_que_cursa
+  - action: utter_respuesta_cursada3
+
+- story: camino casual 4
+  steps:
+  - intent: contar_de_donde_vengo
+  - action: utter_como_le_fue
+  - intent: contar_como_fue
+  - action: utter_preguntar_por_examen
+
+- story: camino casual 5
+  steps:
+  - intent: contar_como_fue_examen
   - action: utter_cambio_tema
+  - action: action_delSlots_examen
+
+
+# Esto es otro tipo de conversación
 
 - story: camino preguntar de donde viene
   steps:

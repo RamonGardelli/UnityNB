@@ -1,42 +1,39 @@
 version: "2.0"
 
 intents:
+  - examenes
+  - materias
+  - establecimientos
+  - año_cursantes
+  - nota_examen_aprobados
+  - nota_examen_desaprobados
   - contar_examen_desaprobado:
       use_entities:
       - examen
-      - materia
-      - nota_examen_aprobado
       - nota_examen_desaprobado
   - contar_examen_aprobado:
       use_entities:
       - examen
-      - materia
       - nota_examen_aprobado
-      - nota_examen_desaprobado
   - contar_examen_aprobado_materia:
       use_entities:
-      - examen
       - materia
-      - nota_examen_aprobado
-      - nota_examen_desaprobado
   - volver_a_intentarlo:
       use_entities: []
   - contar_que_rendi:
       use_entities:
       - examen
       - materia
-      - nota_examen_aprobado
-      - nota_examen_desaprobado
   - nota_que_me_saque:
       use_entities:
-      - examen
-      - materia
       - nota_examen_aprobado
       - nota_examen_desaprobado
   - contar_de_donde_vengo:
       use_entities:
       - establecimiento
       - materia
+  - contar_sali_examen:
+      use_entities: []
   - contar_como_fue:
       use_entities: []
   - preguntar_que_cursa:
@@ -49,7 +46,6 @@ entities:
   - materia
   - nota_examen_aprobado
   - nota_examen_desaprobado
-  - ultima_cursada
   - establecimiento
   - año_cursante
 
@@ -75,20 +71,6 @@ slots:
   nota:
     type: text
   
-  ultima_cursada:
-    type: text
-    auto_fill: true
-  
   establecimiento:
     type: text
     auto_fill: true
-
-  viene_de_la_facultad:
-    type: bool
-
-  rindio_examen:
-    type: bool
-    influence_conversation: true
-
-  temario_diseño:
-    type: list
