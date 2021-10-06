@@ -12,6 +12,7 @@ intents:
   - agradecer
   - bot_challenge
   - psycho_killer
+  - reir
 
 slots:
   # datos del usuario a extraer
@@ -21,7 +22,6 @@ slots:
 
   estado_animo:
     type: categorical
-    initial_value: feliz
     values:
       - feliz
       - triste

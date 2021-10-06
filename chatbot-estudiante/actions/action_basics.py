@@ -13,21 +13,24 @@ class ActionEstadoAnimo(Action):
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         current_intent = tracker.get_intent_of_latest_message()
+        current_animo = tracker.get_slot("estado_animo")
 
         events = []
 
         sender_id = tracker.sender_id
 
-        if (current_intent == "modo_feliz"):
-            events.append(SlotSet("estado_animo", "feliz"))
-            dispatcher.utter_message(response = "utter_condescender_alegre")
-            logger.info(f"** El usuario {sender_id}, está feliz")
-        else:
-            if (current_intent == "modo_triste"):
-                events.append(SlotSet("estado_animo", "triste"))
-                dispatcher.utter_message(response = "utter_levantar_animo")
-                logger.info(f"** El usuario {sender_id}, está triste")
+        if (not current_animo):
+
+            if (current_intent == "modo_feliz"):
+                events.append(SlotSet("estado_animo", "feliz"))
+                dispatcher.utter_message(response = "utter_condescender_alegre")
+                logger.info(f"** El usuario {sender_id}, está feliz.")
             else:
-                logger.warn("** Se intentó setear el estado de ánimo del usuario sin éxito.")
+                if (current_intent == "modo_triste"):
+                    events.append(SlotSet("estado_animo", "triste"))
+                    dispatcher.utter_message(response = "utter_levantar_animo")
+                    logger.info(f"** El usuario {sender_id}, está triste.")
+                else:
+                    logger.warn("** Se intentó setear el estado de ánimo del usuario sin éxito.")
 
         return events

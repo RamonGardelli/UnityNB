@@ -45,6 +45,6 @@ class ActionSessionStart(Action):
 
       sender_id = tracker.sender_id
 
-      logger.info(f"** Nueva conversación con {sender_id}")
+      logger.info(f"** Nueva conversación con {sender_id}.")
 
       return [SessionStarted(), ActionExecuted("action_listen"),SlotSet("nombre_usuario", sender_id)]

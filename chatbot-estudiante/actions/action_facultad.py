@@ -26,7 +26,7 @@ class ActionRindioExamen(Action):
         if (not rindio_examen or rindio_examen is None):
             current_intent = tracker.get_intent_of_latest_message()
             events.append(SlotSet("rindio_examen", current_intent in self.dict_examen))
-            logger.info(f"** Olvidando slots examen del usuario {sender_id}")
+            logger.info(f"** Olvidando slots examen del usuario {sender_id}.")
         
         ultima_nota = next(tracker.get_latest_entity_values("nota_examen_aprobado"), None) or next(tracker.get_latest_entity_values("nota_examen_aprobado"), None)
        
@@ -130,6 +130,6 @@ class ActionOlvidarExamen(Action):
 
         sender_id = tracker.sender_id
 
-        logger.info(f"** Olvidando slots examen del usuario {sender_id}")
+        logger.info(f"** Olvidando slots examen del usuario {sender_id}.")
 
         return events
