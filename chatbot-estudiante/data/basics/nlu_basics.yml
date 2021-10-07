@@ -105,6 +105,7 @@ nlu:
     - estupendo
     - genial
     - que felicidad siento
+    - re bien bro
 
 - intent: modo_triste
   examples: |

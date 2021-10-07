@@ -7,7 +7,6 @@ stories:
     entities:
     - materia: any
     - examen: any
-  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
 
 - story: rendir examen + materia
@@ -15,7 +14,6 @@ stories:
   - intent: contar_examen_aprobado
     entities:
     - materia: any
-  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
 
 - story: rendir examen + nota
@@ -23,10 +21,9 @@ stories:
   - intent: contar_examen_aprobado
     entities:
     - examen: any
-  - action: action_saveSlots_examen
   - action: action_nota_examen_aprobado
 
-- story: contar que me saqué (luego de preguntar cuanto te sacaste)
+- story: contar que me saqué (supone luego de preguntar cuanto te sacaste)
   steps:
   - intent: nota_que_me_saque
   - action: action_saber_nota
@@ -64,4 +61,10 @@ stories:
   steps:
   - intent: contar_como_fue_examen
   - action: utter_cambio_tema
+
+- story: olvidar slots examen
+  steps:
+  - intent: agradecer
+  - slot_was_set:
+      - materia
   - action: action_delSlots_examen

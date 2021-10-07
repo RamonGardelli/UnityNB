@@ -1,7 +1,6 @@
 version: "2.0"
 
 actions:
-  - action_saveSlots_examen
   - action_nota_examen_aprobado
   - action_nota_examen_desaprobado
   - action_materia_examen
@@ -43,7 +42,6 @@ responses:
 
   utter_cuanto_te_sacaste:
     - text: "Que nota te sacaste?"
-    - text: "Cuanto te sacaste {nombre_usuario}?"
     - text: "Con cuanto?"
 
   utter_donde_viene:

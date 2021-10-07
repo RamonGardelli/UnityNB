@@ -28,7 +28,7 @@ class ActionEstadoAnimo(Action):
             else:
                 if (current_intent == "modo_triste"):
                     events.append(SlotSet("estado_animo", "triste"))
-                    dispatcher.utter_message(response = "utter_levantar_animo")
+                    dispatcher.utter_message(response = "utter_preguntar_que_paso")
                     logger.info(f"** El usuario {sender_id}, está triste.")
                 else:
                     logger.warn("** Se intentó setear el estado de ánimo del usuario sin éxito.")

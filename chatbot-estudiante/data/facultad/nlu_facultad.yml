@@ -8,29 +8,29 @@ nlu:
     - fue muy dificil el [final](examen)
     - no estudie nada para el [oral](examen)
     - me pusieron un [1](nota_examen_desaprobado) en el [parcial](examen)
-    - no me presenté al [final](examen)
-    - desaprobé el [parcial](examen) que rendí
-    - me saqué un [2](nota_examen_desaprobado) en el [recuperatorio](examen)
-    - firmé el ausente y me fui del [final](examen)
+    - no me presente al [final](examen)
+    - desaprobe el [parcial](examen) que rendi
+    - me saque un [2](nota_examen_desaprobado) en el [recuperatorio](examen)
+    - firme el ausente y me fui del [final](examen)
     - me clavaron un [0](nota_examen_desaprobado) por machetearme
 
 - intent: volver_a_intentarlo
   examples: |
-    - voy a probar la próxima fecha
+    - voy a probar la proxima fecha
     - que se le va a hacer, la siguiente
-    - la tercera será la vencida
-    - más adelante se vuelve a dar
+    - la tercera sera la vencida
+    - mas adelante se vuelve a dar
 
 - intent: contar_examen_aprobado
   examples: |
     - me fue bien en el [examen](examen)
-    - aprobé el [final](examen)!
-    - me saqué un [4](nota_examen_aprobado)
-    - pude aprobar el [parcial](examen) que rendí con [6](nota_examen_aprobado)
-    - aprobé el [oral](examen) con [9](nota_examen_aprobado)
-    - logré aprobar bien con [7](nota_examen_aprobado)
-    - pasé el [prefinal](examen) con lo justo, [4](nota_examen_aprobado)
-    - aprobé el [parcial](examen)
+    - aprobe el [final](examen)!
+    - me saque un [4](nota_examen_aprobado)
+    - pude aprobar el [parcial](examen) que rendi con [6](nota_examen_aprobado)
+    - aprobe el [oral](examen) con [9](nota_examen_aprobado)
+    - logre aprobar bien con [7](nota_examen_aprobado)
+    - pase el [prefinal](examen) con lo justo, [4](nota_examen_aprobado)
+    - aprobe el [parcial](examen)
     - pude aprobar un [parcialito](examen) con [5](nota_examen_aprobado)
     - safaroni en el [examen](examen)
     - adentro el [examen](examen)
@@ -38,19 +38,19 @@ nlu:
 - intent: contar_que_rendi
   examples: |
     - rendi [fisica](materia)
-    - rendí [programacion](materia)
-    - rendí el [final](examen) de [algoritmos](materia)
+    - rendi [programacion](materia)
+    - rendi el [final](examen) de [algoritmos](materia)
     - di el [oral](examen) de [metodologia](materia)
     - di el final [diseño](materia) hace un rato
     - vengo de rendir [diseño](materia)
 
 - intent: nota_que_me_saque
   examples: |
-    - me saqué un [4](nota_examen_aprobado)
     - me saque un [4](nota_examen_aprobado)
-    - clavé un [10](nota_examen_aprobado)!
+    - me saque un [6](nota_examen_aprobado)
+    - clave un [10](nota_examen_aprobado)!
     - clave un [4](nota_examen_aprobado)
-    - me saqué un [1](nota_examen_desaprobado) miserable
+    - me saque un [1](nota_examen_desaprobado) miserable
     - me pusieron un [5](nota_examen_aprobado)
     - un [8](nota_examen_aprobado)
 
@@ -77,7 +77,7 @@ nlu:
     - [exactas](establecimiento) sali de [diseño](materia)
     - vengo de mi casa
     - recien salgo de cursar
-    - hace un rato cursé [algoritmos](materia)
+    - hace un rato curse [algoritmos](materia)
 
 - intent: contar_sali_examen
   examples: |
@@ -137,7 +137,7 @@ nlu:
     - [recuperatorio] (exame)
     - [prefinal] (examen)
     - [final] (examen)
-    - [evaluación] (examen)
+    - [evaluacion] (examen)
     - [oral] (examen)
     - [defensa] (examen)
 
@@ -168,8 +168,8 @@ nlu:
 
 - intent: materias
   examples: |
-    - [diseño] (materias)
-    - [compiladores] (materias)
+    - [diseño] (materia)
+    - [compiladores] (materia)
     - [feypi] (materia)
     - [programacion] (materia)
     - [matematica] (materia)
@@ -282,8 +282,8 @@ nlu:
 
 - synonym: feypi
   examples: |
-    - Fundamentos de la Economía y Proyectos de Inversión
-    - fundamentos de la economía y proyectos de inversión
+    - Fundamentos de la Economia y Proyectos de Inversion
+    - fundamentos de la economia y proyectos de inversion
     - fundamentos
 
 - synonym: 1ro

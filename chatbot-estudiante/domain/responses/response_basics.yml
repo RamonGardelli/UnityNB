@@ -10,7 +10,6 @@ responses:
   - text: "Hola {nombre_usuario}!"
 
   utter_responder_feliz:
-  - text: "Muy bien"
   - text: "Muy bien por suerte"
   - text: "Estoy contento"
 
@@ -21,16 +20,15 @@ responses:
   - text: "Hace un momento vengo de hacer unos trámites y me senté a descansar"
 
   utter_comentario_inicial_calor:
-  - text: "Jugó garcia lorca de titular"
-  - text: "Que calor que hace!"
+  - text: "Que calor que hace che!"
 
   utter_preguntar_como_esta:
-  - text: "Como estás {nombre_usuario}?"
+  - text: "Como estás?"
   - text: "Que onda?"
 
   utter_preguntar_que_paso:
   - text: "Que pasó {nombre_usuario}?"
-  - text: "Que anda pasando {nombre_usuario}, contame"
+  - text: "Que te anda pasando {nombre_usuario} contame"
 
   utter_inicio_conversacion:
   - text: "Contate algo"
@@ -82,6 +80,5 @@ responses:
   - text: "Tremendoo jaja"
 
   utter_iamabot:
-  - text: "Yo soy Fred, emperador de Rasa"
   - text: "Me llamo Fred, estudio ingeniería en sistemas en la UNICEN"
   # Respuesta de que soy un estudiante de la facultad ;)

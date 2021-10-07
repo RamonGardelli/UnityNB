@@ -1,101 +1,35 @@
 version: "2.0"
 
 stories:
-- story: camino feliz 
+
+- story: saludar
   steps:
   - intent: saludar
   - action: utter_saludar
-  - intent: saber_como_estoy
-  - action: utter_responder_feliz
   - action: utter_preguntar_como_esta
-  - intent: modo_feliz
+
+- story: setear estado de animo y responder
+  steps:
+  - or: 
+    - intent: modo_feliz
+    - intent: modo_triste 
   - action: action_set_animo
 
-- story: camino feliz + preguntar_como_esta
+- story: saber como estoy
   steps:
-  - intent: saludar
-  - action: utter_saludar
-  - action: utter_preguntar_como_esta
-  - intent: modo_feliz
-  - action: action_set_animo
   - intent: saber_como_estoy
   - action: utter_responder_feliz
-  - action: utter_inicio_conversacion
-
-- story: camino feliz + comentario_calor
-  steps:
-  - intent: saludar
-  - action: utter_saludar
-  - action: utter_preguntar_como_esta
-  - intent: modo_feliz
-  - action: action_set_animo
-  - intent: saber_como_estoy
-  - action: utter_comentario_inicial_calor
   - or:
     - intent: afirmar
     - intent: modo_feliz
   - action: utter_inicio_conversacion
 
-- story: camino feliz + apurado
+- story: despedir
   steps:
-  - intent: saludar
-  - action: utter_saludar
-  - action: utter_preguntar_como_esta
-  - intent: modo_feliz
-  - action: action_set_animo
-  - intent: saber_como_estoy
-  - action: utter_responder_feliz
-  - action: utter_inicio_conversacion
-  - or:
-    - intent: despedir
-    - intent: negar
+  - intent: despedir
   - action: utter_despedir
 
-- story: camino feliz + insistir
+- story: psycho_killer
   steps:
-  - intent: saludar
-  - action: utter_saludar
-  - action: utter_preguntar_como_esta
-  - or:
-    - intent: modo_feliz
-    - intent: saber_como_estoy
-  - action: action_set_animo
-  - action: utter_responder_feliz
-  - action: utter_insistir
-  - intent: afirmar
-  - action: utter_inicio_conversacion
-
-- story: camino triste
-  steps:
-  - intent: saludar
-  - action: utter_saludar
-  - action: utter_preguntar_como_esta
-  - intent: modo_triste
-  - action: action_set_animo
-  - intent: agradecer
-  - action: utter_indiferente
-
-- story: camino triste + preguntar_que_paso
-  steps:
-  - intent: saludar
-  - action: utter_saludar
-  - intent: saber_como_estoy
-  - action: utter_responder_feliz
-  - action: utter_preguntar_como_esta
-  - intent: modo_triste
-  - action: action_set_animo
-  - action: utter_preguntar_que_paso
-
-- story: camino triste + condescender_neutro + psycho_killer + inicio_conversacion
-  steps:
-  - intent: saludar
-  - action: utter_saludar
-  - action: utter_preguntar_como_esta
-  - intent: modo_triste
-  - action: action_set_animo
-  - intent: agradecer
-  - action: utter_condescender_neutro
   - intent: psycho_killer
   - action: utter_calmar
-  - intent: afirmar
-  - action: utter_inicio_conversacion
