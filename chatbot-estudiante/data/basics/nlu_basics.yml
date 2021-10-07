@@ -25,6 +25,9 @@ nlu:
     - todo bien?
     - todo en orden?
     - como te sentís?
+    - bien, y vos?
+    - bien vos?
+    - bien y vos?
 
 - intent: que_estoy_haciendo
   examples: |

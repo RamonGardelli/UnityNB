@@ -53,9 +53,6 @@ entities:
 
 slots:
 
-  rindio_examen:
-    type: bool
-
   examen:
     type: text
     auto_fill: true
@@ -73,9 +70,6 @@ slots:
     type: text
     auto_fill: true
     influence_conversation: true
-
-  nota:
-    type: text
   
   establecimiento:
     type: text

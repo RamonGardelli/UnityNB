@@ -6,6 +6,7 @@ actions:
   - action_nota_examen_desaprobado
   - action_materia_examen
   - action_delSlots_examen
+  - action_saber_nota
 
 responses:
   utter_consolar:

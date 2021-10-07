@@ -6,41 +6,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-class ActionRindioExamen(Action):
-
-    dict_examen = ["contar_examen_aprobado", "contar_examen_desaprobado", "nota_que_me_saque", "contar_examen_aprobado_materia", "contar_que_rendi"]
-
-    def name(self) -> Text:
-        return "action_saveSlots_examen"
-
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        rindio_examen = tracker.get_slot("rindio_examen")
-        nota_tracker = tracker.get_slot("nota")
-
-        events = []
-        sender_id = tracker.sender_id
-
-        if (not rindio_examen or rindio_examen is None):
-            current_intent = tracker.get_intent_of_latest_message()
-            rindio = current_intent in self.dict_examen
-            if (rindio):
-                events.append(SlotSet("rindio_examen", rindio))
-                logger.info(f"** Seteando rindio_examen del usuario {sender_id}.")
-            else:
-                logger.warn(f"** Entró a la action_saveSlots sin mencionar rendir examen con el usuario {sender_id}.")
-        
-        ultima_nota = next(tracker.get_latest_entity_values("nota_examen_aprobado"), None) or next(tracker.get_latest_entity_values("nota_examen_aprobado"), None)
-       
-        nota = ultima_nota or nota_tracker
-
-        if (nota != nota_tracker):
-            events.append(SlotSet("nota", nota))
-
-        return events
-
 class ActionNotaExamenAprobado(Action):
 
     def name(self) -> Text:
@@ -50,20 +15,16 @@ class ActionNotaExamenAprobado(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        rindio_examen = tracker.get_slot("rindio_examen")
-
-        if (rindio_examen):
-            nota = tracker.get_slot("nota")
-            if (not nota):
-                dispatcher.utter_message(response = "utter_felicitar_examen_sin_nota")
-                dispatcher.utter_message(response = "utter_cuanto_te_sacaste")
-            else:
-                dispatcher.utter_message(response = "utter_felicitar_examen_con_nota", nota_examen_aprobado = nota)
-                FollowupAction("action_materia_examen")
+        events = []
+        
+        if (not tracker.get_slot("nota_examen_aprobado")):
+            dispatcher.utter_message(response = "utter_felicitar_examen_sin_nota")
+            dispatcher.utter_message(response = "utter_cuanto_te_sacaste")
         else:
-            logger.warn("** Examen aprobado sin rendir_examen")
+            dispatcher.utter_message(response = "utter_felicitar_examen_con_nota", nota_examen_aprobado = nota)
+            events.append(FollowupAction("action_materia_examen"))
 
-        return []
+        return events
 
 class ActionNotaExamenDesaprobado(Action):
 
@@ -74,18 +35,14 @@ class ActionNotaExamenDesaprobado(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        rindio_examen = tracker.get_slot("rindio_examen")
         estado_animo = tracker.get_slot("estado_animo")
 
-        if (rindio_examen):
-            dispatcher.utter_message(response = "utter_consolar")
+        dispatcher.utter_message(response = "utter_consolar")
 
-            if (estado_animo == "triste" or estado_animo is None):
-                dispatcher.utter_message(response = "utter_levantar_animo")
-            else:
-                dispatcher.utter_message(response = "utter_dejar_joder")
+        if (estado_animo == "triste" or estado_animo is None):
+            dispatcher.utter_message(response = "utter_levantar_animo")
         else:
-            logger.warn("** Examen desaprobado sin rendir_examen")
+            dispatcher.utter_message(response = "utter_dejar_joder")
 
         return []
 
@@ -121,12 +78,10 @@ class ActionNotaExamen(Action):
 
         events = []
 
-        nota = tracker.get_slot("nota")
-        nota_aprobado = tracker.get_slot("nota_examen_aprobado")
-        if (nota == nota_aprobado):
-            FollowupAction("action_nota_examen_aprobado")
-        else:
-            FollowupAction("action_nota_examen_desaprobado")
+        if tracker.get_slot("nota_examen_aprobado"):
+            events.append(FollowupAction("action_nota_examen_aprobado"))
+        elif tracker.get_slot("nota_examen_aprobado"):
+            events.append(FollowupAction("action_nota_examen_desaprobado"))
 
         return events
 
@@ -144,13 +99,10 @@ class ActionOlvidarExamen(Action):
 
         events.append(SlotSet("examen", None))
         events.append(SlotSet("materia", None))
-        events.append(SlotSet("nota", None))
         events.append(SlotSet("nota_examen_aprobado", None))
         events.append(SlotSet("nota_examen_desaprobado", None))
 
-        aprobado = tracker.get_slot("nota_examen_aprobado")
-
-        if (aprobado):
+        if tracker.get_slot("nota_examen_aprobado"):
             dispatcher.utter_message(response = "utter_condescender_alegre")
         else:
             dispatcher.utter_message(response = "utter_ofrecer_ayuda")
