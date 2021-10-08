@@ -70,6 +70,10 @@ nlu:
     - afirmativo
     - claramente
     - sin duda alguna
+    - ok
+    - oki
+    - oka
+    - okey
 
 - intent: negar
   examples: |
@@ -106,6 +110,7 @@ nlu:
     - genial
     - que felicidad siento
     - re bien bro
+    - me alegro
 
 - intent: modo_triste
   examples: |

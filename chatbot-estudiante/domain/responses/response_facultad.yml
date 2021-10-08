@@ -42,7 +42,6 @@ responses:
 
   utter_cuanto_te_sacaste:
     - text: "Que nota te sacaste?"
-    - text: "Con cuanto?"
 
   utter_donde_viene:
     - text: "De donde venís amigo?"

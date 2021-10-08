@@ -4,15 +4,31 @@ nlu:
 
 - intent: contar_examen_desaprobado
   examples: |
+    - me fue mal en un [parcial](examen)
+    - me fue mal en un [parcialito](examen)
+    - me fue mal en un [recuperatorio](examen)
+    - me fue mal en un [prefinal](examen)
+    - me fue mal en un [final](examen)
+    - me fue mal en un [evaluacion](examen)
+    - me fue mal en un [oral](examen)
+    - me fue mal en un [defensa](examen)
     - me fue mal en un [examen](examen)
-    - fue muy dificil el [final](examen)
-    - no estudie nada para el [oral](examen)
-    - me pusieron un [1](nota_examen_desaprobado) en el [parcial](examen)
-    - no me presente al [final](examen)
-    - desaprobe el [parcial](examen) que rendi
-    - me saque un [2](nota_examen_desaprobado) en el [recuperatorio](examen)
-    - firme el ausente y me fui del [final](examen)
+    - desaprobe el [parcial](examen)
+    - desaprobe el [parcialito](examen)
+    - desaprobe el [recuperatorio](examen)
+    - desaprobe el [prefinal](examen)
+    - desaprobe el [final](examen)
+    - desaprobe el [evaluacion](examen)
+    - desaprobe el [oral](examen)
+    - desaprobe el [defensa](examen)
+    - desaprobe el [examen](examen)
     - me clavaron un [0](nota_examen_desaprobado) por machetearme
+    - me pusieron un [1](nota_examen_desaprobado) en el [parcial](examen)
+    - me pusieron un [2](nota_examen_desaprobado) en el [parcial](examen)
+    - me pusieron un [3](nota_examen_desaprobado) en el [parcial](examen)
+    - me saque un [1](nota_examen_desaprobado) en el [recuperatorio](examen)
+    - me saque un [2](nota_examen_desaprobado) en el [recuperatorio](examen)
+    - me saque un [3](nota_examen_desaprobado) en el [recuperatorio](examen)
 
 - intent: volver_a_intentarlo
   examples: |
@@ -23,48 +39,91 @@ nlu:
 
 - intent: contar_examen_aprobado
   examples: |
-    - me fue bien en el [examen](examen)
-    - aprobe el [final](examen)!
-    - me saque un [4](nota_examen_aprobado)
+    - me fue bien en el [parcial] (examen)
+    - me fue bien en el [parcialito] (examen)
+    - me fue bien en el [recuperatorio] (exame)
+    - me fue bien en el [prefinal] (examen)
+    - me fue bien en el [final] (examen)
+    - me fue bien en el [evaluacion] (examen)
+    - me fue bien en el [oral] (examen)
+    - me fue bien en el [defensa] (examen)
+    - me fue bien en el [examen] (examen)
+    - aprobe el [parcial] (examen)
+    - aprobe el [parcialito] (examen)
+    - aprobe el [recuperatorio] (exame)
+    - aprobe el [prefinal] (examen)
+    - aprobe el [final](examen)
+    - aprobe el [evaluacion] (examen)
+    - aprobe el [oral] (examen)
+    - aprobe el [defensa] (examen)
+    - aprobe el [examen] (examen)
+    - pude aprobar el [parcial](examen) que rendi con [4](nota_examen_aprobado)
+    - pude aprobar el [parcial](examen) que rendi con [5](nota_examen_aprobado)
     - pude aprobar el [parcial](examen) que rendi con [6](nota_examen_aprobado)
-    - aprobe el [oral](examen) con [9](nota_examen_aprobado)
-    - logre aprobar bien con [7](nota_examen_aprobado)
-    - pase el [prefinal](examen) con lo justo, [4](nota_examen_aprobado)
-    - aprobe el [parcial](examen)
-    - pude aprobar un [parcialito](examen) con [5](nota_examen_aprobado)
-    - safaroni en el [examen](examen)
-    - adentro el [examen](examen)
+    - pude aprobar el [parcial](examen) que rendi con [7](nota_examen_aprobado)
+    - pude aprobar el [parcial](examen) que rendi con [8](nota_examen_aprobado)
+    - pude aprobar el [parcial](examen) que rendi con [9](nota_examen_aprobado)
+    - pude aprobar el [parcial](examen) que rendi con [10](nota_examen_aprobado)
+    - aprobe el [final](examen) con [4](nota_examen_aprobado)
+    - aprobe el [final](examen) con [5](nota_examen_aprobado)
+    - aprobe el [final](examen) con [6](nota_examen_aprobado)
+    - aprobe el [final](examen) con [7](nota_examen_aprobado)
+    - aprobe el [final](examen) con [8](nota_examen_aprobado)
+    - aprobe el [final](examen) con [9](nota_examen_aprobado)
+    - aprobe el [final](examen) con [10](nota_examen_aprobado)
 
 - intent: contar_que_rendi
   examples: |
     - rendi [fisica](materia)
     - rendi [programacion](materia)
-    - rendi el [final](examen) de [algoritmos](materia)
-    - di el [oral](examen) de [metodologia](materia)
-    - di el final [diseño](materia) hace un rato
+    - rendi [ayda](materia)
+    - rendi [ciencias](materia)
+    - rendi [diseño](materia)
+    - rendi [objetos](materia)
+    - rendi el [final](examen) de [fisica](materia)
+    - rendi el [final](examen) de [programacion](materia)
+    - rendi el [final](examen) de [ayda](materia)
+    - rendi el [final](examen) de [ciencias](materia)
+    - rendi el [final](examen) de [diseño](materia)
+    - rendi el [final](examen) de [objetos](materia)
+    - vengo de rendir [fisica](materia)
+    - vengo de rendir [programacion](materia)
+    - vengo de rendir [ayda](materia)
+    - vengo de rendir [ciencias](materia)
     - vengo de rendir [diseño](materia)
+    - vengo de rendir [objetos](materia)
 
 - intent: nota_que_me_saque
   examples: |
     - me saque un [4](nota_examen_aprobado)
+    - me saque un [5](nota_examen_aprobado)
     - me saque un [6](nota_examen_aprobado)
-    - clave un [10](nota_examen_aprobado)!
-    - clave un [4](nota_examen_aprobado)
-    - me saque un [1](nota_examen_desaprobado) miserable
-    - me pusieron un [5](nota_examen_aprobado)
+    - me saque un [7](nota_examen_aprobado)
+    - me saque un [8](nota_examen_aprobado)
+    - me saque un [9](nota_examen_aprobado)
+    - me saque un [10](nota_examen_aprobado)
+    - un [4](nota_examen_aprobado)
+    - un [5](nota_examen_aprobado)
+    - un [6](nota_examen_aprobado)
+    - un [7](nota_examen_aprobado)
     - un [8](nota_examen_aprobado)
+    - un [9](nota_examen_aprobado)
+    - un [10](nota_examen_aprobado)
 
 - intent: contar_examen_aprobado_materia
   examples: |
+    - me fue bien en [fisica](materia)
+    - me fue bien en [programacion](materia)
+    - me fue bien en [ayda](materia)
+    - me fue bien en [ciencias](materia)
     - me fue bien en [diseño](materia)
-    - pude aprobar [diseño](materia)
-    - safaroni en [diseño](materia)
-    - aprobe raspando [diseño](materia)
-    - adentro [diseño](materia)
-    - me saque de encima [diseño](materia)
-    - condena cumplida con [diseño](materia)
-    - me olvido de [diseño](materia)
-    - [diseño](materia) la tiene adentro
+    - me fue bien en [objetos](materia)
+    - aprobe [fisica](materia)
+    - aprobe [programacion](materia)
+    - aprobe [ayda](materia)
+    - aprobe [ciencias](materia)
+    - aprobe [diseño](materia)
+    - aprobe [objetos](materia)
   
 - intent: contar_de_donde_vengo
   examples: |
@@ -81,8 +140,18 @@ nlu:
 
 - intent: contar_sali_examen
   examples: |
-    - recien salgo de [examen](examen) [diseño](materia) 
+    - recien salgo de [examen](examen) [fisica](materia)
+    - recien salgo de [examen](examen) [ayda](materia)
+    - recien salgo de [examen](examen) [ciencias](materia)
+    - recien salgo de [examen](examen) [programacion](materia)
+    - recien salgo de [examen](examen) [diseño](materia)
+    - recien salgo de [examen](examen) [objetos](materia)
+    - sali de un [examen](examen) de [fisica](materia)
+    - sali de un [examen](examen) de [ayda](materia)
+    - sali de un [examen](examen) de [ciencias](materia)
+    - sali de un [examen](examen) de [programacion](materia)
     - sali de un [examen](examen) de [diseño](materia)
+    - sali de un [examen](examen) de [objetos](materia)
 
 - intent: preguntar_que_cursa
   examples: |
@@ -92,22 +161,17 @@ nlu:
     - como va la facu?
     - como va la facultad?
     - que se cuentan esas materias?
-    - que garompa estas cursando?
 
 - intent: contar_como_fue
   examples: |
     - bien yo que se
-    - bien
     - maso
     - un bodrio
     - aburrido
     - interesante
     - meta mate y galletitas
     - me dormi
-    - con paja
-    - simple
-    - claro
-
+    
 - intent: contar_como_fue_examen
   examples: |
     - es simple, es claro
@@ -140,6 +204,7 @@ nlu:
     - [evaluacion] (examen)
     - [oral] (examen)
     - [defensa] (examen)
+    - [examen] (examen)
 
 - intent: establecimientos
   examples: |

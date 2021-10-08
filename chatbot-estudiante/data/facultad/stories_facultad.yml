@@ -1,6 +1,14 @@
 version: "2.0"
 
 stories:
+## Aprobado
+- story: rendir examen aprobado
+  steps:
+  - intent: contar_examen_aprobado
+    entities:
+    - examen: any
+  - action: action_nota_examen_aprobado
+
 - story: rendir examen + materia + nota
   steps:
   - intent: contar_examen_aprobado
@@ -11,18 +19,28 @@ stories:
 
 - story: rendir examen + materia
   steps:
-  - intent: contar_examen_aprobado
+  - intent: contar_examen_aprobado_materia
     entities:
     - materia: any
   - action: action_nota_examen_aprobado
 
-- story: rendir examen + nota
+## Desaprobado
+- story: rendir examen desaprobado
   steps:
-  - intent: contar_examen_aprobado
+  - intent: contar_examen_desaprobado
     entities:
     - examen: any
-  - action: action_nota_examen_aprobado
+  - action: action_nota_examen_desaprobado
 
+- story: rendir examen + materia + nota
+  steps:
+  - intent: contar_examen_desaprobado
+    entities:
+    - materia: any
+    - examen: any
+  - action: action_nota_examen_desaprobado
+
+## Otros
 - story: contar que me saqué (supone luego de preguntar cuanto te sacaste)
   steps:
   - intent: nota_que_me_saque
@@ -62,6 +80,7 @@ stories:
   - intent: contar_como_fue_examen
   - action: utter_cambio_tema
 
+## Limpiar slots!
 - story: olvidar slots examen
   steps:
   - intent: agradecer

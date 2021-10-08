@@ -33,3 +33,13 @@ stories:
   steps:
   - intent: psycho_killer
   - action: utter_calmar
+
+- story: reir
+  steps:
+  - intent: reir
+  - action: utter_reir
+
+- story: ok
+  steps:
+  - intent: ok
+  - action: utter_ok

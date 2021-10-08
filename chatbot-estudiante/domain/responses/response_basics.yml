@@ -75,6 +75,9 @@ responses:
   utter_reir:
   - text: "JAJAJA"
 
+  utter_ok:
+  - text: ";)"
+
   utter_sorprendido:
   - text: "Increible"
   - text: "Tremendoo jaja"
